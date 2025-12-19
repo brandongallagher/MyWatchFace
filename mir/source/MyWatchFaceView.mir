@@ -3210,707 +3210,631 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_471_15_483_8_if_end:
 C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_469_8_483_8_if_end:
 C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_468_60_484_4_stop:
     }
-    [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 487; @symbol_functiondef = [drawActiveMinutesWidget,487,13,36]; @symbol_param<0> = [dc,487,37,39]; @symbol_param<0>_type<0> = [Dc,487,43,45]; @symbol_param<1> = [cx,487,47,49]; @symbol_param<1>_type<0> = [Number,487,53,59]; @symbol_param<2> = [cy,487,61,63]; @symbol_param<2>_type<0> = [Number,487,67,73]; @symbol_param<3> = [radius,487,75,81]; @symbol_param<3>_type<0> = [Number,487,85,91]; ]
-    function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 489 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %outerR.1 = local;
-        symbol [ outerR %outerR.1 489 12 18 ];
-        %tmp.1 = lgetv %radius;
-        symbol [ radius %tmp.1 489 21 27 ];
-        %tmp.2 = 50;
-        %tmp.3 = sub %tmp.1 %tmp.2;
-        lputv %outerR.1 %tmp.3;
-        symbol [ outerR %outerR.1 489 12 18 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 490 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %thickness.2 = local;
-        symbol [ thickness %thickness.2 490 12 21 ];
-        %tmp.4 = 10;
-        lputv %thickness.2 %tmp.4;
-        symbol [ thickness %thickness.2 490 12 21 ];
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 490; @symbol_functiondef = [toRad,490,13,18]; @symbol_param<0> = [deg,490,19,22]; ]
+    function toRad(deg) {
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_490_24_492_4_start:
 [ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 491 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %innerR.3 = local;
-        symbol [ innerR %innerR.3 491 12 18 ];
-        %tmp.5 = lgetv %outerR.1;
-        symbol [ outerR %tmp.5 491 21 27 ];
-        %tmp.6 = lgetv %thickness.2;
-        symbol [ thickness %tmp.6 491 30 39 ];
-        %tmp.7 = sub %tmp.5 %tmp.6;
-        lputv %innerR.3 %tmp.7;
-        symbol [ innerR %innerR.3 491 12 18 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 492 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %midR.4 = local;
-        symbol [ midR %midR.4 492 12 16 ];
-        %tmp.8 = lgetv %outerR.1;
-        symbol [ outerR %tmp.8 492 19 25 ];
-        %tmp.9 = lgetv %thickness.2;
-        symbol [ thickness %tmp.9 492 29 38 ];
-        %tmp.10 = 2.0;
-        %tmp.11 = div %tmp.9 %tmp.10;
-        %tmp.12 = sub %tmp.8 %tmp.11;
-        lputv %midR.4 %tmp.12;
-        symbol [ midR %midR.4 492 12 16 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 493 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %capR.5 = local;
-        symbol [ capR %capR.5 493 12 16 ];
-        %tmp.13 = lgetv %thickness.2;
-        symbol [ thickness %tmp.13 493 19 28 ];
-        %tmp.14 = 2.0;
-        %tmp.15 = div %tmp.13 %tmp.14;
-        lputv %capR.5 %tmp.15;
-        symbol [ capR %capR.5 493 12 16 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 498 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %startDeg.6 = local;
-        symbol [ startDeg %startDeg.6 498 12 20 ];
-        %tmp.16 = -115;
-        lputv %startDeg.6 %tmp.16;
-        symbol [ startDeg %startDeg.6 498 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 499 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %totalSweep.7 = local;
-        symbol [ totalSweep %totalSweep.7 499 12 22 ];
-        %tmp.17 = 50;
-        lputv %totalSweep.7 %tmp.17;
-        symbol [ totalSweep %totalSweep.7 499 12 22 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 501 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %activeDay.8 = local;
-        symbol [ activeDay %activeDay.8 501 12 21 ];
-        %tmp.18 = 120.0;
-        lputv %activeDay.8 %tmp.18;
-        symbol [ activeDay %activeDay.8 501 12 21 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 502 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %activeWeek.9 = local;
-        symbol [ activeWeek %activeWeek.9 502 12 22 ];
-        %tmp.19 = 440.0;
-        lputv %activeWeek.9 %tmp.19;
-        symbol [ activeWeek %activeWeek.9 502 12 22 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 503 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %weekGoal.10 = local;
-        symbol [ weekGoal %weekGoal.10 503 12 20 ];
-        %tmp.20 = 900.0;
-        lputv %weekGoal.10 %tmp.20;
-        symbol [ weekGoal %weekGoal.10 503 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 505 8 ]
-        try @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_beginTry @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_endTry @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_catch @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_beginTry:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_12_512_8_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 506 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_12_512_8_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_12_512_8_stop" ]
-        %info.11 = local;
-        symbol [ info %info.11 506 16 20 ];
-        symbol [ ActivityMonitor %tmp.21 506 23 38 ];
-        %tmp.21 = getm $.Toybox.ActivityMonitor;
-        symbol [ getInfo %tmp.22 506 39 46 ];
-        %tmp.22 = getv function %tmp.21 :getInfo;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        lputv %info.11 %tmp.23;
-        symbol [ info %info.11 506 16 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 507 12 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_12_511_12_if_stmt:
-        %tmp.24 = lgetv %info.11;
-        symbol [ info %tmp.24 507 16 20 ];
-        %tmp.25 = null;
-        %tmp.26 = ne %tmp.24 %tmp.25;
-        bf %tmp.26 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_12_511_12_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_12_511_12_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_30_511_12_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 508 16 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_16_508_104_if_stmt:
-        %tmp.27 = lgetv %info.11;
-        symbol [ info %tmp.27 508 20 24 ];
-        %tmp.28 = as %tmp.27 { (!Null) };
-        symbol [ activeMinutesDay %tmp.29 508 25 41 ];
-        %tmp.29 = getv %tmp.28 :activeMinutesDay;
-        %tmp.30 = null;
-        %tmp.31 = ne %tmp.29 %tmp.30;
-        bf %tmp.31 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_16_508_104_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_16_508_104_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_51_508_104_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 508 53 ]
-        %tmp.32 = lgetv %info.11;
-        symbol [ info %tmp.32 508 65 69 ];
-        %tmp.33 = as %tmp.32 { (!Null) };
-        symbol [ activeMinutesDay %tmp.34 508 70 86 ];
-        %tmp.34 = getv %tmp.33 :activeMinutesDay;
-        symbol [ total %tmp.35 508 87 92 ];
-        %tmp.35 = getv %tmp.34 :total;
-        symbol [ toFloat %tmp.36 508 93 100 ];
-        %tmp.36 = getv function %tmp.35 :toFloat;
-        %tmp.37 = invoke %tmp.35 %tmp.36();
-        lputv %activeDay.8 %tmp.37;
-        symbol [ activeDay %activeDay.8 508 53 62 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_51_508_104_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_16_508_104_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_508_16_508_104_if_end:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 509 16 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_16_509_107_if_stmt:
-        %tmp.38 = lgetv %info.11;
-        symbol [ info %tmp.38 509 20 24 ];
-        %tmp.39 = as %tmp.38 { (!Null) };
-        symbol [ activeMinutesWeek %tmp.40 509 25 42 ];
-        %tmp.40 = getv %tmp.39 :activeMinutesWeek;
-        %tmp.41 = null;
-        %tmp.42 = ne %tmp.40 %tmp.41;
-        bf %tmp.42 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_16_509_107_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_16_509_107_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_52_509_107_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 509 54 ]
-        %tmp.43 = lgetv %info.11;
-        symbol [ info %tmp.43 509 67 71 ];
-        %tmp.44 = as %tmp.43 { (!Null) };
-        symbol [ activeMinutesWeek %tmp.45 509 72 89 ];
-        %tmp.45 = getv %tmp.44 :activeMinutesWeek;
-        symbol [ total %tmp.46 509 90 95 ];
-        %tmp.46 = getv %tmp.45 :total;
-        symbol [ toFloat %tmp.47 509 96 103 ];
-        %tmp.47 = getv function %tmp.46 :toFloat;
-        %tmp.48 = invoke %tmp.46 %tmp.47();
-        lputv %activeWeek.9 %tmp.48;
-        symbol [ activeWeek %activeWeek.9 509 54 64 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_52_509_107_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_16_509_107_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_509_16_509_107_if_end:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 510 16 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_16_510_107_if_stmt:
-        %tmp.49 = lgetv %info.11;
-        symbol [ info %tmp.49 510 20 24 ];
-        %tmp.50 = as %tmp.49 { (!Null) };
-        symbol [ activeMinutesWeekGoal %tmp.51 510 25 46 ];
-        %tmp.51 = getv %tmp.50 :activeMinutesWeekGoal;
-        %tmp.52 = null;
-        %tmp.53 = ne %tmp.51 %tmp.52;
-        bf %tmp.53 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_16_510_107_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_16_510_107_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_56_510_107_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 510 58 ]
-        %tmp.54 = lgetv %info.11;
-        symbol [ info %tmp.54 510 69 73 ];
-        %tmp.55 = as %tmp.54 { (!Null) };
-        symbol [ activeMinutesWeekGoal %tmp.56 510 74 95 ];
-        %tmp.56 = getv %tmp.55 :activeMinutesWeekGoal;
-        symbol [ toFloat %tmp.57 510 96 103 ];
-        %tmp.57 = getv function %tmp.56 :toFloat;
-        %tmp.58 = invoke %tmp.56 %tmp.57();
-        lputv %weekGoal.10 %tmp.58;
-        symbol [ weekGoal %weekGoal.10 510 58 66 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_56_510_107_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_16_510_107_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_510_16_510_107_if_end:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_30_511_12_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_12_511_12_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_507_12_511_12_if_end:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_12_512_8_stop:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_endTry:
-        jsr @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally;
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_catch:
-        %tmp.59 = exception;
-        push %tmp.59;
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 512 10 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_catch" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_512_10_512_22_end" ]
-        %e.12 = local;
-        symbol [ e %e.12 512 17 18 ];
-        %tmp.60 = dup %tmp.59;
-        lputv %e.12 %tmp.60;
-        symbol [ e %e.12 512 17 18 ];
-        jsr @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally;
-        pop;
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_512_10_512_22_end:
-        try @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_catch @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_512_10_512_22_end @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_512_10_512_22_end @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally;
-        jsr @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally;
-        throw %tmp.59;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_finally:
-        jsrret;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_505_8_512_22_end:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 515 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %weekFrac.13 = local;
-        symbol [ weekFrac %weekFrac.13 515 12 20 ];
-        %tmp.61 = lgetv %activeWeek.9;
-        symbol [ activeWeek %tmp.61 515 23 33 ];
-        %tmp.62 = lgetv %weekGoal.10;
-        symbol [ weekGoal %tmp.62 515 36 44 ];
-        %tmp.63 = div %tmp.61 %tmp.62;
-        lputv %weekFrac.13 %tmp.63;
-        symbol [ weekFrac %weekFrac.13 515 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 516 8 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_8_516_46_if_stmt:
-        %tmp.64 = lgetv %weekFrac.13;
-        symbol [ weekFrac %tmp.64 516 12 20 ];
-        %tmp.65 = 1.0;
-        %tmp.66 = gt %tmp.64 %tmp.65;
-        bf %tmp.66 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_8_516_46_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_8_516_46_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_28_516_46_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 516 30 ]
-        %tmp.67 = 1.0;
-        lputv %weekFrac.13 %tmp.67;
-        symbol [ weekFrac %weekFrac.13 516 30 38 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_28_516_46_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_8_516_46_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_516_8_516_46_if_end:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 519 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %dayFrac.14 = local;
-        symbol [ dayFrac %dayFrac.14 519 12 19 ];
-        %tmp.68 = lgetv %activeDay.8;
-        symbol [ activeDay %tmp.68 519 22 31 ];
-        %tmp.69 = lgetv %weekGoal.10;
-        symbol [ weekGoal %tmp.69 519 34 42 ];
-        %tmp.70 = div %tmp.68 %tmp.69;
-        lputv %dayFrac.14 %tmp.70;
-        symbol [ dayFrac %dayFrac.14 519 12 19 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 520 8 ]
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_8_520_44_if_stmt:
-        %tmp.71 = lgetv %dayFrac.14;
-        symbol [ dayFrac %tmp.71 520 12 19 ];
-        %tmp.72 = 1.0;
-        %tmp.73 = gt %tmp.71 %tmp.72;
-        bf %tmp.73 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_8_520_44_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_8_520_44_if_true:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_27_520_44_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 520 29 ]
-        %tmp.74 = 1.0;
-        lputv %dayFrac.14 %tmp.74;
-        symbol [ dayFrac %dayFrac.14 520 29 36 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_27_520_44_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_8_520_44_if_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_520_8_520_44_if_end:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 524 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %weekSweep.15 = local;
-        symbol [ weekSweep %weekSweep.15 524 12 21 ];
-        %tmp.75 = lgetv %totalSweep.7;
-        symbol [ totalSweep %tmp.75 524 24 34 ];
-        %tmp.76 = lgetv %weekFrac.13;
-        symbol [ weekFrac %tmp.76 524 37 45 ];
-        %tmp.77 = mul %tmp.75 %tmp.76;
-        lputv %weekSweep.15 %tmp.77;
-        symbol [ weekSweep %weekSweep.15 524 12 21 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 525 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %daySweep.16 = local;
-        symbol [ daySweep %daySweep.16 525 12 20 ];
-        %tmp.78 = lgetv %totalSweep.7;
-        symbol [ totalSweep %tmp.78 525 23 33 ];
-        %tmp.79 = lgetv %dayFrac.14;
-        symbol [ dayFrac %tmp.79 525 36 43 ];
-        %tmp.80 = mul %tmp.78 %tmp.79;
-        lputv %daySweep.16 %tmp.80;
-        symbol [ daySweep %daySweep.16 525 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 526 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %dayStart.17 = local;
-        symbol [ dayStart %dayStart.17 526 12 20 ];
-        %tmp.81 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.81 526 23 31 ];
-        %tmp.82 = lgetv %weekSweep.15;
-        symbol [ weekSweep %tmp.82 526 35 44 ];
-        %tmp.83 = lgetv %daySweep.16;
-        symbol [ daySweep %tmp.83 526 47 55 ];
-        %tmp.84 = sub %tmp.82 %tmp.83;
-        %tmp.85 = add %tmp.81 %tmp.84;
-        lputv %dayStart.17 %tmp.85;
-        symbol [ dayStart %dayStart.17 526 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 530 8 ]
-        %tmp.86 = lgetv %dc;
-        symbol [ dc %tmp.86 530 8 10 ];
-        symbol [ setPenWidth %tmp.87 530 11 22 ];
-        %tmp.87 = getv function %tmp.86 :setPenWidth;
-        %tmp.88 = lgetv %thickness.2;
-        symbol [ thickness %tmp.88 530 23 32 ];
-        invoke %tmp.86 %tmp.87(%tmp.88);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 533 8 ]
-        %tmp.89 = lgetv %dc;
-        symbol [ dc %tmp.89 533 8 10 ];
-        symbol [ setColor %tmp.90 533 11 19 ];
-        %tmp.90 = getv function %tmp.89 :setColor;
-        symbol [ Graphics %tmp.91 533 20 28 ];
-        %tmp.91 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.92 533 29 42 ];
-        %tmp.92 = getv %tmp.91 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.93 533 44 52 ];
-        %tmp.93 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.94 533 53 70 ];
-        %tmp.94 = getv %tmp.93 :COLOR_TRANSPARENT;
-        invoke %tmp.89 %tmp.90(%tmp.92, %tmp.94);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 534 8 ]
-        %tmp.95 = lgetv %dc;
-        symbol [ dc %tmp.95 534 8 10 ];
-        symbol [ drawArc %tmp.96 534 11 18 ];
-        %tmp.96 = getv function %tmp.95 :drawArc;
-        %tmp.97 = lgetv %cx;
-        symbol [ cx %tmp.97 534 19 21 ];
-        %tmp.98 = lgetv %cy;
-        symbol [ cy %tmp.98 534 23 25 ];
-        %tmp.99 = lgetv %midR.4;
-        symbol [ midR %tmp.99 534 27 31 ];
-        symbol [ Graphics %tmp.100 534 33 41 ];
-        %tmp.100 = getm $.Toybox.Graphics;
-        symbol [ ARC_COUNTER_CLOCKWISE %tmp.101 534 42 63 ];
-        %tmp.101 = getv %tmp.100 :ARC_COUNTER_CLOCKWISE;
-        %tmp.102 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.102 534 65 73 ];
-        %tmp.103 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.103 534 75 83 ];
-        %tmp.104 = lgetv %totalSweep.7;
-        symbol [ totalSweep %tmp.104 534 86 96 ];
-        %tmp.105 = add %tmp.103 %tmp.104;
-        invoke %tmp.95 %tmp.96(%tmp.97, %tmp.98, %tmp.99, %tmp.101, %tmp.102, %tmp.105);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 537 8 ]
-        %tmp.106 = lgetv %dc;
-        symbol [ dc %tmp.106 537 8 10 ];
-        symbol [ setColor %tmp.107 537 11 19 ];
-        %tmp.107 = getv function %tmp.106 :setColor;
-        symbol [ Graphics %tmp.108 537 20 28 ];
-        %tmp.108 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_RED %tmp.109 537 29 41 ];
-        %tmp.109 = getv %tmp.108 :COLOR_DK_RED;
-        symbol [ Graphics %tmp.110 537 43 51 ];
-        %tmp.110 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.111 537 52 69 ];
-        %tmp.111 = getv %tmp.110 :COLOR_TRANSPARENT;
-        invoke %tmp.106 %tmp.107(%tmp.109, %tmp.111);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 538 8 ]
-        %tmp.112 = lgetv %dc;
-        symbol [ dc %tmp.112 538 8 10 ];
-        symbol [ drawArc %tmp.113 538 11 18 ];
-        %tmp.113 = getv function %tmp.112 :drawArc;
-        %tmp.114 = lgetv %cx;
-        symbol [ cx %tmp.114 538 19 21 ];
-        %tmp.115 = lgetv %cy;
-        symbol [ cy %tmp.115 538 23 25 ];
-        %tmp.116 = lgetv %midR.4;
-        symbol [ midR %tmp.116 538 27 31 ];
-        symbol [ Graphics %tmp.117 538 33 41 ];
-        %tmp.117 = getm $.Toybox.Graphics;
-        symbol [ ARC_COUNTER_CLOCKWISE %tmp.118 538 42 63 ];
-        %tmp.118 = getv %tmp.117 :ARC_COUNTER_CLOCKWISE;
-        %tmp.119 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.119 538 65 73 ];
-        %tmp.120 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.120 538 75 83 ];
-        %tmp.121 = lgetv %weekSweep.15;
-        symbol [ weekSweep %tmp.121 538 86 95 ];
-        %tmp.122 = add %tmp.120 %tmp.121;
-        invoke %tmp.112 %tmp.113(%tmp.114, %tmp.115, %tmp.116, %tmp.118, %tmp.119, %tmp.122);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 541 8 ]
-        %tmp.123 = lgetv %dc;
-        symbol [ dc %tmp.123 541 8 10 ];
-        symbol [ setColor %tmp.124 541 11 19 ];
-        %tmp.124 = getv function %tmp.123 :setColor;
-        symbol [ Graphics %tmp.125 541 20 28 ];
-        %tmp.125 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.126 541 29 38 ];
-        %tmp.126 = getv %tmp.125 :COLOR_RED;
-        symbol [ Graphics %tmp.127 541 40 48 ];
-        %tmp.127 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.128 541 49 66 ];
-        %tmp.128 = getv %tmp.127 :COLOR_TRANSPARENT;
-        invoke %tmp.123 %tmp.124(%tmp.126, %tmp.128);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 542 8 ]
-        %tmp.129 = lgetv %dc;
-        symbol [ dc %tmp.129 542 8 10 ];
-        symbol [ drawArc %tmp.130 542 11 18 ];
-        %tmp.130 = getv function %tmp.129 :drawArc;
-        %tmp.131 = lgetv %cx;
-        symbol [ cx %tmp.131 542 19 21 ];
-        %tmp.132 = lgetv %cy;
-        symbol [ cy %tmp.132 542 23 25 ];
-        %tmp.133 = lgetv %midR.4;
-        symbol [ midR %tmp.133 542 27 31 ];
-        symbol [ Graphics %tmp.134 542 33 41 ];
-        %tmp.134 = getm $.Toybox.Graphics;
-        symbol [ ARC_COUNTER_CLOCKWISE %tmp.135 542 42 63 ];
-        %tmp.135 = getv %tmp.134 :ARC_COUNTER_CLOCKWISE;
-        %tmp.136 = lgetv %dayStart.17;
-        symbol [ dayStart %tmp.136 542 65 73 ];
-        %tmp.137 = lgetv %dayStart.17;
-        symbol [ dayStart %tmp.137 542 75 83 ];
-        %tmp.138 = lgetv %daySweep.16;
-        symbol [ daySweep %tmp.138 542 86 94 ];
-        %tmp.139 = add %tmp.137 %tmp.138;
-        invoke %tmp.129 %tmp.130(%tmp.131, %tmp.132, %tmp.133, %tmp.135, %tmp.136, %tmp.139);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 548 8 ]
-        %tmp.140 = lgetv %dc;
-        symbol [ dc %tmp.140 548 8 10 ];
-        symbol [ setColor %tmp.141 548 11 19 ];
-        %tmp.141 = getv function %tmp.140 :setColor;
-        symbol [ Graphics %tmp.142 548 20 28 ];
-        %tmp.142 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_RED %tmp.143 548 29 41 ];
-        %tmp.143 = getv %tmp.142 :COLOR_DK_RED;
-        symbol [ Graphics %tmp.144 548 43 51 ];
-        %tmp.144 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.145 548 52 69 ];
-        %tmp.145 = getv %tmp.144 :COLOR_TRANSPARENT;
-        invoke %tmp.140 %tmp.141(%tmp.143, %tmp.145);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 549 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %radStart.18 = local;
-        symbol [ radStart %radStart.18 549 12 20 ];
-        symbol [ Math %tmp.147 549 23 27 ];
-        %tmp.147 = getv ? :Math;
-        symbol [ toRadians %tmp.148 549 28 37 ];
-        %tmp.148 = getv function %tmp.147 :toRadians;
-        %tmp.149 = lgetv %startDeg.6;
-        symbol [ startDeg %tmp.149 549 38 46 ];
-        %tmp.150 = invoke %tmp.147 %tmp.148(%tmp.149);
-        lputv %radStart.18 %tmp.150;
-        symbol [ radStart %radStart.18 549 12 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 550 8 ]
-        %tmp.151 = lgetv %dc;
-        symbol [ dc %tmp.151 550 8 10 ];
-        symbol [ fillCircle %tmp.152 550 11 21 ];
-        %tmp.152 = getv function %tmp.151 :fillCircle;
-        %tmp.153 = lgetv %cx;
-        symbol [ cx %tmp.153 550 22 24 ];
-        %tmp.154 = lgetv %midR.4;
-        symbol [ midR %tmp.154 550 27 31 ];
-        symbol [ Math %tmp.156 550 34 38 ];
-        %tmp.156 = getv ? :Math;
-        symbol [ cos %tmp.157 550 39 42 ];
-        %tmp.157 = getv function %tmp.156 :cos;
-        %tmp.158 = lgetv %radStart.18;
-        symbol [ radStart %tmp.158 550 43 51 ];
-        %tmp.159 = invoke %tmp.156 %tmp.157(%tmp.158);
-        %tmp.160 = mul %tmp.154 %tmp.159;
-        %tmp.161 = add %tmp.153 %tmp.160;
-        %tmp.162 = lgetv %cy;
-        symbol [ cy %tmp.162 550 54 56 ];
-        %tmp.163 = lgetv %midR.4;
-        symbol [ midR %tmp.163 550 59 63 ];
-        symbol [ Math %tmp.165 550 66 70 ];
-        %tmp.165 = getv ? :Math;
-        symbol [ sin %tmp.166 550 71 74 ];
-        %tmp.166 = getv function %tmp.165 :sin;
-        %tmp.167 = lgetv %radStart.18;
-        symbol [ radStart %tmp.167 550 75 83 ];
-        %tmp.168 = invoke %tmp.165 %tmp.166(%tmp.167);
-        %tmp.169 = mul %tmp.163 %tmp.168;
-        %tmp.170 = sub %tmp.162 %tmp.169;
-        %tmp.171 = lgetv %capR.5;
-        symbol [ capR %tmp.171 550 86 90 ];
-        invoke %tmp.151 %tmp.152(%tmp.161, %tmp.170, %tmp.171);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 553 8 ]
-        %tmp.172 = lgetv %dc;
-        symbol [ dc %tmp.172 553 8 10 ];
-        symbol [ setColor %tmp.173 553 11 19 ];
-        %tmp.173 = getv function %tmp.172 :setColor;
-        symbol [ Graphics %tmp.174 553 20 28 ];
-        %tmp.174 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.175 553 29 38 ];
-        %tmp.175 = getv %tmp.174 :COLOR_RED;
-        symbol [ Graphics %tmp.176 553 40 48 ];
-        %tmp.176 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.177 553 49 66 ];
-        %tmp.177 = getv %tmp.176 :COLOR_TRANSPARENT;
-        invoke %tmp.172 %tmp.173(%tmp.175, %tmp.177);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 554 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %radEnd.19 = local;
-        symbol [ radEnd %radEnd.19 554 12 18 ];
-        symbol [ Math %tmp.179 554 21 25 ];
-        %tmp.179 = getv ? :Math;
-        symbol [ toRadians %tmp.180 554 26 35 ];
-        %tmp.180 = getv function %tmp.179 :toRadians;
-        %tmp.181 = lgetv %dayStart.17;
-        symbol [ dayStart %tmp.181 554 36 44 ];
-        %tmp.182 = lgetv %daySweep.16;
-        symbol [ daySweep %tmp.182 554 47 55 ];
-        %tmp.183 = add %tmp.181 %tmp.182;
-        %tmp.184 = invoke %tmp.179 %tmp.180(%tmp.183);
-        lputv %radEnd.19 %tmp.184;
-        symbol [ radEnd %radEnd.19 554 12 18 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 555 8 ]
-        %tmp.185 = lgetv %dc;
-        symbol [ dc %tmp.185 555 8 10 ];
-        symbol [ fillCircle %tmp.186 555 11 21 ];
-        %tmp.186 = getv function %tmp.185 :fillCircle;
-        %tmp.187 = lgetv %cx;
-        symbol [ cx %tmp.187 555 22 24 ];
-        %tmp.188 = lgetv %midR.4;
-        symbol [ midR %tmp.188 555 27 31 ];
-        symbol [ Math %tmp.190 555 34 38 ];
-        %tmp.190 = getv ? :Math;
-        symbol [ cos %tmp.191 555 39 42 ];
-        %tmp.191 = getv function %tmp.190 :cos;
-        %tmp.192 = lgetv %radEnd.19;
-        symbol [ radEnd %tmp.192 555 43 49 ];
-        %tmp.193 = invoke %tmp.190 %tmp.191(%tmp.192);
-        %tmp.194 = mul %tmp.188 %tmp.193;
-        %tmp.195 = add %tmp.187 %tmp.194;
-        %tmp.196 = lgetv %cy;
-        symbol [ cy %tmp.196 555 52 54 ];
-        %tmp.197 = lgetv %midR.4;
-        symbol [ midR %tmp.197 555 57 61 ];
-        symbol [ Math %tmp.199 555 64 68 ];
-        %tmp.199 = getv ? :Math;
-        symbol [ sin %tmp.200 555 69 72 ];
-        %tmp.200 = getv function %tmp.199 :sin;
-        %tmp.201 = lgetv %radEnd.19;
-        symbol [ radEnd %tmp.201 555 73 79 ];
-        %tmp.202 = invoke %tmp.199 %tmp.200(%tmp.201);
-        %tmp.203 = mul %tmp.197 %tmp.202;
-        %tmp.204 = sub %tmp.196 %tmp.203;
-        %tmp.205 = lgetv %capR.5;
-        symbol [ capR %tmp.205 555 82 86 ];
-        invoke %tmp.185 %tmp.186(%tmp.195, %tmp.204, %tmp.205);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 558 8 ]
-        %tmp.206 = lgetv %dc;
-        symbol [ dc %tmp.206 558 8 10 ];
-        symbol [ setColor %tmp.207 558 11 19 ];
-        %tmp.207 = getv function %tmp.206 :setColor;
-        symbol [ Graphics %tmp.208 558 20 28 ];
-        %tmp.208 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.209 558 29 40 ];
-        %tmp.209 = getv %tmp.208 :COLOR_BLACK;
-        symbol [ Graphics %tmp.210 558 42 50 ];
-        %tmp.210 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.211 558 51 68 ];
-        %tmp.211 = getv %tmp.210 :COLOR_TRANSPARENT;
-        invoke %tmp.206 %tmp.207(%tmp.209, %tmp.211);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 559 8 ]
-        %tmp.212 = lgetv %dc;
-        symbol [ dc %tmp.212 559 8 10 ];
-        symbol [ setPenWidth %tmp.213 559 11 22 ];
-        %tmp.213 = getv function %tmp.212 :setPenWidth;
-        %tmp.214 = 1;
-        invoke %tmp.212 %tmp.213(%tmp.214);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 560 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %radDiv.20 = local;
-        symbol [ radDiv %radDiv.20 560 12 18 ];
-        symbol [ Math %tmp.216 560 21 25 ];
-        %tmp.216 = getv ? :Math;
-        symbol [ toRadians %tmp.217 560 26 35 ];
-        %tmp.217 = getv function %tmp.216 :toRadians;
-        %tmp.218 = lgetv %dayStart.17;
-        symbol [ dayStart %tmp.218 560 36 44 ];
-        %tmp.219 = invoke %tmp.216 %tmp.217(%tmp.218);
-        lputv %radDiv.20 %tmp.219;
-        symbol [ radDiv %radDiv.20 560 12 18 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 561 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %x1.21 = local;
-        symbol [ x1 %x1.21 561 12 14 ];
-        %tmp.220 = lgetv %cx;
-        symbol [ cx %tmp.220 561 17 19 ];
-        %tmp.221 = lgetv %innerR.3;
-        symbol [ innerR %tmp.221 561 23 29 ];
-        symbol [ Math %tmp.223 561 33 37 ];
-        %tmp.223 = getv ? :Math;
-        symbol [ cos %tmp.224 561 38 41 ];
-        %tmp.224 = getv function %tmp.223 :cos;
-        %tmp.225 = lgetv %radDiv.20;
-        symbol [ radDiv %tmp.225 561 42 48 ];
-        %tmp.226 = invoke %tmp.223 %tmp.224(%tmp.225);
-        %tmp.227 = mul %tmp.221 %tmp.226;
-        %tmp.228 = add %tmp.220 %tmp.227;
-        lputv %x1.21 %tmp.228;
-        symbol [ x1 %x1.21 561 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 562 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %y1.22 = local;
-        symbol [ y1 %y1.22 562 12 14 ];
-        %tmp.229 = lgetv %cy;
-        symbol [ cy %tmp.229 562 17 19 ];
-        %tmp.230 = lgetv %innerR.3;
-        symbol [ innerR %tmp.230 562 23 29 ];
-        symbol [ Math %tmp.232 562 33 37 ];
-        %tmp.232 = getv ? :Math;
-        symbol [ sin %tmp.233 562 38 41 ];
-        %tmp.233 = getv function %tmp.232 :sin;
-        %tmp.234 = lgetv %radDiv.20;
-        symbol [ radDiv %tmp.234 562 42 48 ];
-        %tmp.235 = invoke %tmp.232 %tmp.233(%tmp.234);
-        %tmp.236 = mul %tmp.230 %tmp.235;
-        %tmp.237 = sub %tmp.229 %tmp.236;
-        lputv %y1.22 %tmp.237;
-        symbol [ y1 %y1.22 562 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 563 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %x2.23 = local;
-        symbol [ x2 %x2.23 563 12 14 ];
-        %tmp.238 = lgetv %cx;
-        symbol [ cx %tmp.238 563 17 19 ];
-        %tmp.239 = lgetv %outerR.1;
-        symbol [ outerR %tmp.239 563 23 29 ];
-        symbol [ Math %tmp.241 563 33 37 ];
-        %tmp.241 = getv ? :Math;
-        symbol [ cos %tmp.242 563 38 41 ];
-        %tmp.242 = getv function %tmp.241 :cos;
-        %tmp.243 = lgetv %radDiv.20;
-        symbol [ radDiv %tmp.243 563 42 48 ];
-        %tmp.244 = invoke %tmp.241 %tmp.242(%tmp.243);
-        %tmp.245 = mul %tmp.239 %tmp.244;
-        %tmp.246 = add %tmp.238 %tmp.245;
-        lputv %x2.23 %tmp.246;
-        symbol [ x2 %x2.23 563 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 564 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop" ]
-        %y2.24 = local;
-        symbol [ y2 %y2.24 564 12 14 ];
-        %tmp.247 = lgetv %cy;
-        symbol [ cy %tmp.247 564 17 19 ];
-        %tmp.248 = lgetv %outerR.1;
-        symbol [ outerR %tmp.248 564 23 29 ];
-        symbol [ Math %tmp.250 564 33 37 ];
-        %tmp.250 = getv ? :Math;
-        symbol [ sin %tmp.251 564 38 41 ];
-        %tmp.251 = getv function %tmp.250 :sin;
-        %tmp.252 = lgetv %radDiv.20;
-        symbol [ radDiv %tmp.252 564 42 48 ];
-        %tmp.253 = invoke %tmp.250 %tmp.251(%tmp.252);
-        %tmp.254 = mul %tmp.248 %tmp.253;
-        %tmp.255 = sub %tmp.247 %tmp.254;
-        lputv %y2.24 %tmp.255;
-        symbol [ y2 %y2.24 564 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 565 8 ]
-        %tmp.256 = lgetv %dc;
-        symbol [ dc %tmp.256 565 8 10 ];
-        symbol [ drawLine %tmp.257 565 11 19 ];
-        %tmp.257 = getv function %tmp.256 :drawLine;
-        %tmp.258 = lgetv %x1.21;
-        symbol [ x1 %tmp.258 565 20 22 ];
-        %tmp.259 = lgetv %y1.22;
-        symbol [ y1 %tmp.259 565 24 26 ];
-        %tmp.260 = lgetv %x2.23;
-        symbol [ x2 %tmp.260 565 28 30 ];
-        %tmp.261 = lgetv %y2.24;
-        symbol [ y2 %tmp.261 565 32 34 ];
-        invoke %tmp.256 %tmp.257(%tmp.258, %tmp.259, %tmp.260, %tmp.261);
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_487_101_566_4_stop:
+        %tmp.1 = lgetv %deg;
+        symbol [ deg %tmp.1 491 15 18 ];
+        symbol [ Math %tmp.3 491 21 25 ];
+        %tmp.3 = getv ? :Math;
+        symbol [ PI %tmp.4 491 26 28 ];
+        %tmp.4 = getv %tmp.3 :PI;
+        %tmp.5 = mul %tmp.1 %tmp.4;
+        %tmp.6 = 180.0;
+        %tmp.7 = div %tmp.5 %tmp.6;
+        ret %tmp.7;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_490_24_492_4_stop:
     }
-    [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 604; @symbol_functiondef = [drawFontSamples,604,13,28]; @symbol_param<0> = [dc,604,29,31]; @symbol_param<0>_type<0> = [Dc,604,35,37]; @symbol_param<1> = [radius,604,39,45]; @symbol_param<1>_type<0> = [Number,604,49,55]; ]
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 494; @symbol_functiondef = [drawActiveMinutesWidget,494,13,36]; @symbol_param<0> = [dc,494,37,39]; @symbol_param<0>_type<0> = [Dc,494,43,45]; @symbol_param<1> = [cx,494,47,49]; @symbol_param<1>_type<0> = [Number,494,53,59]; @symbol_param<2> = [cy,494,61,63]; @symbol_param<2>_type<0> = [Number,494,67,73]; @symbol_param<3> = [radius,494,75,81]; @symbol_param<3>_type<0> = [Number,494,85,91]; ]
+    function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 497 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_8_499_8_if_stmt:
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 497 12 14 ];
+        %tmp.3 = const :setAntiAlias;
+        symbol [ setAntiAlias %tmp.3 497 20 32 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_8_499_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_8_499_8_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_34_499_8_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 498 12 ]
+        %tmp.5 = lgetv %dc;
+        symbol [ dc %tmp.5 498 12 14 ];
+        %tmp.6 = as %tmp.5 { (interface { var setAntiAlias; }) };
+        symbol [ setAntiAlias %tmp.7 498 15 27 ];
+        %tmp.7 = getv function %tmp.6 :setAntiAlias;
+        %tmp.8 = true;
+        invoke %tmp.6 %tmp.7(%tmp.8);
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_34_499_8_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_8_499_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_497_8_499_8_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 501 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %thickness.1 = local;
+        symbol [ thickness %thickness.1 501 12 21 ];
+        %tmp.9 = 14;
+        lputv %thickness.1 %tmp.9;
+        symbol [ thickness %thickness.1 501 12 21 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 502 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %outerR.2 = local;
+        symbol [ outerR %outerR.2 502 12 18 ];
+        %tmp.10 = lgetv %radius;
+        symbol [ radius %tmp.10 502 21 27 ];
+        %tmp.11 = 25;
+        %tmp.12 = sub %tmp.10 %tmp.11;
+        lputv %outerR.2 %tmp.12;
+        symbol [ outerR %outerR.2 502 12 18 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 503 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %midR.3 = local;
+        symbol [ midR %midR.3 503 12 16 ];
+        %tmp.13 = lgetv %outerR.2;
+        symbol [ outerR %tmp.13 503 19 25 ];
+        %tmp.14 = lgetv %thickness.1;
+        symbol [ thickness %tmp.14 503 29 38 ];
+        %tmp.15 = 2.0;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = sub %tmp.13 %tmp.16;
+        lputv %midR.3 %tmp.17;
+        symbol [ midR %midR.3 503 12 16 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 504 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %capR.4 = local;
+        symbol [ capR %capR.4 504 12 16 ];
+        %tmp.18 = lgetv %thickness.1;
+        symbol [ thickness %tmp.18 504 19 28 ];
+        %tmp.19 = 2.0;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        %tmp.21 = 1.5;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        lputv %capR.4 %tmp.22;
+        symbol [ capR %capR.4 504 12 16 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 507 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %startDeg.5 = local;
+        symbol [ startDeg %startDeg.5 507 12 20 ];
+        %tmp.23 = -115.0;
+        lputv %startDeg.5 %tmp.23;
+        symbol [ startDeg %startDeg.5 507 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 508 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %totalSweep.6 = local;
+        symbol [ totalSweep %totalSweep.6 508 12 22 ];
+        %tmp.24 = 50.0;
+        lputv %totalSweep.6 %tmp.24;
+        symbol [ totalSweep %totalSweep.6 508 12 22 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 511 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %gapDeg.7 = local;
+        symbol [ gapDeg %gapDeg.7 511 12 18 ];
+        %tmp.25 = 1.5;
+        lputv %gapDeg.7 %tmp.25;
+        symbol [ gapDeg %gapDeg.7 511 12 18 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 514 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %activeDay.8 = local;
+        symbol [ activeDay %activeDay.8 514 12 21 ];
+        %tmp.26 = 120.0;
+        lputv %activeDay.8 %tmp.26;
+        symbol [ activeDay %activeDay.8 514 12 21 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 515 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %activeWeek.9 = local;
+        symbol [ activeWeek %activeWeek.9 515 12 22 ];
+        %tmp.27 = 455.0;
+        lputv %activeWeek.9 %tmp.27;
+        symbol [ activeWeek %activeWeek.9 515 12 22 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 516 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %weekGoal.10 = local;
+        symbol [ weekGoal %weekGoal.10 516 12 20 ];
+        %tmp.28 = 900.0;
+        lputv %weekGoal.10 %tmp.28;
+        symbol [ weekGoal %weekGoal.10 516 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 526 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_8_526_48_if_stmt:
+        %tmp.29 = lgetv %weekGoal.10;
+        symbol [ weekGoal %tmp.29 526 12 20 ];
+        %tmp.30 = 1.0;
+        %tmp.31 = lt %tmp.29 %tmp.30;
+        bf %tmp.31 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_8_526_48_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_8_526_48_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_28_526_48_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 526 30 ]
+        %tmp.32 = 150.0;
+        lputv %weekGoal.10 %tmp.32;
+        symbol [ weekGoal %weekGoal.10 526 30 38 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_28_526_48_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_8_526_48_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_526_8_526_48_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 529 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %weekFrac.11 = local;
+        symbol [ weekFrac %weekFrac.11 529 12 20 ];
+        %tmp.33 = lgetv %activeWeek.9;
+        symbol [ activeWeek %tmp.33 529 23 33 ];
+        %tmp.34 = lgetv %weekGoal.10;
+        symbol [ weekGoal %tmp.34 529 36 44 ];
+        %tmp.35 = div %tmp.33 %tmp.34;
+        lputv %weekFrac.11 %tmp.35;
+        symbol [ weekFrac %weekFrac.11 529 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 530 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_8_530_46_if_stmt:
+        %tmp.36 = lgetv %weekFrac.11;
+        symbol [ weekFrac %tmp.36 530 12 20 ];
+        %tmp.37 = 1.0;
+        %tmp.38 = gt %tmp.36 %tmp.37;
+        bf %tmp.38 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_8_530_46_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_8_530_46_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_28_530_46_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 530 30 ]
+        %tmp.39 = 1.0;
+        lputv %weekFrac.11 %tmp.39;
+        symbol [ weekFrac %weekFrac.11 530 30 38 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_28_530_46_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_8_530_46_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_530_8_530_46_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 532 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %dayFrac.12 = local;
+        symbol [ dayFrac %dayFrac.12 532 12 19 ];
+        %tmp.40 = lgetv %activeDay.8;
+        symbol [ activeDay %tmp.40 532 22 31 ];
+        %tmp.41 = lgetv %weekGoal.10;
+        symbol [ weekGoal %tmp.41 532 34 42 ];
+        %tmp.42 = div %tmp.40 %tmp.41;
+        lputv %dayFrac.12 %tmp.42;
+        symbol [ dayFrac %dayFrac.12 532 12 19 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 533 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_8_533_44_if_stmt:
+        %tmp.43 = lgetv %dayFrac.12;
+        symbol [ dayFrac %tmp.43 533 12 19 ];
+        %tmp.44 = 1.0;
+        %tmp.45 = gt %tmp.43 %tmp.44;
+        bf %tmp.45 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_8_533_44_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_8_533_44_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_27_533_44_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 533 29 ]
+        %tmp.46 = 1.0;
+        lputv %dayFrac.12 %tmp.46;
+        symbol [ dayFrac %dayFrac.12 533 29 36 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_27_533_44_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_8_533_44_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_533_8_533_44_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 536 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_8_536_54_if_stmt:
+        %tmp.47 = lgetv %weekFrac.11;
+        symbol [ weekFrac %tmp.47 536 12 20 ];
+        %tmp.48 = lgetv %dayFrac.12;
+        symbol [ dayFrac %tmp.48 536 23 30 ];
+        %tmp.49 = lt %tmp.47 %tmp.48;
+        bf %tmp.49 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_8_536_54_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_8_536_54_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_32_536_54_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 536 34 ]
+        %tmp.50 = lgetv %dayFrac.12;
+        symbol [ dayFrac %tmp.50 536 45 52 ];
+        lputv %weekFrac.11 %tmp.50;
+        symbol [ weekFrac %weekFrac.11 536 34 42 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_32_536_54_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_8_536_54_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_536_8_536_54_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 538 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %weekSweep.13 = local;
+        symbol [ weekSweep %weekSweep.13 538 12 21 ];
+        %tmp.51 = lgetv %totalSweep.6;
+        symbol [ totalSweep %tmp.51 538 24 34 ];
+        %tmp.52 = lgetv %weekFrac.11;
+        symbol [ weekFrac %tmp.52 538 37 45 ];
+        %tmp.53 = mul %tmp.51 %tmp.52;
+        lputv %weekSweep.13 %tmp.53;
+        symbol [ weekSweep %weekSweep.13 538 12 21 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 539 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %daySweep.14 = local;
+        symbol [ daySweep %daySweep.14 539 12 20 ];
+        %tmp.54 = lgetv %totalSweep.6;
+        symbol [ totalSweep %tmp.54 539 23 33 ];
+        %tmp.55 = lgetv %dayFrac.12;
+        symbol [ dayFrac %tmp.55 539 36 43 ];
+        %tmp.56 = mul %tmp.54 %tmp.55;
+        lputv %daySweep.14 %tmp.56;
+        symbol [ daySweep %daySweep.14 539 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 543 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %endDeg.15 = local;
+        symbol [ endDeg %endDeg.15 543 12 18 ];
+        %tmp.57 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.57 543 21 29 ];
+        %tmp.58 = lgetv %weekSweep.13;
+        symbol [ weekSweep %tmp.58 543 32 41 ];
+        %tmp.59 = add %tmp.57 %tmp.58;
+        lputv %endDeg.15 %tmp.59;
+        symbol [ endDeg %endDeg.15 543 12 18 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 544 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %splitDeg.16 = local;
+        symbol [ splitDeg %splitDeg.16 544 12 20 ];
+        %tmp.60 = lgetv %endDeg.15;
+        symbol [ endDeg %tmp.60 544 23 29 ];
+        %tmp.61 = lgetv %daySweep.14;
+        symbol [ daySweep %tmp.61 544 32 40 ];
+        %tmp.62 = sub %tmp.60 %tmp.61;
+        lputv %splitDeg.16 %tmp.62;
+        symbol [ splitDeg %splitDeg.16 544 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 546 8 ]
+        %tmp.63 = lgetv %dc;
+        symbol [ dc %tmp.63 546 8 10 ];
+        symbol [ setPenWidth %tmp.64 546 11 22 ];
+        %tmp.64 = getv function %tmp.63 :setPenWidth;
+        %tmp.65 = lgetv %thickness.1;
+        symbol [ thickness %tmp.65 546 23 32 ];
+        invoke %tmp.63 %tmp.64(%tmp.65);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 553 8 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 553 8 10 ];
+        symbol [ setColor %tmp.67 553 11 19 ];
+        %tmp.67 = getv function %tmp.66 :setColor;
+        symbol [ Graphics %tmp.68 553 20 28 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.69 553 29 42 ];
+        %tmp.69 = getv %tmp.68 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.70 553 44 52 ];
+        %tmp.70 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.71 553 53 70 ];
+        %tmp.71 = getv %tmp.70 :COLOR_TRANSPARENT;
+        invoke %tmp.66 %tmp.67(%tmp.69, %tmp.71);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 554 8 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 554 8 10 ];
+        symbol [ drawArc %tmp.73 554 11 18 ];
+        %tmp.73 = getv function %tmp.72 :drawArc;
+        %tmp.74 = lgetv %cx;
+        symbol [ cx %tmp.74 554 19 21 ];
+        %tmp.75 = lgetv %cy;
+        symbol [ cy %tmp.75 554 23 25 ];
+        %tmp.76 = lgetv %midR.3;
+        symbol [ midR %tmp.76 554 27 31 ];
+        symbol [ Graphics %tmp.77 554 33 41 ];
+        %tmp.77 = getm $.Toybox.Graphics;
+        symbol [ ARC_COUNTER_CLOCKWISE %tmp.78 554 42 63 ];
+        %tmp.78 = getv %tmp.77 :ARC_COUNTER_CLOCKWISE;
+        %tmp.79 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.79 554 65 73 ];
+        %tmp.80 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.80 554 75 83 ];
+        %tmp.81 = lgetv %totalSweep.6;
+        symbol [ totalSweep %tmp.81 554 86 96 ];
+        %tmp.82 = add %tmp.80 %tmp.81;
+        invoke %tmp.72 %tmp.73(%tmp.74, %tmp.75, %tmp.76, %tmp.78, %tmp.79, %tmp.82);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 557 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop" ]
+        %radBgEnd.17 = local;
+        symbol [ radBgEnd %radBgEnd.17 557 12 20 ];
+        symbol [ Math %tmp.84 557 23 27 ];
+        %tmp.84 = getv ? :Math;
+        symbol [ toRadians %tmp.85 557 28 37 ];
+        %tmp.85 = getv function %tmp.84 :toRadians;
+        %tmp.86 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.86 557 38 46 ];
+        %tmp.87 = lgetv %totalSweep.6;
+        symbol [ totalSweep %tmp.87 557 49 59 ];
+        %tmp.88 = add %tmp.86 %tmp.87;
+        %tmp.89 = invoke %tmp.84 %tmp.85(%tmp.88);
+        lputv %radBgEnd.17 %tmp.89;
+        symbol [ radBgEnd %radBgEnd.17 557 12 20 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 558 8 ]
+        %tmp.90 = lgetv %dc;
+        symbol [ dc %tmp.90 558 8 10 ];
+        symbol [ fillCircle %tmp.91 558 11 21 ];
+        %tmp.91 = getv function %tmp.90 :fillCircle;
+        %tmp.92 = lgetv %cx;
+        symbol [ cx %tmp.92 558 22 24 ];
+        %tmp.93 = lgetv %midR.3;
+        symbol [ midR %tmp.93 558 27 31 ];
+        symbol [ Math %tmp.95 558 34 38 ];
+        %tmp.95 = getv ? :Math;
+        symbol [ cos %tmp.96 558 39 42 ];
+        %tmp.96 = getv function %tmp.95 :cos;
+        %tmp.97 = lgetv %radBgEnd.17;
+        symbol [ radBgEnd %tmp.97 558 43 51 ];
+        %tmp.98 = invoke %tmp.95 %tmp.96(%tmp.97);
+        %tmp.99 = mul %tmp.93 %tmp.98;
+        %tmp.100 = add %tmp.92 %tmp.99;
+        %tmp.101 = lgetv %cy;
+        symbol [ cy %tmp.101 558 54 56 ];
+        %tmp.102 = lgetv %midR.3;
+        symbol [ midR %tmp.102 558 59 63 ];
+        symbol [ Math %tmp.104 558 66 70 ];
+        %tmp.104 = getv ? :Math;
+        symbol [ sin %tmp.105 558 71 74 ];
+        %tmp.105 = getv function %tmp.104 :sin;
+        %tmp.106 = lgetv %radBgEnd.17;
+        symbol [ radBgEnd %tmp.106 558 75 83 ];
+        %tmp.107 = invoke %tmp.104 %tmp.105(%tmp.106);
+        %tmp.108 = mul %tmp.102 %tmp.107;
+        %tmp.109 = sub %tmp.101 %tmp.108;
+        %tmp.110 = lgetv %capR.4;
+        symbol [ capR %tmp.110 558 86 90 ];
+        invoke %tmp.90 %tmp.91(%tmp.100, %tmp.109, %tmp.110);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 563 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_8_571_8_if_stmt:
+        %tmp.111 = lgetv %weekSweep.13;
+        symbol [ weekSweep %tmp.111 563 13 22 ];
+        %tmp.112 = lgetv %daySweep.14;
+        symbol [ daySweep %tmp.112 563 25 33 ];
+        %tmp.113 = sub %tmp.111 %tmp.112;
+        %tmp.114 = lgetv %gapDeg.7;
+        symbol [ gapDeg %tmp.114 563 37 43 ];
+        %tmp.115 = gt %tmp.113 %tmp.114;
+        bf %tmp.115 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_8_571_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_8_571_8_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_45_571_8_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 564 12 ]
+        %tmp.116 = lgetv %dc;
+        symbol [ dc %tmp.116 564 12 14 ];
+        symbol [ setColor %tmp.117 564 15 23 ];
+        %tmp.117 = getv function %tmp.116 :setColor;
+        symbol [ Graphics %tmp.118 564 24 32 ];
+        %tmp.118 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_BLUE %tmp.119 564 33 46 ];
+        %tmp.119 = getv %tmp.118 :COLOR_DK_BLUE;
+        symbol [ Graphics %tmp.120 564 48 56 ];
+        %tmp.120 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.121 564 57 74 ];
+        %tmp.121 = getv %tmp.120 :COLOR_TRANSPARENT;
+        invoke %tmp.116 %tmp.117(%tmp.119, %tmp.121);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 566 12 ]
+        %tmp.122 = lgetv %dc;
+        symbol [ dc %tmp.122 566 12 14 ];
+        symbol [ drawArc %tmp.123 566 15 22 ];
+        %tmp.123 = getv function %tmp.122 :drawArc;
+        %tmp.124 = lgetv %cx;
+        symbol [ cx %tmp.124 566 23 25 ];
+        %tmp.125 = lgetv %cy;
+        symbol [ cy %tmp.125 566 27 29 ];
+        %tmp.126 = lgetv %midR.3;
+        symbol [ midR %tmp.126 566 31 35 ];
+        symbol [ Graphics %tmp.127 566 37 45 ];
+        %tmp.127 = getm $.Toybox.Graphics;
+        symbol [ ARC_COUNTER_CLOCKWISE %tmp.128 566 46 67 ];
+        %tmp.128 = getv %tmp.127 :ARC_COUNTER_CLOCKWISE;
+        %tmp.129 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.129 566 69 77 ];
+        %tmp.130 = lgetv %splitDeg.16;
+        symbol [ splitDeg %tmp.130 566 79 87 ];
+        %tmp.131 = lgetv %gapDeg.7;
+        symbol [ gapDeg %tmp.131 566 90 96 ];
+        %tmp.132 = sub %tmp.130 %tmp.131;
+        invoke %tmp.122 %tmp.123(%tmp.124, %tmp.125, %tmp.126, %tmp.128, %tmp.129, %tmp.132);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 569 12 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_45_571_8_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_45_571_8_stop" ]
+        %radStart.18 = local;
+        symbol [ radStart %radStart.18 569 16 24 ];
+        %tmp.133 = self;
+        symbol [ toRad %tmp.134 569 27 32 ];
+        %tmp.134 = getv function %tmp.133 :toRad;
+        %tmp.135 = lgetv %startDeg.5;
+        symbol [ startDeg %tmp.135 569 33 41 ];
+        %tmp.136 = invoke %tmp.133 %tmp.134(%tmp.135);
+        lputv %radStart.18 %tmp.136;
+        symbol [ radStart %radStart.18 569 16 24 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 570 12 ]
+        %tmp.137 = lgetv %dc;
+        symbol [ dc %tmp.137 570 12 14 ];
+        symbol [ fillCircle %tmp.138 570 15 25 ];
+        %tmp.138 = getv function %tmp.137 :fillCircle;
+        %tmp.139 = lgetv %cx;
+        symbol [ cx %tmp.139 570 26 28 ];
+        %tmp.140 = lgetv %midR.3;
+        symbol [ midR %tmp.140 570 31 35 ];
+        symbol [ Math %tmp.142 570 38 42 ];
+        %tmp.142 = getv ? :Math;
+        symbol [ cos %tmp.143 570 43 46 ];
+        %tmp.143 = getv function %tmp.142 :cos;
+        %tmp.144 = lgetv %radStart.18;
+        symbol [ radStart %tmp.144 570 47 55 ];
+        %tmp.145 = invoke %tmp.142 %tmp.143(%tmp.144);
+        %tmp.146 = mul %tmp.140 %tmp.145;
+        %tmp.147 = add %tmp.139 %tmp.146;
+        %tmp.148 = lgetv %cy;
+        symbol [ cy %tmp.148 570 58 60 ];
+        %tmp.149 = lgetv %midR.3;
+        symbol [ midR %tmp.149 570 63 67 ];
+        symbol [ Math %tmp.151 570 70 74 ];
+        %tmp.151 = getv ? :Math;
+        symbol [ sin %tmp.152 570 75 78 ];
+        %tmp.152 = getv function %tmp.151 :sin;
+        %tmp.153 = lgetv %radStart.18;
+        symbol [ radStart %tmp.153 570 79 87 ];
+        %tmp.154 = invoke %tmp.151 %tmp.152(%tmp.153);
+        %tmp.155 = mul %tmp.149 %tmp.154;
+        %tmp.156 = sub %tmp.148 %tmp.155;
+        %tmp.157 = lgetv %capR.4;
+        symbol [ capR %tmp.157 570 90 94 ];
+        invoke %tmp.137 %tmp.138(%tmp.147, %tmp.156, %tmp.157);
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_45_571_8_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_8_571_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_563_8_571_8_if_end:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 574 8 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_8_588_8_if_stmt:
+        %tmp.158 = lgetv %daySweep.14;
+        symbol [ daySweep %tmp.158 574 12 20 ];
+        %tmp.159 = 0;
+        %tmp.160 = gt %tmp.158 %tmp.159;
+        bf %tmp.160 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_8_588_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_8_588_8_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_26_588_8_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 575 12 ]
+        %tmp.161 = lgetv %dc;
+        symbol [ dc %tmp.161 575 12 14 ];
+        symbol [ setColor %tmp.162 575 15 23 ];
+        %tmp.162 = getv function %tmp.161 :setColor;
+        symbol [ Graphics %tmp.163 575 24 32 ];
+        %tmp.163 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.164 575 33 43 ];
+        %tmp.164 = getv %tmp.163 :COLOR_BLUE;
+        symbol [ Graphics %tmp.165 575 45 53 ];
+        %tmp.165 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.166 575 54 71 ];
+        %tmp.166 = getv %tmp.165 :COLOR_TRANSPARENT;
+        invoke %tmp.161 %tmp.162(%tmp.164, %tmp.166);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 577 12 ]
+        %tmp.167 = lgetv %dc;
+        symbol [ dc %tmp.167 577 12 14 ];
+        symbol [ drawArc %tmp.168 577 15 22 ];
+        %tmp.168 = getv function %tmp.167 :drawArc;
+        %tmp.169 = lgetv %cx;
+        symbol [ cx %tmp.169 577 23 25 ];
+        %tmp.170 = lgetv %cy;
+        symbol [ cy %tmp.170 577 27 29 ];
+        %tmp.171 = lgetv %midR.3;
+        symbol [ midR %tmp.171 577 31 35 ];
+        symbol [ Graphics %tmp.172 577 37 45 ];
+        %tmp.172 = getm $.Toybox.Graphics;
+        symbol [ ARC_COUNTER_CLOCKWISE %tmp.173 577 46 67 ];
+        %tmp.173 = getv %tmp.172 :ARC_COUNTER_CLOCKWISE;
+        %tmp.174 = lgetv %splitDeg.16;
+        symbol [ splitDeg %tmp.174 577 69 77 ];
+        %tmp.175 = lgetv %endDeg.15;
+        symbol [ endDeg %tmp.175 577 79 85 ];
+        invoke %tmp.167 %tmp.168(%tmp.169, %tmp.170, %tmp.171, %tmp.173, %tmp.174, %tmp.175);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 580 12 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_26_588_8_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_26_588_8_stop" ]
+        %radEnd.19 = local;
+        symbol [ radEnd %radEnd.19 580 16 22 ];
+        %tmp.176 = self;
+        symbol [ toRad %tmp.177 580 25 30 ];
+        %tmp.177 = getv function %tmp.176 :toRad;
+        %tmp.178 = lgetv %endDeg.15;
+        symbol [ endDeg %tmp.178 580 31 37 ];
+        %tmp.179 = invoke %tmp.176 %tmp.177(%tmp.178);
+        lputv %radEnd.19 %tmp.179;
+        symbol [ radEnd %radEnd.19 580 16 22 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 581 12 ]
+        %tmp.180 = lgetv %dc;
+        symbol [ dc %tmp.180 581 12 14 ];
+        symbol [ fillCircle %tmp.181 581 15 25 ];
+        %tmp.181 = getv function %tmp.180 :fillCircle;
+        %tmp.182 = lgetv %cx;
+        symbol [ cx %tmp.182 581 26 28 ];
+        %tmp.183 = lgetv %midR.3;
+        symbol [ midR %tmp.183 581 31 35 ];
+        symbol [ Math %tmp.185 581 38 42 ];
+        %tmp.185 = getv ? :Math;
+        symbol [ cos %tmp.186 581 43 46 ];
+        %tmp.186 = getv function %tmp.185 :cos;
+        %tmp.187 = lgetv %radEnd.19;
+        symbol [ radEnd %tmp.187 581 47 53 ];
+        %tmp.188 = invoke %tmp.185 %tmp.186(%tmp.187);
+        %tmp.189 = mul %tmp.183 %tmp.188;
+        %tmp.190 = add %tmp.182 %tmp.189;
+        %tmp.191 = lgetv %cy;
+        symbol [ cy %tmp.191 581 56 58 ];
+        %tmp.192 = lgetv %midR.3;
+        symbol [ midR %tmp.192 581 61 65 ];
+        symbol [ Math %tmp.194 581 68 72 ];
+        %tmp.194 = getv ? :Math;
+        symbol [ sin %tmp.195 581 73 76 ];
+        %tmp.195 = getv function %tmp.194 :sin;
+        %tmp.196 = lgetv %radEnd.19;
+        symbol [ radEnd %tmp.196 581 77 83 ];
+        %tmp.197 = invoke %tmp.194 %tmp.195(%tmp.196);
+        %tmp.198 = mul %tmp.192 %tmp.197;
+        %tmp.199 = sub %tmp.191 %tmp.198;
+        %tmp.200 = lgetv %capR.4;
+        symbol [ capR %tmp.200 581 86 90 ];
+        invoke %tmp.180 %tmp.181(%tmp.190, %tmp.199, %tmp.200);
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 584 12 ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_12_587_12_if_stmt:
+        %tmp.201 = lgetv %weekSweep.13;
+        symbol [ weekSweep %tmp.201 584 17 26 ];
+        %tmp.202 = lgetv %daySweep.14;
+        symbol [ daySweep %tmp.202 584 29 37 ];
+        %tmp.203 = sub %tmp.201 %tmp.202;
+        %tmp.204 = lgetv %gapDeg.7;
+        symbol [ gapDeg %tmp.204 584 42 48 ];
+        %tmp.205 = lte %tmp.203 %tmp.204;
+        bf %tmp.205 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_12_587_12_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_12_587_12_if_true:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_50_587_12_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 585 16 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_50_587_12_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_50_587_12_stop" ]
+        %radSplit.20 = local;
+        symbol [ radSplit %radSplit.20 585 20 28 ];
+        %tmp.206 = self;
+        symbol [ toRad %tmp.207 585 31 36 ];
+        %tmp.207 = getv function %tmp.206 :toRad;
+        %tmp.208 = lgetv %splitDeg.16;
+        symbol [ splitDeg %tmp.208 585 37 45 ];
+        %tmp.209 = invoke %tmp.206 %tmp.207(%tmp.208);
+        lputv %radSplit.20 %tmp.209;
+        symbol [ radSplit %radSplit.20 585 20 28 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 586 16 ]
+        %tmp.210 = lgetv %dc;
+        symbol [ dc %tmp.210 586 16 18 ];
+        symbol [ fillCircle %tmp.211 586 19 29 ];
+        %tmp.211 = getv function %tmp.210 :fillCircle;
+        %tmp.212 = lgetv %cx;
+        symbol [ cx %tmp.212 586 30 32 ];
+        %tmp.213 = lgetv %midR.3;
+        symbol [ midR %tmp.213 586 35 39 ];
+        symbol [ Math %tmp.215 586 42 46 ];
+        %tmp.215 = getv ? :Math;
+        symbol [ cos %tmp.216 586 47 50 ];
+        %tmp.216 = getv function %tmp.215 :cos;
+        %tmp.217 = lgetv %radSplit.20;
+        symbol [ radSplit %tmp.217 586 51 59 ];
+        %tmp.218 = invoke %tmp.215 %tmp.216(%tmp.217);
+        %tmp.219 = mul %tmp.213 %tmp.218;
+        %tmp.220 = add %tmp.212 %tmp.219;
+        %tmp.221 = lgetv %cy;
+        symbol [ cy %tmp.221 586 62 64 ];
+        %tmp.222 = lgetv %midR.3;
+        symbol [ midR %tmp.222 586 67 71 ];
+        symbol [ Math %tmp.224 586 74 78 ];
+        %tmp.224 = getv ? :Math;
+        symbol [ sin %tmp.225 586 79 82 ];
+        %tmp.225 = getv function %tmp.224 :sin;
+        %tmp.226 = lgetv %radSplit.20;
+        symbol [ radSplit %tmp.226 586 83 91 ];
+        %tmp.227 = invoke %tmp.224 %tmp.225(%tmp.226);
+        %tmp.228 = mul %tmp.222 %tmp.227;
+        %tmp.229 = sub %tmp.221 %tmp.228;
+        %tmp.230 = lgetv %capR.4;
+        symbol [ capR %tmp.230 586 94 98 ];
+        invoke %tmp.210 %tmp.211(%tmp.220, %tmp.229, %tmp.230);
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_50_587_12_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_12_587_12_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_584_12_587_12_if_end:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_26_588_8_stop:
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_8_588_8_if_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_574_8_588_8_if_end:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_494_101_589_4_stop:
+    }
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 627; @symbol_functiondef = [drawFontSamples,627,13,28]; @symbol_param<0> = [dc,627,29,31]; @symbol_param<0>_type<0> = [Dc,627,35,37]; @symbol_param<1> = [radius,627,39,45]; @symbol_param<1>_type<0> = [Number,627,49,55]; ]
     function drawFontSamples(dc as Dc, radius as Number) as Void {
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 605 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_stop" ]
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 628 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_stop" ]
         %y.1 = local;
-        symbol [ y %y.1 605 12 13 ];
+        symbol [ y %y.1 628 12 13 ];
         %tmp.1 = 20;
         lputv %y.1 %tmp.1;
-        symbol [ y %y.1 605 12 13 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 606 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_stop" ]
+        symbol [ y %y.1 628 12 13 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 629 8 ]
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_start" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_stop" ]
         %fonts.2 = local;
-        symbol [ fonts %fonts.2 606 12 17 ];
+        symbol [ fonts %fonts.2 629 12 17 ];
         %tmp.2 = newa 6;
         %tmp.3 = newa 2;
-        symbol [ Graphics %tmp.4 607 13 21 ];
+        symbol [ Graphics %tmp.4 630 13 21 ];
         %tmp.4 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.5 607 22 32 ];
+        symbol [ FONT_XTINY %tmp.5 630 22 32 ];
         %tmp.5 = getv %tmp.4 :FONT_XTINY;
         %tmp.6 = dup %tmp.3;
         %tmp.7 = aputv %tmp.6 0 %tmp.5;
@@ -3920,9 +3844,9 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.11 = dup %tmp.2;
         %tmp.12 = aputv %tmp.11 0 %tmp.10;
         %tmp.13 = newa 2;
-        symbol [ Graphics %tmp.14 608 13 21 ];
+        symbol [ Graphics %tmp.14 631 13 21 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.15 608 22 31 ];
+        symbol [ FONT_TINY %tmp.15 631 22 31 ];
         %tmp.15 = getv %tmp.14 :FONT_TINY;
         %tmp.16 = dup %tmp.13;
         %tmp.17 = aputv %tmp.16 0 %tmp.15;
@@ -3932,9 +3856,9 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.21 = dup %tmp.12;
         %tmp.22 = aputv %tmp.21 1 %tmp.20;
         %tmp.23 = newa 2;
-        symbol [ Graphics %tmp.24 609 13 21 ];
+        symbol [ Graphics %tmp.24 632 13 21 ];
         %tmp.24 = getm $.Toybox.Graphics;
-        symbol [ FONT_SYSTEM_TINY %tmp.25 609 22 38 ];
+        symbol [ FONT_SYSTEM_TINY %tmp.25 632 22 38 ];
         %tmp.25 = getv %tmp.24 :FONT_SYSTEM_TINY;
         %tmp.26 = dup %tmp.23;
         %tmp.27 = aputv %tmp.26 0 %tmp.25;
@@ -3944,9 +3868,9 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.31 = dup %tmp.22;
         %tmp.32 = aputv %tmp.31 2 %tmp.30;
         %tmp.33 = newa 2;
-        symbol [ Graphics %tmp.34 610 13 21 ];
+        symbol [ Graphics %tmp.34 633 13 21 ];
         %tmp.34 = getm $.Toybox.Graphics;
-        symbol [ FONT_GLANCE %tmp.35 610 22 33 ];
+        symbol [ FONT_GLANCE %tmp.35 633 22 33 ];
         %tmp.35 = getv %tmp.34 :FONT_GLANCE;
         %tmp.36 = dup %tmp.33;
         %tmp.37 = aputv %tmp.36 0 %tmp.35;
@@ -3956,9 +3880,9 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.41 = dup %tmp.32;
         %tmp.42 = aputv %tmp.41 3 %tmp.40;
         %tmp.43 = newa 2;
-        symbol [ Graphics %tmp.44 611 13 21 ];
+        symbol [ Graphics %tmp.44 634 13 21 ];
         %tmp.44 = getm $.Toybox.Graphics;
-        symbol [ FONT_GLANCE_NUMBER %tmp.45 611 22 40 ];
+        symbol [ FONT_GLANCE_NUMBER %tmp.45 634 22 40 ];
         %tmp.45 = getv %tmp.44 :FONT_GLANCE_NUMBER;
         %tmp.46 = dup %tmp.43;
         %tmp.47 = aputv %tmp.46 0 %tmp.45;
@@ -3968,9 +3892,9 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.51 = dup %tmp.42;
         %tmp.52 = aputv %tmp.51 4 %tmp.50;
         %tmp.53 = newa 2;
-        symbol [ Graphics %tmp.54 618 13 21 ];
+        symbol [ Graphics %tmp.54 641 13 21 ];
         %tmp.54 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_MILD %tmp.55 618 22 38 ];
+        symbol [ FONT_NUMBER_MILD %tmp.55 641 22 38 ];
         %tmp.55 = getv %tmp.54 :FONT_NUMBER_MILD;
         %tmp.56 = dup %tmp.53;
         %tmp.57 = aputv %tmp.56 0 %tmp.55;
@@ -3980,90 +3904,90 @@ C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_start:
         %tmp.61 = dup %tmp.52;
         %tmp.62 = aputv %tmp.61 5 %tmp.60;
         lputv %fonts.2 %tmp.62;
-        symbol [ fonts %fonts.2 606 12 17 ];
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 623 8 ]
+        symbol [ fonts %fonts.2 629 12 17 ];
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 646 8 ]
         %tmp.63 = lgetv %dc;
-        symbol [ dc %tmp.63 623 8 10 ];
-        symbol [ setColor %tmp.64 623 11 19 ];
+        symbol [ dc %tmp.63 646 8 10 ];
+        symbol [ setColor %tmp.64 646 11 19 ];
         %tmp.64 = getv function %tmp.63 :setColor;
-        symbol [ Graphics %tmp.65 623 20 28 ];
+        symbol [ Graphics %tmp.65 646 20 28 ];
         %tmp.65 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.66 623 29 40 ];
+        symbol [ COLOR_WHITE %tmp.66 646 29 40 ];
         %tmp.66 = getv %tmp.65 :COLOR_WHITE;
-        symbol [ Graphics %tmp.67 623 42 50 ];
+        symbol [ Graphics %tmp.67 646 42 50 ];
         %tmp.67 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.68 623 51 62 ];
+        symbol [ COLOR_BLACK %tmp.68 646 51 62 ];
         %tmp.68 = getv %tmp.67 :COLOR_BLACK;
         invoke %tmp.63 %tmp.64(%tmp.66, %tmp.68);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 625 8 ]
-        for @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_test @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_incr @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_init:
-        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_begin" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_end" ]
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 648 8 ]
+        for @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_test @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_incr @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_init:
+        [ "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_begin" "C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_end" ]
         %i.3 = local;
-        symbol [ i %i.3 625 17 18 ];
+        symbol [ i %i.3 648 17 18 ];
         %tmp.69 = 0;
         lputv %i.3 %tmp.69;
-        symbol [ i %i.3 625 17 18 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_test:
+        symbol [ i %i.3 648 17 18 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_test:
         %tmp.70 = lgetv %i.3;
-        symbol [ i %tmp.70 625 24 25 ];
+        symbol [ i %tmp.70 648 24 25 ];
         %tmp.71 = lgetv %fonts.2;
-        symbol [ fonts %tmp.71 625 28 33 ];
-        symbol [ size %tmp.72 625 34 38 ];
+        symbol [ fonts %tmp.71 648 28 33 ];
+        symbol [ size %tmp.72 648 34 38 ];
         %tmp.72 = getv function %tmp.71 :size;
         %tmp.73 = invoke %tmp.71 %tmp.72();
         %tmp.74 = lt %tmp.70 %tmp.73;
-        bf %tmp.74 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_end;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_begin:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_47_628_8_start:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 626 12 ]
+        bf %tmp.74 @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_end;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_begin:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_47_651_8_start:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 649 12 ]
         %tmp.75 = lgetv %dc;
-        symbol [ dc %tmp.75 626 12 14 ];
-        symbol [ drawText %tmp.76 626 15 23 ];
+        symbol [ dc %tmp.75 649 12 14 ];
+        symbol [ drawText %tmp.76 649 15 23 ];
         %tmp.76 = getv function %tmp.75 :drawText;
         %tmp.77 = lgetv %radius;
-        symbol [ radius %tmp.77 626 24 30 ];
+        symbol [ radius %tmp.77 649 24 30 ];
         %tmp.78 = 1;
         %tmp.79 = mul %tmp.77 %tmp.78;
         %tmp.80 = lgetv %y.1;
-        symbol [ y %tmp.80 626 36 37 ];
+        symbol [ y %tmp.80 649 36 37 ];
         %tmp.81 = lgetv %fonts.2;
-        symbol [ fonts %tmp.81 626 39 44 ];
+        symbol [ fonts %tmp.81 649 39 44 ];
         %tmp.82 = lgetv %i.3;
-        symbol [ i %tmp.82 626 45 46 ];
+        symbol [ i %tmp.82 649 45 46 ];
         %tmp.83 = agetv %tmp.81 %tmp.82;
         %tmp.84 = 0;
         %tmp.85 = agetv %tmp.83 %tmp.84;
         %tmp.86 = lgetv %fonts.2;
-        symbol [ fonts %tmp.86 626 52 57 ];
+        symbol [ fonts %tmp.86 649 52 57 ];
         %tmp.87 = lgetv %i.3;
-        symbol [ i %tmp.87 626 58 59 ];
+        symbol [ i %tmp.87 649 58 59 ];
         %tmp.88 = agetv %tmp.86 %tmp.87;
         %tmp.89 = 1;
         %tmp.90 = agetv %tmp.88 %tmp.89;
-        symbol [ Graphics %tmp.91 626 65 73 ];
+        symbol [ Graphics %tmp.91 649 65 73 ];
         %tmp.91 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.92 626 74 93 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.92 649 74 93 ];
         %tmp.92 = getv %tmp.91 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.75 %tmp.76(%tmp.79, %tmp.80, %tmp.85, %tmp.90, %tmp.92);
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 627 12 ]
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 650 12 ]
         %tmp.93 = lgetv %y.1;
-        symbol [ y %tmp.93 627 12 13 ];
+        symbol [ y %tmp.93 650 12 13 ];
         %tmp.94 = 40;
         %tmp.95 = add %tmp.93 %tmp.94;
         lputv %y.1 %tmp.95;
-        symbol [ y %y.1 627 12 13 ];
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_47_628_8_stop:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_incr:
-[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 625 ]
+        symbol [ y %y.1 650 12 13 ];
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_47_651_8_stop:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_incr:
+[ "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc" 648 ]
         %tmp.98 = lgetv %i.3;
-        symbol [ i %tmp.98 625 42 43 ];
+        symbol [ i %tmp.98 648 42 43 ];
         %tmp.99 = add %tmp.98 1;
         lputv %i.3 %tmp.99;
-        symbol [ i %i.3 625 42 43 ];
-        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_test;
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_625_8_628_8_for_end:
-C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_604_65_629_4_stop:
+        symbol [ i %i.3 648 42 43 ];
+        goto @C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_test;
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_648_8_651_8_for_end:
+C__workdir_garmin_MyWatchFace_source_MyWatchFaceView_mc_627_65_652_4_stop:
     }
 }
 [ @file = "C:\workdir\garmin\MyWatchFace\source\MyWatchFaceView.mc"; @line = 1; ]

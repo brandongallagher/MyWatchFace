@@ -484,85 +484,108 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
 
-    function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
-        // 1. Positioning for 2 o'clock to 4 o'clock
-        var outerR = radius - 50; // Increased to move near the edge of the Venu 3 dial
-        var thickness = 10;
-        var innerR = outerR - thickness;
-        var midR = outerR - (thickness / 2.0);
-        var capR = thickness / 2.0;
-        // var midRadius = outerR - (thickness / 2.0);
-        // var innerR = outerR - thickness;
-        
-        // Garmin 0 is at 3 o'clock. 
-        var startDeg = -115; 
-        var totalSweep = 50;
+    
 
+    // Helper to keep code clean
+    function toRad(deg) {
+        return deg * Math.PI / 180.0;
+    }
+
+    function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
+        // 1. Setup & Config
+        // ENABLE ANTI-ALIASING: Critical for Venu 3
+        if (dc has :setAntiAlias) {
+            dc.setAntiAlias(true);
+        }
+
+        var thickness = 14; // Increased slightly for the larger Venu 3 screen
+        var outerR = radius - 25; // Push it closer to edge for modern look
+        var midR = outerR - (thickness / 2.0);
+        var capR = thickness / 2.0 - 1.5;
+        
+        // Angles
+        var startDeg = -115.0; // Use float
+        var totalSweep = 50.0; 
+        
+        // Gap size in degrees (cleaner than drawing a black line)
+        var gapDeg = 1.5; 
+
+        // 2. Data Fetching
         var activeDay = 120.0;
-        var activeWeek = 440.0;
+        var activeWeek = 455.0;
         var weekGoal = 900.0; 
 
-        try {
-            var info = ActivityMonitor.getInfo();
-            if (info != null) {
-                if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
-                if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
-                if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
-            }
-        } catch (e) { }
+        // var info = ActivityMonitor.getInfo();
+        // if (info != null) {
+        //     if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
+        //     if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
+        //     if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
+        // }
 
-        // 2. Calculate Fractions (using the safe methods we discussed)
+        // Safety checks
+        if (weekGoal < 1.0) { weekGoal = 150.0; }
+
+        // 3. Logic Calculations
         var weekFrac = activeWeek / weekGoal;
         if (weekFrac > 1.0) { weekFrac = 1.0; }
 
-        // Logic: Daily contribution relative to the week goal
         var dayFrac = activeDay / weekGoal;
         if (dayFrac > 1.0) { dayFrac = 1.0; }
-
         
-        // Progress
+        // Prevent weekFrac from being smaller than dayFrac (data sync glitch protection)
+        if (weekFrac < dayFrac) { weekFrac = dayFrac; }
+
         var weekSweep = totalSweep * weekFrac;
         var daySweep = totalSweep * dayFrac;
-        var dayStart = startDeg + (weekSweep - daySweep);
-        
-        
-        
+
+        // Calculate the "Split" point where Dark Red meets Bright Red
+        // We work backwards: The Bright Red is at the VERY END of the progress.
+        var endDeg = startDeg + weekSweep;
+        var splitDeg = endDeg - daySweep;
+
         dc.setPenWidth(thickness);
 
-        // 1. Draw Gray Background (with flat ends)
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        // ---------------------------------------------------------
+        // DRAWING
+        // ---------------------------------------------------------
+
+        // A. Background (Gray)
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, startDeg, startDeg + totalSweep);
 
-        // 2. Draw Week (Dark Red)
-        dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, startDeg, startDeg + weekSweep);
+        // NEW: Background End Cap (the far right side)
+        var radBgEnd = Math.toRadians(startDeg + totalSweep);
+        dc.fillCircle(cx + midR * Math.cos(radBgEnd), cy - midR * Math.sin(radBgEnd), capR);
 
-        // 3. Draw Day (Bright Red)
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, dayStart, dayStart + daySweep);
+        // B. The Week Segment (Dark Red)
+        // Draw only if we have enough week progress to separate from the day
+        // We stop 'gapDeg' short of the split to create the clean divider
+        if ((weekSweep - daySweep) > gapDeg) {
+            dc.setColor(Graphics.COLOR_DK_BLUE, Graphics.COLOR_TRANSPARENT);
+            // Draw from Start -> (Split - Gap)
+            dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, startDeg, splitDeg - gapDeg);
+            
+            // Start Cap (Dark Red)
+            var radStart = toRad(startDeg);
+            dc.fillCircle(cx + midR * Math.cos(radStart), cy - midR * Math.sin(radStart), capR);
+        }
 
-        // 4. THE CLEANUP: Draw only 2 Caps (Start of Week and End of Day)
-        // This removes all the sloppiness in the middle!
-        
-        // Cap at the very beginning (4 o'clock)
-        dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
-        var radStart = Math.toRadians(startDeg);
-        dc.fillCircle(cx + midR * Math.cos(radStart), cy - midR * Math.sin(radStart), capR);
+        // C. The Day Segment (Bright Red)
+        if (daySweep > 0) {
+            dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
+            // Draw from Split -> End
+            dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, splitDeg, endDeg);
 
-        // Cap at the very end of current progress
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        var radEnd = Math.toRadians(dayStart + daySweep);
-        dc.fillCircle(cx + midR * Math.cos(radEnd), cy - midR * Math.sin(radEnd), capR);
+            // End Cap (Bright Red)
+            var radEnd = toRad(endDeg);
+            dc.fillCircle(cx + midR * Math.cos(radEnd), cy - midR * Math.sin(radEnd), capR);
 
-        // 5. The Sharp Divider (Black 1px line at the junction)
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(1); // Single pixel for maximum sharpness
-        var radDiv = Math.toRadians(dayStart);
-        var x1 = cx + (innerR) * Math.cos(radDiv);
-        var y1 = cy - (innerR) * Math.sin(radDiv);
-        var x2 = cx + (outerR) * Math.cos(radDiv);
-        var y2 = cy - (outerR) * Math.sin(radDiv);
-        dc.drawLine(x1, y1, x2, y2);
+            // If the Week part was hidden (because day == week), we need a Start Cap in Bright Red
+            if ((weekSweep - daySweep) <= gapDeg) {
+                var radSplit = toRad(splitDeg); // Roughly the start
+                dc.fillCircle(cx + midR * Math.cos(radSplit), cy - midR * Math.sin(radSplit), capR);
+            }
+        }
     }
 
     // // Helper: draw a thick ring arc (outer->inner) from startDeg clockwise sweepDeg degrees
