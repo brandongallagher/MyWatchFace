@@ -502,14 +502,14 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var activeWeek = 440.0;
         var weekGoal = 900.0; 
 
-        // try {
-        //     var info = ActivityMonitor.getInfo();
-        //     if (info != null) {
-        //         if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
-        //         if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
-        //         if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
-        //     }
-        // } catch (e) { }
+        try {
+            var info = ActivityMonitor.getInfo();
+            if (info != null) {
+                if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
+                if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
+                if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
+            }
+        } catch (e) { }
 
         // 2. Calculate Fractions (using the safe methods we discussed)
         var weekFrac = activeWeek / weekGoal;

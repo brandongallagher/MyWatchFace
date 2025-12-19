@@ -1,1 +1,11 @@
-bin/MyWatchFace.prg
+bin/
+build/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+MyWatchFace.prg.debug.xml
