@@ -48,13 +48,13 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Draw sunset indicator
         drawSunsetIndicator(dc, centerX, centerY, radius);
 
-        drawDate(dc, centerX + radius - 25, centerY);
+        drawDate(dc, centerX + radius - 40, centerY + 50);
         
         // Draw battery percent at top center
-        drawBatteryPercent(dc, centerX, 40);
+        drawBatteryPercent(dc, centerX, 50);
 
         // Draw weather widget on the left
-        drawWeatherWidget(dc, centerX, centerY);
+        drawWeatherWidget(dc, centerX - 110, centerY + 50);
 
         // Draw active minutes widget on the right
         drawActiveMinutesWidget(dc, centerX, centerY, radius);
@@ -74,8 +74,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         drawSecondHand(dc, centerX, centerY, clockTime.sec, radius);
 
         // Draw center dot
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.fillCircle(centerX, centerY, 5);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.fillCircle(centerX, centerY, 2);
 
     }
 
@@ -85,9 +85,10 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         for (var i = 0; i < 60; i++) {
             if (i % 5 != 0) {  // Skip positions where hours are
+                var dotRadius = radius - 5;
                 var angle = (i * 6 - 90) * Math.PI / 180.0;
-                var outerX = centerX + (radius * Math.cos(angle)).toNumber();
-                var outerY = centerY + (radius * Math.sin(angle)).toNumber();
+                var outerX = centerX + (dotRadius * Math.cos(angle)).toNumber();
+                var outerY = centerY + (dotRadius * Math.sin(angle)).toNumber();
                 dc.fillCircle(outerX, outerY, 2);  // Draw as circle with radius 2
             }
         }
@@ -109,7 +110,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             
             // Outer and inner radii
             var outerRadius = radius;
-            var innerRadius = radius - 15;
+            var innerRadius = radius - 20;
             var halfWidth = 4;  // half-width of the mark
             
             // Calculate the four corners of the rectangle
@@ -165,23 +166,23 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             var conditions = Weather.getCurrentConditions();
             if (conditions == null) { return; }
 
-            // Debug: log conditions properties to console
-            System.println("DEBUG: Weather.getCurrentConditions() available properties:");
-            System.println("  temperature: " + conditions.temperature);
-            System.println("  condition: " + conditions.condition);
-            System.println("  hiTemp: " + conditions.highTemperature);
-            System.println("  lowTemp: " + conditions.lowTemperature);
-            System.println("  feelsLike: " + conditions.feelsLikeTemperature);
-            System.println("  humidity: " + conditions.relativeHumidity);
-            System.println("  windSpeed: " + conditions.windSpeed);
-            System.println("  windBearing: " + conditions.windBearing);
+            // // Debug: log conditions properties to console
+            // System.println("DEBUG: Weather.getCurrentConditions() available properties:");
+            // System.println("  temperature: " + conditions.temperature);
+            // System.println("  condition: " + conditions.condition);
+            // System.println("  hiTemp: " + conditions.highTemperature);
+            // System.println("  lowTemp: " + conditions.lowTemperature);
+            // System.println("  feelsLike: " + conditions.feelsLikeTemperature);
+            // System.println("  humidity: " + conditions.relativeHumidity);
+            // System.println("  windSpeed: " + conditions.windSpeed);
+            // System.println("  windBearing: " + conditions.windBearing);
 
-            var forecast = Weather.getDailyForecast();
-            if (forecast == null) { return; }
+            // var forecast = Weather.getDailyForecast();
+            // if (forecast == null) { return; }
 
-            // Debug: log conditions properties to console
-            System.println("DEBUG: Weather.getDailyForecast available properties:");
-            System.println("  forecast: " + forecast[1].toString);
+            // // Debug: log conditions properties to console
+            // System.println("DEBUG: Weather.getDailyForecast available properties:");
+            // System.println("  forecast: " + forecast[1].toString);
 
 
             var location = conditions.observationLocationPosition;
@@ -200,8 +201,9 @@ class MyWatchFaceView extends WatchUi.WatchFace {
                 var angleRad = angleDegrees * Math.PI / 180.0;
 
                 // Dot position on the dial edge
-                var indicatorX = centerX + radius * Math.cos(angleRad);
-                var indicatorY = centerY + radius * Math.sin(angleRad);
+                var dotRadius = radius - 5;
+                var indicatorX = centerX + dotRadius * Math.cos(angleRad);
+                var indicatorY = centerY + dotRadius * Math.sin(angleRad);
 
                 // Draw orange dot
                 dc.setColor(CustomColors.BURNT_ORANGE, Graphics.COLOR_BLACK);
@@ -228,14 +230,14 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         radius as Number
     ) as Void {
 
-        dc.setColor(0x00FF00, Graphics.COLOR_BLACK);
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);
 
         // Hour angle: 30° per hour + 0.5° per minute
         var totalMinutes = (hours % 12) * 60 + minutes;
         var angle = (totalMinutes * 0.5 - 90) * Math.PI / 180.0;
 
         var handLength = (radius * 0.7).toNumber();
-        var halfWidthBase = 6;     // base thickness / 2
+        var halfWidthBase = 7;     // base thickness / 2
         var halfWidthTip  = 3;     // taper toward tip
 
         // Direction vector
@@ -279,20 +281,20 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.fillPolygon(points);
 
         // Draw center bulge (pin attachment)
-        dc.setColor(0x00FF00, Graphics.COLOR_BLACK);
-        dc.fillCircle(centerX, centerY, 5);
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);
+        dc.fillCircle(centerX, centerY, 6);
     }
 
 
     // Draw the minute hand as a polygon (blunt, tapered) with tail and center bulge
     function drawMinuteHand(dc as Dc, centerX as Number, centerY as Number, minutes as Number, radius as Number) as Void {
-        dc.setColor(0x00FF00, Graphics.COLOR_BLACK);  // Fluorescent green
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);  // Fluorescent green
 
         // Calculate minute hand angle (6 degrees per minute)
         var angle = (minutes * 6 - 90) * Math.PI / 180.0;
 
         var handLength = (radius * 0.9).toNumber();
-        var halfWidthBase = 6;     // base thickness / 2
+        var halfWidthBase = 7;     // base thickness / 2
         var halfWidthTip  = 3;     // taper toward tip
 
         // Direction vector
@@ -336,8 +338,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.fillPolygon(points);
 
         // Draw center bulge (pin attachment)
-        dc.setColor(0x00FF00, Graphics.COLOR_BLACK);
-        dc.fillCircle(centerX, centerY, 5);
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);
+        dc.fillCircle(centerX, centerY, 6);
     }
 
     // Draw the second hand as a polygon (blunt, tapered) with tail and center bulge
@@ -354,8 +356,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var angle = (seconds * 6 - 90) * Math.PI / 180.0;
 
         var handLength = (radius * 0.95).toNumber();
-        var halfWidthBase = 3;   // base thickness / 2
-        var halfWidthTip  = 1.5;  // taper toward tip
+        var halfWidthBase = 5;   // base thickness / 2
+        var halfWidthTip  = 2.5;  // taper toward tip
 
         // Direction vector
         var cosA = Math.cos(angle);
@@ -399,7 +401,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // Draw center bulge (pin attachment)
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-        dc.fillCircle(centerX, centerY, 5);
+        dc.fillCircle(centerX, centerY, 4);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -417,12 +419,54 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
     // Draw battery percent at top center
-    function drawBatteryPercent(dc as Dc, centerX as Number, y as Number) as Void {
+    function drawBatteryPercent(dc as Dc, x as Number, y as Number) as Void {
         var batteryPercent = System.getSystemStats().battery;
         var batteryString = batteryPercent.format("%.0f") + "%";
         
-        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_BLACK);
-        dc.drawText(centerX, y, Graphics.FONT_XTINY, batteryString, Graphics.TEXT_JUSTIFY_CENTER);
+        // set the color to indicate a low battery
+        if (batteryPercent <= 12) {
+            drawPillText(dc, x, y + 20, batteryString, Graphics.COLOR_WHITE, Graphics.COLOR_RED, Graphics.FONT_XTINY);
+        } else if (batteryPercent <= 25) {
+            drawPillText(dc, x, y + 20, batteryString, Graphics.COLOR_WHITE, Graphics.COLOR_YELLOW, Graphics.FONT_XTINY);
+        } else {
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_BLACK);
+            dc.drawText(x, y, Graphics.FONT_XTINY, batteryString, Graphics.TEXT_JUSTIFY_CENTER);
+        }
+    }
+
+    // Helper method to draw a pill-shaped background with centered text
+    function drawPillText(dc, x, y, text, textColor, bgColor, font) {
+        var paddingH = 14; // Horizontal padding (sides)
+        var paddingV = 6;  // Vertical padding (top/bottom)
+
+        // 1. Calculate dimensions based on text size
+        var textWidth = dc.getTextWidthInPixels(text, font);
+        var fontHeight = dc.getFontHeight(font);
+        
+        var pillWidth = textWidth + (paddingH * 2);
+        var pillHeight = fontHeight + (paddingV * 2);
+        var cornerRadius = pillHeight / 2;
+
+        // 2. Draw the pill (Background)
+        dc.setColor(bgColor, Graphics.COLOR_TRANSPARENT);
+        // x and y represent the center of the pill
+        dc.fillRoundedRectangle(
+            x - (pillWidth / 2), 
+            y - (pillHeight / 2), 
+            pillWidth, 
+            pillHeight, 
+            cornerRadius
+        );
+
+        // 3. Draw the text (Foreground)
+        dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            x, 
+            y, 
+            font, 
+            text, 
+            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+        );
     }
 
     function drawDate(dc as Dc, x as Number, y as Number) as Void {
@@ -439,11 +483,11 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         ]);
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
-        dc.drawText(x, y, Graphics.FONT_TINY, dateString, Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, y, Graphics.FONT_XTINY, dateString, Graphics.TEXT_JUSTIFY_VCENTER);
     }
     
     // Draw weather widget on the left with current, high, low, and icon
-    function drawWeatherWidget(dc as Dc, centerX as Number, centerY as Number) as Void {
+    function drawWeatherWidget(dc as Dc, x as Number, y as Number) as Void {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         var currentTemp = "--";
         var highTemp = "--";
@@ -466,18 +510,18 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             // Weather data not available
         }
 
-        var x = centerX - 110;  // position to the left
+        // var x = centerX - 110;  // position to the left
 
         // Draw current temperature
         dc.setColor(getTemperatureColor(currentTemp.toNumber()), Graphics.COLOR_BLACK);
-        dc.drawText(x, centerY - 45, Graphics.FONT_SMALL, currentTemp, Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(x + 33, centerY - 45, Graphics.FONT_SMALL, "°", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, y - 45, Graphics.FONT_SMALL, currentTemp, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x + 33, y - 45, Graphics.FONT_SMALL, "°", Graphics.TEXT_JUSTIFY_CENTER);
         
         // reset the text color
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
 
         // Draw high/low temperatures
-        dc.drawText(x, centerY, Graphics.FONT_XTINY, highTemp + " - " + lowTemp, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, y, Graphics.FONT_XTINY, highTemp + " - " + lowTemp, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     function celsiusToFahrenheit(tempC as Number) as Number {

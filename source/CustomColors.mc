@@ -25,4 +25,5 @@ class CustomColors {
     static const BROWN       = 0xFFA52A2A;
     static const LIGHT_BLUE  = 0xFFADD8E6;
     static const TEAL        = 0xFF008080;
+    static const FLUORESCENT_GREEN = 0x00FF00;
 }
