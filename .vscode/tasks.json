@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "monkeyc",
+			"device": "venu3",
+			"simulatorBuild": true,
+			"folderPath": "c:\\workdir\\garmin\\MyWatchFace",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "monkeyc: venu3"
+		}
+	]
+}

@@ -1,0 +1,75 @@
+[ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 6; @symbol_classdef = [CustomColors,6,6,18]; ]
+class CustomColors {
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 7; @position = 17; @symbol_constdef = [COLOR_CUSTOM_BLACK,7,17,35]; ]
+    static
+    const COLOR_CUSTOM_BLACK = 0xFF000000;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 8; @position = 17; @symbol_constdef = [COLOR_CUSTOM_WHITE,8,17,35]; ]
+    static
+    const COLOR_CUSTOM_WHITE = 0xFFFFFFFF;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 9; @position = 17; @symbol_constdef = [COLOR_CUSTOM_GRAY,9,17,34]; ]
+    static
+    const COLOR_CUSTOM_GRAY = 0xFF808080;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 10; @position = 17; @symbol_constdef = [COLOR_CUSTOM_LIGHT_GRAY,10,17,40]; ]
+    static
+    const COLOR_CUSTOM_LIGHT_GRAY = 0xFFD3D3D3;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 11; @position = 17; @symbol_constdef = [COLOR_CUSTOM_DARK_GRAY,11,17,39]; ]
+    static
+    const COLOR_CUSTOM_DARK_GRAY = 0xFF404040;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 12; @position = 17; @symbol_constdef = [COLOR_CUSTOM_RED,12,17,33]; ]
+    static
+    const COLOR_CUSTOM_RED = 0xFFFF0000;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 13; @position = 17; @symbol_constdef = [COLOR_CUSTOM_DARK_RED,13,17,38]; ]
+    static
+    const COLOR_CUSTOM_DARK_RED = 0xFF8B0000;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 14; @position = 17; @symbol_constdef = [COLOR_CUSTOM_GREEN,14,17,35]; ]
+    static
+    const COLOR_CUSTOM_GREEN = 0xFF00FF00;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 15; @position = 17; @symbol_constdef = [COLOR_CUSTOM_DARK_GREEN,15,17,40]; ]
+    static
+    const COLOR_CUSTOM_DARK_GREEN = 0xFF006400;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 16; @position = 17; @symbol_constdef = [COLOR_CUSTOM_BLUE,16,17,34]; ]
+    static
+    const COLOR_CUSTOM_BLUE = 0xFF0000FF;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 17; @position = 17; @symbol_constdef = [COLOR_CUSTOM_DARK_BLUE,17,17,39]; ]
+    static
+    const COLOR_CUSTOM_DARK_BLUE = 0xFF00008B;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 18; @position = 17; @symbol_constdef = [COLOR_CUSTOM_CYAN,18,17,34]; ]
+    static
+    const COLOR_CUSTOM_CYAN = 0xFF00FFFF;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 19; @position = 17; @symbol_constdef = [COLOR_CUSTOM_MAGENTA,19,17,37]; ]
+    static
+    const COLOR_CUSTOM_MAGENTA = 0xFFFF00FF;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 20; @position = 17; @symbol_constdef = [COLOR_CUSTOM_YELLOW,20,17,36]; ]
+    static
+    const COLOR_CUSTOM_YELLOW = 0xFFFFFF00;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 21; @position = 17; @symbol_constdef = [COLOR_CUSTOM_ORANGE,21,17,36]; ]
+    static
+    const COLOR_CUSTOM_ORANGE = 0xFFFFA500;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 22; @position = 17; @symbol_constdef = [COLOR_CUSTOM_PURPLE,22,17,36]; ]
+    static
+    const COLOR_CUSTOM_PURPLE = 0xFF800080;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 23; @position = 17; @symbol_constdef = [COLOR_CUSTOM_PINK,23,17,34]; ]
+    static
+    const COLOR_CUSTOM_PINK = 0xFFFFC0CB;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 24; @position = 17; @symbol_constdef = [COLOR_CUSTOM_BROWN,24,17,35]; ]
+    static
+    const COLOR_CUSTOM_BROWN = 0xFFA52A2A;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 25; @position = 17; @symbol_constdef = [COLOR_CUSTOM_LIGHT_BLUE,25,17,40]; ]
+    static
+    const COLOR_CUSTOM_LIGHT_BLUE = 0xFFADD8E6;
+    [ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 26; @position = 17; @symbol_constdef = [COLOR_CUSTOM_TEAL,26,17,34]; ]
+    static
+    const COLOR_CUSTOM_TEAL = 0xFF008080;
+}
+[ @file = "c:\workdir\garmin\MyWatchFace\source\colors.mc"; @line = 2; ]
+<init> {
+}

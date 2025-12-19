@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\workdir\garmin\MyWatchFace\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="1" lineNum="10" parent="globals/MyWatchFaceView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="2" lineNum="31" parent="globals" pc="268435472" symbol="getApp"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="2" lineNum="32" parent="globals" pc="268435482" symbol="getApp"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="3" lineNum="6" parent="globals/Background" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\workdir\\garmin\\MyWatchFace\\bin\\gen\\006-B4260-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="5" lineNum="5" parent="globals/MyWatchFaceApp" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="211" parent="globals/MyWatchFaceView" pc="268435537" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="220" parent="globals/MyWatchFaceView" pc="268435540" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="223" parent="globals/MyWatchFaceView" pc="268435555" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="224" parent="globals/MyWatchFaceView" pc="268435568" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="226" parent="globals/MyWatchFaceView" pc="268435593" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="227" parent="globals/MyWatchFaceView" pc="268435609" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="228" parent="globals/MyWatchFaceView" pc="268435613" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="231" parent="globals/MyWatchFaceView" pc="268435617" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="232" parent="globals/MyWatchFaceView" pc="268435633" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="235" parent="globals/MyWatchFaceView" pc="268435649" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="236" parent="globals/MyWatchFaceView" pc="268435655" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="239" parent="globals/MyWatchFaceView" pc="268435659" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="240" parent="globals/MyWatchFaceView" pc="268435669" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="241" parent="globals/MyWatchFaceView" pc="268435685" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="244" parent="globals/MyWatchFaceView" pc="268435701" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="245" parent="globals/MyWatchFaceView" pc="268435717" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="248" parent="globals/MyWatchFaceView" pc="268435733" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="268" parent="globals/MyWatchFaceView" pc="268435985" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="271" parent="globals/MyWatchFaceView" pc="268435997" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="7" lineNum="272" parent="globals/MyWatchFaceView" pc="268436012" symbol="drawHourHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="10" lineNum="19" parent="globals/MyWatchFaceView" pc="268436029" symbol="onLayout"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="10" lineNum="20" parent="globals/MyWatchFaceView" pc="268436031" symbol="onLayout"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="11" lineNum="409" parent="globals/MyWatchFaceView" pc="268436065" symbol="drawBatteryPercent"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="11" lineNum="410" parent="globals/MyWatchFaceView" pc="268436068" symbol="drawBatteryPercent"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="11" lineNum="411" parent="globals/MyWatchFaceView" pc="268436085" symbol="drawBatteryPercent"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="11" lineNum="413" parent="globals/MyWatchFaceView" pc="268436107" symbol="drawBatteryPercent"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="11" lineNum="414" parent="globals/MyWatchFaceView" pc="268436122" symbol="drawBatteryPercent"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="12" lineNum="454" parent="globals/MyWatchFaceView" pc="268436142" symbol="celsiusToFahrenheit"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="12" lineNum="455" parent="globals/MyWatchFaceView" pc="268436144" symbol="celsiusToFahrenheit"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="277" parent="globals/MyWatchFaceView" pc="268436177" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="278" parent="globals/MyWatchFaceView" pc="268436180" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="281" parent="globals/MyWatchFaceView" pc="268436195" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="283" parent="globals/MyWatchFaceView" pc="268436217" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="284" parent="globals/MyWatchFaceView" pc="268436233" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="285" parent="globals/MyWatchFaceView" pc="268436237" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="288" parent="globals/MyWatchFaceView" pc="268436241" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="289" parent="globals/MyWatchFaceView" pc="268436257" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="292" parent="globals/MyWatchFaceView" pc="268436273" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="293" parent="globals/MyWatchFaceView" pc="268436279" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="296" parent="globals/MyWatchFaceView" pc="268436283" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="297" parent="globals/MyWatchFaceView" pc="268436293" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="298" parent="globals/MyWatchFaceView" pc="268436309" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="301" parent="globals/MyWatchFaceView" pc="268436325" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="302" parent="globals/MyWatchFaceView" pc="268436341" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="305" parent="globals/MyWatchFaceView" pc="268436357" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="325" parent="globals/MyWatchFaceView" pc="268436609" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="328" parent="globals/MyWatchFaceView" pc="268436621" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="13" lineNum="329" parent="globals/MyWatchFaceView" pc="268436636" symbol="drawMinuteHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="333" parent="globals/MyWatchFaceView" pc="268436653" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="334" parent="globals/MyWatchFaceView" pc="268436656" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="337" parent="globals/MyWatchFaceView" pc="268436672" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="338" parent="globals/MyWatchFaceView" pc="268436689" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="339" parent="globals/MyWatchFaceView" pc="268436696" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="343" parent="globals/MyWatchFaceView" pc="268436714" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="345" parent="globals/MyWatchFaceView" pc="268436736" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="346" parent="globals/MyWatchFaceView" pc="268436752" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="347" parent="globals/MyWatchFaceView" pc="268436759" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="350" parent="globals/MyWatchFaceView" pc="268436766" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="351" parent="globals/MyWatchFaceView" pc="268436782" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="354" parent="globals/MyWatchFaceView" pc="268436798" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="355" parent="globals/MyWatchFaceView" pc="268436804" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="358" parent="globals/MyWatchFaceView" pc="268436808" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="359" parent="globals/MyWatchFaceView" pc="268436818" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="360" parent="globals/MyWatchFaceView" pc="268436834" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="363" parent="globals/MyWatchFaceView" pc="268436850" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="364" parent="globals/MyWatchFaceView" pc="268436866" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="367" parent="globals/MyWatchFaceView" pc="268436882" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="387" parent="globals/MyWatchFaceView" pc="268437146" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="390" parent="globals/MyWatchFaceView" pc="268437158" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="14" lineNum="391" parent="globals/MyWatchFaceView" pc="268437174" symbol="drawSecondHand"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="458" parent="globals/MyWatchFaceView" pc="268437191" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="459" parent="globals/MyWatchFaceView" pc="268437193" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="460" parent="globals/MyWatchFaceView" pc="268437201" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="461" parent="globals/MyWatchFaceView" pc="268437210" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="462" parent="globals/MyWatchFaceView" pc="268437218" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="463" parent="globals/MyWatchFaceView" pc="268437225" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="464" parent="globals/MyWatchFaceView" pc="268437233" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="465" parent="globals/MyWatchFaceView" pc="268437241" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="466" parent="globals/MyWatchFaceView" pc="268437249" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="467" parent="globals/MyWatchFaceView" pc="268437258" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="468" parent="globals/MyWatchFaceView" pc="268437266" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="469" parent="globals/MyWatchFaceView" pc="268437275" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="470" parent="globals/MyWatchFaceView" pc="268437283" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="15" lineNum="472" parent="globals/MyWatchFaceView" pc="268437292" symbol="getTemperatureColor"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="479" parent="globals/MyWatchFaceView" pc="268437299" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="480" parent="globals/MyWatchFaceView" pc="268437302" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="480" parent="globals/MyWatchFaceView" pc="268437309" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="482" parent="globals/MyWatchFaceView" pc="268437313" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="483" parent="globals/MyWatchFaceView" pc="268437320" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="484" parent="globals/MyWatchFaceView" pc="268437333" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="486" parent="globals/MyWatchFaceView" pc="268437343" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="487" parent="globals/MyWatchFaceView" pc="268437357" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="490" parent="globals/MyWatchFaceView" pc="268437369" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="491" parent="globals/MyWatchFaceView" pc="268437376" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="496" parent="globals/MyWatchFaceView" pc="268437398" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="497" parent="globals/MyWatchFaceView" pc="268437414" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="500" parent="globals/MyWatchFaceView" pc="268437430" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="501" parent="globals/MyWatchFaceView" pc="268437452" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="502" parent="globals/MyWatchFaceView" pc="268437474" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="505" parent="globals/MyWatchFaceView" pc="268437490" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="506" parent="globals/MyWatchFaceView" pc="268437512" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="507" parent="globals/MyWatchFaceView" pc="268437534" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="16" lineNum="509" parent="globals/MyWatchFaceView" pc="268437550" symbol="drawRingArc"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="594" parent="globals/MyWatchFaceView" pc="268437563" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="595" parent="globals/MyWatchFaceView" pc="268437566" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="596" parent="globals/MyWatchFaceView" pc="268437570" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="613" parent="globals/MyWatchFaceView" pc="268437624" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="615" parent="globals/MyWatchFaceView" pc="268437640" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="616" parent="globals/MyWatchFaceView" pc="268437656" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="17" lineNum="617" parent="globals/MyWatchFaceView" pc="268437690" symbol="drawFontSamples"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="418" parent="globals/MyWatchFaceView" pc="268437708" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="419" parent="globals/MyWatchFaceView" pc="268437711" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="420" parent="globals/MyWatchFaceView" pc="268437727" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="421" parent="globals/MyWatchFaceView" pc="268437734" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="422" parent="globals/MyWatchFaceView" pc="268437741" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="425" parent="globals/MyWatchFaceView" pc="268437748" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="426" parent="globals/MyWatchFaceView" pc="268437760" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="427" parent="globals/MyWatchFaceView" pc="268437766" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="428" parent="globals/MyWatchFaceView" pc="268437777" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="430" parent="globals/MyWatchFaceView" pc="268437810" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="431" parent="globals/MyWatchFaceView" pc="268437821" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="433" parent="globals/MyWatchFaceView" pc="268437854" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="434" parent="globals/MyWatchFaceView" pc="268437865" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="437" parent="globals/MyWatchFaceView" pc="268437907" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="441" parent="globals/MyWatchFaceView" pc="268437923" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="444" parent="globals/MyWatchFaceView" pc="268437930" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="445" parent="globals/MyWatchFaceView" pc="268437956" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="448" parent="globals/MyWatchFaceView" pc="268437985" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="19" lineNum="451" parent="globals/MyWatchFaceView" pc="268438001" symbol="drawWeatherWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="20" lineNum="14" parent="globals/MyWatchFaceView" pc="268438030" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="20" lineNum="15" parent="globals/MyWatchFaceView" pc="268438032" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="152" parent="globals/MyWatchFaceView" pc="268438045" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="154" parent="globals/MyWatchFaceView" pc="268438048" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="155" parent="globals/MyWatchFaceView" pc="268438060" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="155" parent="globals/MyWatchFaceView" pc="268438066" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="158" parent="globals/MyWatchFaceView" pc="268438073" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="159" parent="globals/MyWatchFaceView" pc="268438091" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="160" parent="globals/MyWatchFaceView" pc="268438116" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="161" parent="globals/MyWatchFaceView" pc="268438141" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="162" parent="globals/MyWatchFaceView" pc="268438166" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="163" parent="globals/MyWatchFaceView" pc="268438191" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="164" parent="globals/MyWatchFaceView" pc="268438216" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="165" parent="globals/MyWatchFaceView" pc="268438241" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="166" parent="globals/MyWatchFaceView" pc="268438266" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="168" parent="globals/MyWatchFaceView" pc="268438291" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="169" parent="globals/MyWatchFaceView" pc="268438303" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="169" parent="globals/MyWatchFaceView" pc="268438309" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="172" parent="globals/MyWatchFaceView" pc="268438316" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="173" parent="globals/MyWatchFaceView" pc="268438334" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="176" parent="globals/MyWatchFaceView" pc="268438363" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="177" parent="globals/MyWatchFaceView" pc="268438371" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="178" parent="globals/MyWatchFaceView" pc="268438383" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="180" parent="globals/MyWatchFaceView" pc="268438401" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="182" parent="globals/MyWatchFaceView" pc="268438407" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="183" parent="globals/MyWatchFaceView" pc="268438424" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="184" parent="globals/MyWatchFaceView" pc="268438432" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="187" parent="globals/MyWatchFaceView" pc="268438440" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="188" parent="globals/MyWatchFaceView" pc="268438453" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="189" parent="globals/MyWatchFaceView" pc="268438466" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="192" parent="globals/MyWatchFaceView" pc="268438482" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="193" parent="globals/MyWatchFaceView" pc="268438504" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="196" parent="globals/MyWatchFaceView" pc="268438526" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="197" parent="globals/MyWatchFaceView" pc="268438541" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="204" parent="globals/MyWatchFaceView" pc="268438566" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="21" lineNum="206" parent="globals/MyWatchFaceView" pc="268438570" symbol="drawSunsetIndicator"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="30" parent="globals/MyWatchFaceView" pc="268438609" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="32" parent="globals/MyWatchFaceView" pc="268438612" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="33" parent="globals/MyWatchFaceView" pc="268438624" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="36" parent="globals/MyWatchFaceView" pc="268438632" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="37" parent="globals/MyWatchFaceView" pc="268438641" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="38" parent="globals/MyWatchFaceView" pc="268438650" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="39" parent="globals/MyWatchFaceView" pc="268438657" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="40" parent="globals/MyWatchFaceView" pc="268438664" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="43" parent="globals/MyWatchFaceView" pc="268438687" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="46" parent="globals/MyWatchFaceView" pc="268438704" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="49" parent="globals/MyWatchFaceView" pc="268438716" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="53" parent="globals/MyWatchFaceView" pc="268438733" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="56" parent="globals/MyWatchFaceView" pc="268438748" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="59" parent="globals/MyWatchFaceView" pc="268438763" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="62" parent="globals/MyWatchFaceView" pc="268438780" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="63" parent="globals/MyWatchFaceView" pc="268438788" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="71" parent="globals/MyWatchFaceView" pc="268438804" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="72" parent="globals/MyWatchFaceView" pc="268438833" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="73" parent="globals/MyWatchFaceView" pc="268438856" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="76" parent="globals/MyWatchFaceView" pc="268438879" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="23" lineNum="77" parent="globals/MyWatchFaceView" pc="268438895" symbol="onUpdate"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="512" parent="globals/MyWatchFaceView" pc="268438912" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="514" parent="globals/MyWatchFaceView" pc="268438915" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="515" parent="globals/MyWatchFaceView" pc="268438922" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="516" parent="globals/MyWatchFaceView" pc="268438926" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="517" parent="globals/MyWatchFaceView" pc="268438933" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="518" parent="globals/MyWatchFaceView" pc="268438946" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="523" parent="globals/MyWatchFaceView" pc="268438956" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="524" parent="globals/MyWatchFaceView" pc="268438960" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="526" parent="globals/MyWatchFaceView" pc="268438964" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="527" parent="globals/MyWatchFaceView" pc="268438971" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="528" parent="globals/MyWatchFaceView" pc="268438978" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="540" parent="globals/MyWatchFaceView" pc="268438985" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="541" parent="globals/MyWatchFaceView" pc="268438992" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="541" parent="globals/MyWatchFaceView" pc="268439003" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="544" parent="globals/MyWatchFaceView" pc="268439013" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="545" parent="globals/MyWatchFaceView" pc="268439020" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="545" parent="globals/MyWatchFaceView" pc="268439031" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="549" parent="globals/MyWatchFaceView" pc="268439041" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="550" parent="globals/MyWatchFaceView" pc="268439048" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="551" parent="globals/MyWatchFaceView" pc="268439055" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="555" parent="globals/MyWatchFaceView" pc="268439065" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="558" parent="globals/MyWatchFaceView" pc="268439077" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="559" parent="globals/MyWatchFaceView" pc="268439094" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="562" parent="globals/MyWatchFaceView" pc="268439118" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="563" parent="globals/MyWatchFaceView" pc="268439135" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="566" parent="globals/MyWatchFaceView" pc="268439159" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="567" parent="globals/MyWatchFaceView" pc="268439176" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="573" parent="globals/MyWatchFaceView" pc="268439200" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="574" parent="globals/MyWatchFaceView" pc="268439217" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="575" parent="globals/MyWatchFaceView" pc="268439233" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="578" parent="globals/MyWatchFaceView" pc="268439285" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="579" parent="globals/MyWatchFaceView" pc="268439302" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="580" parent="globals/MyWatchFaceView" pc="268439321" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="583" parent="globals/MyWatchFaceView" pc="268439373" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="584" parent="globals/MyWatchFaceView" pc="268439386" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="585" parent="globals/MyWatchFaceView" pc="268439398" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="586" parent="globals/MyWatchFaceView" pc="268439414" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="587" parent="globals/MyWatchFaceView" pc="268439436" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="588" parent="globals/MyWatchFaceView" pc="268439458" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="589" parent="globals/MyWatchFaceView" pc="268439480" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="24" lineNum="590" parent="globals/MyWatchFaceView" pc="268439502" symbol="drawActiveMinutesWidget"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="82" parent="globals/MyWatchFaceView" pc="268439521" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="84" parent="globals/MyWatchFaceView" pc="268439524" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="85" parent="globals/MyWatchFaceView" pc="268439540" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="86" parent="globals/MyWatchFaceView" pc="268439551" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="87" parent="globals/MyWatchFaceView" pc="268439561" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="88" parent="globals/MyWatchFaceView" pc="268439583" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="89" parent="globals/MyWatchFaceView" pc="268439611" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="90" parent="globals/MyWatchFaceView" pc="268439639" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="95" parent="globals/MyWatchFaceView" pc="268439668" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="96" parent="globals/MyWatchFaceView" pc="268439684" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="97" parent="globals/MyWatchFaceView" pc="268439695" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="98" parent="globals/MyWatchFaceView" pc="268439717" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="99" parent="globals/MyWatchFaceView" pc="268439733" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="102" parent="globals/MyWatchFaceView" pc="268439749" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="103" parent="globals/MyWatchFaceView" pc="268439755" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="106" parent="globals/MyWatchFaceView" pc="268439759" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="107" parent="globals/MyWatchFaceView" pc="268439763" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="110" parent="globals/MyWatchFaceView" pc="268439767" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="111" parent="globals/MyWatchFaceView" pc="268439771" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="112" parent="globals/MyWatchFaceView" pc="268439778" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="116" parent="globals/MyWatchFaceView" pc="268439782" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="117" parent="globals/MyWatchFaceView" pc="268439798" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="119" parent="globals/MyWatchFaceView" pc="268439814" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="120" parent="globals/MyWatchFaceView" pc="268439830" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="122" parent="globals/MyWatchFaceView" pc="268439846" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="123" parent="globals/MyWatchFaceView" pc="268439862" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="125" parent="globals/MyWatchFaceView" pc="268439878" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="126" parent="globals/MyWatchFaceView" pc="268439894" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="128" parent="globals/MyWatchFaceView" pc="268439910" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="135" parent="globals/MyWatchFaceView" pc="268440024" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="139" parent="globals/MyWatchFaceView" pc="268440046" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="140" parent="globals/MyWatchFaceView" pc="268440062" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="141" parent="globals/MyWatchFaceView" pc="268440074" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="142" parent="globals/MyWatchFaceView" pc="268440090" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="143" parent="globals/MyWatchFaceView" pc="268440112" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="144" parent="globals/MyWatchFaceView" pc="268440119" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="145" parent="globals/MyWatchFaceView" pc="268440147" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceView.mc" id="25" lineNum="146" parent="globals/MyWatchFaceView" pc="268440175" symbol="drawClockDial"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="26" lineNum="8" parent="globals/Background" pc="268440214" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="26" lineNum="9" parent="globals/Background" pc="268440217" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="26" lineNum="13" parent="globals/Background" pc="268440235" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="27" lineNum="16" parent="globals/Background" pc="268440252" symbol="draw"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="27" lineNum="18" parent="globals/Background" pc="268440254" symbol="draw"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceBackground.mc" id="27" lineNum="19" parent="globals/Background" pc="268440283" symbol="draw"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="28" lineNum="12" parent="globals/MyWatchFaceApp" pc="268440292" symbol="onStart"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="29" lineNum="25" parent="globals/MyWatchFaceApp" pc="268440295" symbol="onSettingsChanged"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="29" lineNum="26" parent="globals/MyWatchFaceApp" pc="268440297" symbol="onSettingsChanged"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="30" lineNum="20" parent="globals/MyWatchFaceApp" pc="268440309" symbol="getInitialView"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="30" lineNum="21" parent="globals/MyWatchFaceApp" pc="268440311" symbol="getInitialView"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="31" lineNum="7" parent="globals/MyWatchFaceApp" pc="268440337" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="31" lineNum="8" parent="globals/MyWatchFaceApp" pc="268440339" symbol="initialize"/>
+        <entry filename="C:\\workdir\\garmin\\MyWatchFace\\source\\MyWatchFaceApp.mc" id="32" lineNum="16" parent="globals/MyWatchFaceApp" pc="268440352" symbol="onStop"/>
+        <entry filename="c:\\workdir\\garmin\\MyWatchFace\\bin\\gen\\006-B4260-00\\source\\Rez.mcgen" id="33" lineNum="13" parent="globals/Rez/Layouts" pc="268440355" symbol="WatchFace"/>
+        <entry filename="c:\\workdir\\garmin\\MyWatchFace\\bin\\gen\\006-B4260-00\\source\\Rez.mcgen" id="33" lineNum="14" parent="globals/Rez/Layouts" pc="268440366" symbol="WatchFace"/>
+        <entry filename="c:\\workdir\\garmin\\MyWatchFace\\bin\\gen\\006-B4260-00\\source\\Rez.mcgen" id="33" lineNum="16" parent="globals/Rez/Layouts" pc="268440390" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="7" object="true" symbol="MyWatchFaceApp"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="18" method="true" symbol="drawSunsetIndicator"/>
+        <entry id="9" method="true" symbol="celsiusToFahrenheit"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry field="true" id="30" symbol="ColorRed"/>
+        <entry field="true" id="33" symbol="MilitaryFormatTitle"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="19" method="true" symbol="drawWeatherWidget"/>
+        <entry field="true" id="27" symbol="ColorBlue"/>
+        <entry id="8" object="true" symbol="MyWatchFaceView"/>
+        <entry field="true" id="24" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry id="20" method="true" symbol="getTemperatureColor"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry id="15" method="true" symbol="drawMinuteHand"/>
+        <entry id="13" method="true" symbol="drawFontSamples"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="16" method="true" symbol="drawRingArc"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry field="true" id="28" symbol="ColorDarkGray"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry field="true" id="21" symbol="showFontSamples"/>
+        <entry field="true" id="31" symbol="ColorWhite"/>
+        <entry field="true" id="26" symbol="ColorBlack"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="17" method="true" symbol="drawSecondHand"/>
+        <entry id="14" method="true" symbol="drawHourHand"/>
+        <entry id="12" method="true" symbol="drawClockDial"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="6" object="true" symbol="CustomColors"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry id="10" method="true" symbol="drawActiveMinutesWidget"/>
+        <entry field="true" id="23" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="25" symbol="BackgroundColorTitle"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="11" method="true" symbol="drawBatteryPercent"/>
+        <entry field="true" id="29" symbol="ColorLightGray"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="32" symbol="ForegroundColorTitle"/>
+        <entry id="22" module="true" symbol="Layouts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436028" name="dc" stackId="1" startPc="268435537"/>
+        <entry arg="true" endPc="268436028" name="centerX" stackId="2" startPc="268435537"/>
+        <entry arg="true" endPc="268436028" name="centerY" stackId="3" startPc="268435537"/>
+        <entry arg="true" endPc="268436028" name="hours" stackId="4" startPc="268435537"/>
+        <entry arg="true" endPc="268436028" name="minutes" stackId="5" startPc="268435537"/>
+        <entry arg="true" endPc="268436028" name="radius" stackId="6" startPc="268435537"/>
+        <entry endPc="268436027" name="totalMinutes" stackId="7" startPc="268435540"/>
+        <entry endPc="268436027" name="angle" stackId="8" startPc="268435540"/>
+        <entry endPc="268436027" name="handLength" stackId="9" startPc="268435540"/>
+        <entry endPc="268436027" name="halfWidthBase" stackId="10" startPc="268435540"/>
+        <entry endPc="268436027" name="halfWidthTip" stackId="11" startPc="268435540"/>
+        <entry endPc="268436027" name="cosA" stackId="12" startPc="268435540"/>
+        <entry endPc="268436027" name="sinA" stackId="13" startPc="268435540"/>
+        <entry endPc="268436027" name="px" stackId="14" startPc="268435540"/>
+        <entry endPc="268436027" name="py" stackId="15" startPc="268435540"/>
+        <entry endPc="268436027" name="tailLength" stackId="16" startPc="268435540"/>
+        <entry endPc="268436027" name="tailX" stackId="17" startPc="268435540"/>
+        <entry endPc="268436027" name="tailY" stackId="18" startPc="268435540"/>
+        <entry endPc="268436027" name="tipX" stackId="19" startPc="268435540"/>
+        <entry endPc="268436027" name="tipY" stackId="20" startPc="268435540"/>
+        <entry endPc="268436027" name="points" stackId="21" startPc="268435540"/>
+        <entry arg="true" endPc="268436064" name="dc" stackId="1" startPc="268436029"/>
+        <entry arg="true" endPc="268436141" name="dc" stackId="1" startPc="268436065"/>
+        <entry arg="true" endPc="268436141" name="centerX" stackId="2" startPc="268436065"/>
+        <entry arg="true" endPc="268436141" name="y" stackId="3" startPc="268436065"/>
+        <entry endPc="268436140" name="batteryPercent" stackId="4" startPc="268436068"/>
+        <entry endPc="268436140" name="batteryString" stackId="5" startPc="268436068"/>
+        <entry arg="true" endPc="268436176" name="tempC" stackId="1" startPc="268436142"/>
+        <entry arg="true" endPc="268436652" name="dc" stackId="1" startPc="268436177"/>
+        <entry arg="true" endPc="268436652" name="centerX" stackId="2" startPc="268436177"/>
+        <entry arg="true" endPc="268436652" name="centerY" stackId="3" startPc="268436177"/>
+        <entry arg="true" endPc="268436652" name="minutes" stackId="4" startPc="268436177"/>
+        <entry arg="true" endPc="268436652" name="radius" stackId="5" startPc="268436177"/>
+        <entry endPc="268436651" name="angle" stackId="6" startPc="268436180"/>
+        <entry endPc="268436651" name="handLength" stackId="7" startPc="268436180"/>
+        <entry endPc="268436651" name="halfWidthBase" stackId="8" startPc="268436180"/>
+        <entry endPc="268436651" name="halfWidthTip" stackId="9" startPc="268436180"/>
+        <entry endPc="268436651" name="cosA" stackId="10" startPc="268436180"/>
+        <entry endPc="268436651" name="sinA" stackId="11" startPc="268436180"/>
+        <entry endPc="268436651" name="px" stackId="12" startPc="268436180"/>
+        <entry endPc="268436651" name="py" stackId="13" startPc="268436180"/>
+        <entry endPc="268436651" name="tailLength" stackId="14" startPc="268436180"/>
+        <entry endPc="268436651" name="tailX" stackId="15" startPc="268436180"/>
+        <entry endPc="268436651" name="tailY" stackId="16" startPc="268436180"/>
+        <entry endPc="268436651" name="tipX" stackId="17" startPc="268436180"/>
+        <entry endPc="268436651" name="tipY" stackId="18" startPc="268436180"/>
+        <entry endPc="268436651" name="points" stackId="19" startPc="268436180"/>
+        <entry arg="true" endPc="268437190" name="dc" stackId="1" startPc="268436653"/>
+        <entry arg="true" endPc="268437190" name="centerX" stackId="2" startPc="268436653"/>
+        <entry arg="true" endPc="268437190" name="centerY" stackId="3" startPc="268436653"/>
+        <entry arg="true" endPc="268437190" name="seconds" stackId="4" startPc="268436653"/>
+        <entry arg="true" endPc="268437190" name="radius" stackId="5" startPc="268436653"/>
+        <entry endPc="268437189" name="unreadNotifications" stackId="6" startPc="268436656"/>
+        <entry endPc="268437189" name="angle" stackId="7" startPc="268436656"/>
+        <entry endPc="268437189" name="handLength" stackId="8" startPc="268436656"/>
+        <entry endPc="268437189" name="halfWidthBase" stackId="9" startPc="268436656"/>
+        <entry endPc="268437189" name="halfWidthTip" stackId="10" startPc="268436656"/>
+        <entry endPc="268437189" name="cosA" stackId="11" startPc="268436656"/>
+        <entry endPc="268437189" name="sinA" stackId="12" startPc="268436656"/>
+        <entry endPc="268437189" name="px" stackId="13" startPc="268436656"/>
+        <entry endPc="268437189" name="py" stackId="14" startPc="268436656"/>
+        <entry endPc="268437189" name="tailLength" stackId="15" startPc="268436656"/>
+        <entry endPc="268437189" name="tailX" stackId="16" startPc="268436656"/>
+        <entry endPc="268437189" name="tailY" stackId="17" startPc="268436656"/>
+        <entry endPc="268437189" name="tipX" stackId="18" startPc="268436656"/>
+        <entry endPc="268437189" name="tipY" stackId="19" startPc="268436656"/>
+        <entry endPc="268437189" name="points" stackId="20" startPc="268436656"/>
+        <entry arg="true" endPc="268437298" name="tempF" stackId="1" startPc="268437191"/>
+        <entry arg="true" endPc="268437562" name="dc" stackId="1" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="cx" stackId="2" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="cy" stackId="3" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="outerR" stackId="4" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="innerR" stackId="5" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="startDeg" stackId="6" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="sweepDeg" stackId="7" startPc="268437299"/>
+        <entry arg="true" endPc="268437562" name="color" stackId="8" startPc="268437299"/>
+        <entry endPc="268437561" name="thickness" stackId="9" startPc="268437302"/>
+        <entry endPc="268437561" name="midRadius" stackId="10" startPc="268437302"/>
+        <entry endPc="268437561" name="capRadius" stackId="11" startPc="268437302"/>
+        <entry endPc="268437561" name="endDeg" stackId="12" startPc="268437302"/>
+        <entry endPc="268437561" name="startRad" stackId="13" startPc="268437302"/>
+        <entry endPc="268437561" name="endRad" stackId="14" startPc="268437302"/>
+        <entry endPc="268437561" name="startX" stackId="15" startPc="268437302"/>
+        <entry endPc="268437561" name="startY" stackId="16" startPc="268437302"/>
+        <entry endPc="268437561" name="endX" stackId="17" startPc="268437302"/>
+        <entry endPc="268437561" name="endY" stackId="18" startPc="268437302"/>
+        <entry arg="true" endPc="268437707" name="dc" stackId="1" startPc="268437563"/>
+        <entry arg="true" endPc="268437707" name="radius" stackId="2" startPc="268437563"/>
+        <entry endPc="268437706" name="y" stackId="3" startPc="268437566"/>
+        <entry endPc="268437706" name="fonts" stackId="4" startPc="268437566"/>
+        <entry endPc="268437706" name="i" stackId="5" startPc="268437656"/>
+        <entry arg="true" endPc="268438029" name="dc" stackId="1" startPc="268437708"/>
+        <entry arg="true" endPc="268438029" name="centerX" stackId="2" startPc="268437708"/>
+        <entry arg="true" endPc="268438029" name="centerY" stackId="3" startPc="268437708"/>
+        <entry endPc="268438028" name="currentTemp" stackId="4" startPc="268437711"/>
+        <entry endPc="268438028" name="highTemp" stackId="5" startPc="268437711"/>
+        <entry endPc="268438028" name="lowTemp" stackId="6" startPc="268437711"/>
+        <entry endPc="268437900" name="conditions" stackId="7" startPc="268437748"/>
+        <entry endPc="268437917" name="e" stackId="8" startPc="268437907"/>
+        <entry endPc="268438028" name="x" stackId="9" startPc="268437711"/>
+        <entry arg="true" endPc="268438608" name="dc" stackId="1" startPc="268438045"/>
+        <entry arg="true" endPc="268438608" name="centerX" stackId="2" startPc="268438045"/>
+        <entry arg="true" endPc="268438608" name="centerY" stackId="3" startPc="268438045"/>
+        <entry arg="true" endPc="268438608" name="radius" stackId="4" startPc="268438045"/>
+        <entry endPc="268438559" name="conditions" stackId="5" startPc="268438048"/>
+        <entry endPc="268438559" name="forecast" stackId="6" startPc="268438048"/>
+        <entry endPc="268438559" name="location" stackId="7" startPc="268438048"/>
+        <entry endPc="268438559" name="today" stackId="8" startPc="268438048"/>
+        <entry endPc="268438559" name="sunsetMoment" stackId="9" startPc="268438048"/>
+        <entry endPc="268438556" name="info" stackId="10" startPc="268438407"/>
+        <entry endPc="268438556" name="sunsetHour" stackId="11" startPc="268438407"/>
+        <entry endPc="268438556" name="sunsetMinute" stackId="12" startPc="268438407"/>
+        <entry endPc="268438556" name="totalMinutes" stackId="13" startPc="268438407"/>
+        <entry endPc="268438556" name="angleDegrees" stackId="14" startPc="268438407"/>
+        <entry endPc="268438556" name="angleRad" stackId="15" startPc="268438407"/>
+        <entry endPc="268438556" name="indicatorX" stackId="16" startPc="268438407"/>
+        <entry endPc="268438556" name="indicatorY" stackId="17" startPc="268438407"/>
+        <entry endPc="268438602" name="e" stackId="18" startPc="268438566"/>
+        <entry arg="true" endPc="268438911" name="dc" stackId="1" startPc="268438609"/>
+        <entry endPc="268438910" name="width" stackId="2" startPc="268438612"/>
+        <entry endPc="268438910" name="height" stackId="3" startPc="268438612"/>
+        <entry endPc="268438910" name="centerX" stackId="4" startPc="268438612"/>
+        <entry endPc="268438910" name="centerY" stackId="5" startPc="268438612"/>
+        <entry endPc="268438910" name="radius" stackId="6" startPc="268438612"/>
+        <entry endPc="268438910" name="clockTime" stackId="7" startPc="268438612"/>
+        <entry arg="true" endPc="268439520" name="dc" stackId="1" startPc="268438912"/>
+        <entry arg="true" endPc="268439520" name="cx" stackId="2" startPc="268438912"/>
+        <entry arg="true" endPc="268439520" name="cy" stackId="3" startPc="268438912"/>
+        <entry arg="true" endPc="268439520" name="radius" stackId="4" startPc="268438912"/>
+        <entry endPc="268439519" name="outerR" stackId="5" startPc="268438915"/>
+        <entry endPc="268439519" name="thickness" stackId="6" startPc="268438915"/>
+        <entry endPc="268439519" name="innerR" stackId="7" startPc="268438915"/>
+        <entry endPc="268439519" name="midR" stackId="8" startPc="268438915"/>
+        <entry endPc="268439519" name="capR" stackId="9" startPc="268438915"/>
+        <entry endPc="268439519" name="startDeg" stackId="10" startPc="268438915"/>
+        <entry endPc="268439519" name="totalSweep" stackId="11" startPc="268438915"/>
+        <entry endPc="268439519" name="activeDay" stackId="12" startPc="268438915"/>
+        <entry endPc="268439519" name="activeWeek" stackId="13" startPc="268438915"/>
+        <entry endPc="268439519" name="weekGoal" stackId="14" startPc="268438915"/>
+        <entry endPc="268439519" name="weekFrac" stackId="15" startPc="268438915"/>
+        <entry endPc="268439519" name="dayFrac" stackId="16" startPc="268438915"/>
+        <entry endPc="268439519" name="weekSweep" stackId="17" startPc="268438915"/>
+        <entry endPc="268439519" name="daySweep" stackId="18" startPc="268438915"/>
+        <entry endPc="268439519" name="dayStart" stackId="19" startPc="268438915"/>
+        <entry endPc="268439519" name="radStart" stackId="20" startPc="268438915"/>
+        <entry endPc="268439519" name="radEnd" stackId="21" startPc="268438915"/>
+        <entry endPc="268439519" name="radDiv" stackId="22" startPc="268438915"/>
+        <entry endPc="268439519" name="x1" stackId="23" startPc="268438915"/>
+        <entry endPc="268439519" name="y1" stackId="24" startPc="268438915"/>
+        <entry endPc="268439519" name="x2" stackId="25" startPc="268438915"/>
+        <entry endPc="268439519" name="y2" stackId="26" startPc="268438915"/>
+        <entry arg="true" endPc="268440213" name="dc" stackId="1" startPc="268439521"/>
+        <entry arg="true" endPc="268440213" name="centerX" stackId="2" startPc="268439521"/>
+        <entry arg="true" endPc="268440213" name="centerY" stackId="3" startPc="268439521"/>
+        <entry arg="true" endPc="268440213" name="radius" stackId="4" startPc="268439521"/>
+        <entry endPc="268439667" name="i" stackId="5" startPc="268439551"/>
+        <entry endPc="268439654" name="angle" stackId="6" startPc="268439561"/>
+        <entry endPc="268439654" name="outerX" stackId="7" startPc="268439561"/>
+        <entry endPc="268439654" name="outerY" stackId="8" startPc="268439561"/>
+        <entry endPc="268440045" name="i" stackId="9" startPc="268439695"/>
+        <entry endPc="268440035" name="angle" stackId="10" startPc="268439695"/>
+        <entry endPc="268440035" name="cosA" stackId="11" startPc="268439695"/>
+        <entry endPc="268440035" name="sinA" stackId="12" startPc="268439695"/>
+        <entry endPc="268440035" name="perpX" stackId="13" startPc="268439695"/>
+        <entry endPc="268440035" name="perpY" stackId="14" startPc="268439695"/>
+        <entry endPc="268440035" name="radX" stackId="15" startPc="268439695"/>
+        <entry endPc="268440035" name="radY" stackId="16" startPc="268439695"/>
+        <entry endPc="268440035" name="outerRadius" stackId="17" startPc="268439695"/>
+        <entry endPc="268440035" name="innerRadius" stackId="18" startPc="268439695"/>
+        <entry endPc="268440035" name="halfWidth" stackId="19" startPc="268439695"/>
+        <entry endPc="268440035" name="p1X" stackId="20" startPc="268439695"/>
+        <entry endPc="268440035" name="p1Y" stackId="21" startPc="268439695"/>
+        <entry endPc="268440035" name="p2X" stackId="22" startPc="268439695"/>
+        <entry endPc="268440035" name="p2Y" stackId="23" startPc="268439695"/>
+        <entry endPc="268440035" name="p3X" stackId="24" startPc="268439695"/>
+        <entry endPc="268440035" name="p3Y" stackId="25" startPc="268439695"/>
+        <entry endPc="268440035" name="p4X" stackId="26" startPc="268439695"/>
+        <entry endPc="268440035" name="p4Y" stackId="27" startPc="268439695"/>
+        <entry endPc="268440035" name="points" stackId="28" startPc="268439695"/>
+        <entry endPc="268440212" name="i" stackId="29" startPc="268440074"/>
+        <entry endPc="268440199" name="angle" stackId="30" startPc="268440090"/>
+        <entry endPc="268440199" name="digitRadius" stackId="31" startPc="268440090"/>
+        <entry endPc="268440199" name="digitX" stackId="32" startPc="268440090"/>
+        <entry endPc="268440199" name="digitY" stackId="33" startPc="268440090"/>
+        <entry endPc="268440250" name="dictionary" stackId="1" startPc="268440217"/>
+        <entry arg="true" endPc="268440291" name="dc" stackId="1" startPc="268440252"/>
+        <entry arg="true" endPc="268440399" name="dc" stackId="1" startPc="268440355"/>
+        <entry endPc="268440399" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="2" startPc="268440366"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4260-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilitaryFormatTitle"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/CustomColors" offset="143" parentId="globals" symbolId="CustomColors" type="class"/>
+        <dataEntry label="globals/MyWatchFaceView" offset="187" parentId="globals" symbolId="MyWatchFaceView" type="class"/>
+        <dataEntry label="globals/Background" offset="402" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/Rez" offset="455" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/MyWatchFaceApp" offset="508" parentId="globals" symbolId="MyWatchFaceApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="588" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="623" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="658" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="CustomColors">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="MyWatchFaceView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="Background" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="MyWatchFaceApp" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="CustomColors">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436028" name="drawHourHand" parent="MyWatchFaceView" startPc="268435537">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <param id="hours"/>
+            <param id="minutes"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onExitSleep" parent="MyWatchFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="MyWatchFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436064" name="onLayout" parent="MyWatchFaceView" startPc="268436029">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436141" name="drawBatteryPercent" parent="MyWatchFaceView" startPc="268436065">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="y"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436176" name="celsiusToFahrenheit" parent="MyWatchFaceView" startPc="268436142">
+            <param id="tempC"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436652" name="drawMinuteHand" parent="MyWatchFaceView" startPc="268436177">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <param id="minutes"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437190" name="drawSecondHand" parent="MyWatchFaceView" startPc="268436653">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <param id="seconds"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437298" name="getTemperatureColor" parent="MyWatchFaceView" startPc="268437191">
+            <param id="tempF"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437562" name="drawRingArc" parent="MyWatchFaceView" startPc="268437299">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="outerR"/>
+            <param id="innerR"/>
+            <param id="startDeg"/>
+            <param id="sweepDeg"/>
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437707" name="drawFontSamples" parent="MyWatchFaceView" startPc="268437563">
+            <param id="dc"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onEnterSleep" parent="MyWatchFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438029" name="drawWeatherWidget" parent="MyWatchFaceView" startPc="268437708">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438044" name="initialize" parent="MyWatchFaceView" startPc="268438030">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438608" name="drawSunsetIndicator" parent="MyWatchFaceView" startPc="268438045">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="MyWatchFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438911" name="onUpdate" parent="MyWatchFaceView" startPc="268438609">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439520" name="drawActiveMinutesWidget" parent="MyWatchFaceView" startPc="268438912">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440213" name="drawClockDial" parent="MyWatchFaceView" startPc="268439521">
+            <param id="dc"/>
+            <param id="centerX"/>
+            <param id="centerY"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440251" name="initialize" parent="Background" startPc="268440214">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440291" name="draw" parent="Background" startPc="268440252">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440294" name="onStart" parent="MyWatchFaceApp" startPc="268440292">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440308" name="onSettingsChanged" parent="MyWatchFaceApp" startPc="268440295">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440336" name="getInitialView" parent="MyWatchFaceApp" startPc="268440309">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440351" name="initialize" parent="MyWatchFaceApp" startPc="268440337">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440354" name="onStop" parent="MyWatchFaceApp" startPc="268440352">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440399" name="WatchFace" parent="Layouts" startPc="268440355">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
