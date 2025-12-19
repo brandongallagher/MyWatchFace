@@ -48,6 +48,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Draw sunset indicator
         drawSunsetIndicator(dc, centerX, centerY, radius);
 
+        drawDate(dc, centerX + radius - 25, centerY);
         
         // Draw battery percent at top center
         drawBatteryPercent(dc, centerX, 40);
@@ -353,8 +354,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var angle = (seconds * 6 - 90) * Math.PI / 180.0;
 
         var handLength = (radius * 0.95).toNumber();
-        var halfWidthBase = 1.5;   // base thickness / 2
-        var halfWidthTip  = 0.75;  // taper toward tip
+        var halfWidthBase = 3;   // base thickness / 2
+        var halfWidthTip  = 1.5;  // taper toward tip
 
         // Direction vector
         var cosA = Math.cos(angle);
@@ -424,6 +425,23 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.drawText(centerX, y, Graphics.FONT_XTINY, batteryString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
+    function drawDate(dc as Dc, x as Number, y as Number) as Void {
+        // Get the current time
+        var now = Time.now();
+        var info = Gregorian.info(now, Time.FORMAT_MEDIUM);
+
+        // Format the string: "Wed Dec 19"
+        // info.day_of_week and info.month are strings because of FORMAT_MEDIUM
+        var dateString = Lang.format("$1$ $2$ $3$", [
+            info.day_of_week,
+            info.month,
+            info.day
+        ]);
+
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        dc.drawText(x, y, Graphics.FONT_TINY, dateString, Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+    
     // Draw weather widget on the left with current, high, low, and icon
     function drawWeatherWidget(dc as Dc, centerX as Number, centerY as Number) as Void {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
@@ -452,13 +470,14 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // Draw current temperature
         dc.setColor(getTemperatureColor(currentTemp.toNumber()), Graphics.COLOR_BLACK);
-        dc.drawText(x, centerY - 45, Graphics.FONT_SMALL, currentTemp + "°", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, centerY - 45, Graphics.FONT_SMALL, currentTemp, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x + 33, centerY - 45, Graphics.FONT_SMALL, "°", Graphics.TEXT_JUSTIFY_CENTER);
         
         // reset the text color
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
 
         // Draw high/low temperatures
-        dc.drawText(x, centerY, Graphics.FONT_XTINY, highTemp + " / " + lowTemp, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, centerY, Graphics.FONT_XTINY, highTemp + " - " + lowTemp, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     function celsiusToFahrenheit(tempC as Number) as Number {
@@ -515,12 +534,12 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var activeWeek = 455.0;
         var weekGoal = 900.0; 
 
-        // var info = ActivityMonitor.getInfo();
-        // if (info != null) {
-        //     if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
-        //     if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
-        //     if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
-        // }
+        var info = ActivityMonitor.getInfo();
+        if (info != null) {
+            if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
+            if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
+            if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
+        }
 
         // Safety checks
         if (weekGoal < 1.0) { weekGoal = 150.0; }
