@@ -137,13 +137,23 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // Draw hour digits (only 4 and 8)
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        
+        // get the hour of day 1-12
+        var currentHour = System.getClockTime().hour % 12;
+        if (currentHour == 0) {
+            currentHour = 12;
+        }
+        
         for (var i = 1; i <= 12; i++) {
             if (i == 4 || i == 8) {
-                var angle = (i * 30 - 90) * Math.PI / 180.0;
-                var digitRadius = radius - 40;
-                var digitX = centerX + (digitRadius * Math.cos(angle)).toNumber();
-                var digitY = centerY + (digitRadius * Math.sin(angle)).toNumber();
-                dc.drawText(digitX, digitY, Graphics.FONT_GLANCE_NUMBER, i.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                // only show if the current time is near that hour
+                if (i < currentHour + 1 && i > currentHour - 1) {
+                    var angle = (i * 30 - 90) * Math.PI / 180.0;
+                    var digitRadius = radius - 40;
+                    var digitX = centerX + (digitRadius * Math.cos(angle)).toNumber();
+                    var digitY = centerY + (digitRadius * Math.sin(angle)).toNumber();
+                    dc.drawText(digitX, digitY, Graphics.FONT_GLANCE_NUMBER, i.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                }
             }
         }
     }
@@ -474,41 +484,6 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
 
-
-    // Helper: draw a thick ring arc (outer->inner) from startDeg clockwise sweepDeg degrees
-    function drawRingArc(dc as Dc, cx as Number, cy as Number, outerR as Number, innerR as Number, startDeg as Number, sweepDeg as Number, color as Number) as Void {
-        if (sweepDeg <= 0) { return; }
-        
-        var thickness = outerR - innerR;
-        var midRadius = innerR + (thickness / 2.0);
-        var capRadius = thickness / 2.0;
-
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(thickness);
-
-        // 1. Draw the main arc
-        var endDeg = startDeg - sweepDeg;
-        dc.drawArc(cx, cy, midRadius, Graphics.ARC_CLOCKWISE, startDeg, endDeg);
-
-        // 2. Draw Round Caps
-        // Convert start and end angles to radians for trigonometry
-        // Note: We use -90 because Garmin 0 degrees is at 3 o'clock
-        var startRad = Math.toRadians(startDeg);
-        var endRad = Math.toRadians(endDeg);
-
-        // Draw cap at the start
-        var startX = cx + midRadius * Math.cos(startRad);
-        var startY = cy - midRadius * Math.sin(startRad); // Subtract because Y increases downwards
-        dc.fillCircle(startX, startY, capRadius);
-
-        // Draw cap at the end
-        var endX = cx + midRadius * Math.cos(endRad);
-        var endY = cy - midRadius * Math.sin(endRad);
-        dc.fillCircle(endX, endY, capRadius);
-        
-        dc.setPenWidth(1);
-    }
-
     function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
         // 1. Positioning for 2 o'clock to 4 o'clock
         var outerR = radius - 50; // Increased to move near the edge of the Venu 3 dial
@@ -520,8 +495,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // var innerR = outerR - thickness;
         
         // Garmin 0 is at 3 o'clock. 
-        var startDeg = -120; // 4 o'clock
-        var totalSweep = 60;
+        var startDeg = -115; 
+        var totalSweep = 50;
 
         var activeDay = 120.0;
         var activeWeek = 440.0;
@@ -590,6 +565,41 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.drawLine(x1, y1, x2, y2);
     }
 
+    // // Helper: draw a thick ring arc (outer->inner) from startDeg clockwise sweepDeg degrees
+    // function drawRingArc(dc as Dc, cx as Number, cy as Number, outerR as Number, innerR as Number, startDeg as Number, sweepDeg as Number, color as Number) as Void {
+    //     if (sweepDeg <= 0) { return; }
+        
+    //     var thickness = outerR - innerR;
+    //     var midRadius = innerR + (thickness / 2.0);
+    //     var capRadius = thickness / 2.0;
+
+    //     dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+    //     dc.setPenWidth(thickness);
+
+    //     // 1. Draw the main arc
+    //     var endDeg = startDeg - sweepDeg;
+    //     dc.drawArc(cx, cy, midRadius, Graphics.ARC_CLOCKWISE, startDeg, endDeg);
+
+    //     // 2. Draw Round Caps
+    //     // Convert start and end angles to radians for trigonometry
+    //     // Note: We use -90 because Garmin 0 degrees is at 3 o'clock
+    //     var startRad = Math.toRadians(startDeg);
+    //     var endRad = Math.toRadians(endDeg);
+
+    //     // Draw cap at the start
+    //     var startX = cx + midRadius * Math.cos(startRad);
+    //     var startY = cy - midRadius * Math.sin(startRad); // Subtract because Y increases downwards
+    //     dc.fillCircle(startX, startY, capRadius);
+
+    //     // Draw cap at the end
+    //     var endX = cx + midRadius * Math.cos(endRad);
+    //     var endY = cy - midRadius * Math.sin(endRad);
+    //     dc.fillCircle(endX, endY, capRadius);
+        
+    //     dc.setPenWidth(1);
+    // }
+
+    
     // Draw font samples for testing
     function drawFontSamples(dc as Dc, radius as Number) as Void {
         var y = 20;
