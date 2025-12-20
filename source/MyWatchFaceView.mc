@@ -48,7 +48,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Draw sunset indicator
         drawSunsetIndicator(dc, centerX, centerY, radius);
 
-        drawDate(dc, centerX + radius - 40, centerY + 50);
+        // drawDate(dc, centerX + radius - 40, centerY + 50);
+        drawDateStacked(dc, centerX + radius - 60, centerY + 30);
         
         // Draw battery percent at top center
         drawBatteryPercent(dc, centerX, 50);
@@ -485,6 +486,22 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         dc.drawText(x, y, Graphics.FONT_XTINY, dateString, Graphics.TEXT_JUSTIFY_VCENTER);
     }
+
+    function drawDateStacked(dc as Dc, x as Number, y as Number) as Void {
+        var now = Time.now();
+        var info = Gregorian.info(now, Time.FORMAT_MEDIUM);
+
+        // Format the string: "Wed Dec 19"
+        var dayOfWeekString = Lang.format("$1$", [info.day_of_week]);
+        var dayOfMonthString = Lang.format("$1$", [info.day]);
+
+        var dayOfWeekfont = Graphics.FONT_XTINY;
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        dc.drawText(x, y, Graphics.FONT_XTINY, dayOfWeekString, Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        dc.drawText(x, y + dc.getFontHeight(dayOfWeekfont) + 6, Graphics.FONT_GLANCE_NUMBER, dayOfMonthString, Graphics.TEXT_JUSTIFY_VCENTER);
+    }
     
     // Draw weather widget on the left with current, high, low, and icon
     function drawWeatherWidget(dc as Dc, x as Number, y as Number) as Void {
@@ -562,7 +579,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         }
 
         var thickness = 14; // Increased slightly for the larger Venu 3 screen
-        var outerR = radius - 25; // Push it closer to edge for modern look
+        var outerR = radius - 30; // Push it closer to edge for modern look
         var midR = outerR - (thickness / 2.0);
         var capR = thickness / 2.0 - 1.5;
         
@@ -571,7 +588,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var totalSweep = 50.0; 
         
         // Gap size in degrees (cleaner than drawing a black line)
-        var gapDeg = 1.5; 
+        var gapDeg = 0.5; 
 
         // 2. Data Fetching
         var activeDay = 120.0;
@@ -579,11 +596,11 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var weekGoal = 900.0; 
 
         var info = ActivityMonitor.getInfo();
-        if (info != null) {
-            if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
-            if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
-            if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
-        }
+        // if (info != null) {
+        //     if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
+        //     if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
+        //     if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
+        // }
 
         // Safety checks
         if (weekGoal < 1.0) { weekGoal = 150.0; }
@@ -606,20 +623,28 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var endDeg = startDeg + weekSweep;
         var splitDeg = endDeg - daySweep;
 
-        dc.setPenWidth(thickness);
-
         // ---------------------------------------------------------
         // DRAWING
         // ---------------------------------------------------------
 
+        // Thin pen for the gray background
+        dc.setPenWidth(thickness/2);
+
         // A. Background (Gray)
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, startDeg, startDeg + totalSweep);
-
-        // NEW: Background End Cap (the far right side)
+        
+        // Background Start Cap (the far left side)
+        var radBgStart = Math.toRadians(startDeg);
+        dc.fillCircle(cx + midR * Math.cos(radBgStart), cy - midR * Math.sin(radBgStart), capR/2);
+        // Background End Cap (the far right side)
         var radBgEnd = Math.toRadians(startDeg + totalSweep);
-        dc.fillCircle(cx + midR * Math.cos(radBgEnd), cy - midR * Math.sin(radBgEnd), capR);
+        dc.fillCircle(cx + midR * Math.cos(radBgEnd), cy - midR * Math.sin(radBgEnd), capR/2);
 
+
+        // wider pen for the active minutes ring
+        dc.setPenWidth(thickness);
+        
         // B. The Week Segment (Dark Red)
         // Draw only if we have enough week progress to separate from the day
         // We stop 'gapDeg' short of the split to create the clean divider
@@ -639,9 +664,9 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             // Draw from Split -> End
             dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, splitDeg, endDeg);
 
-            // End Cap (Bright Red)
+            // End Cap
             var radEnd = toRad(endDeg);
-            dc.fillCircle(cx + midR * Math.cos(radEnd), cy - midR * Math.sin(radEnd), capR);
+            dc.fillCircle(cx + midR * Math.cos(radEnd), cy - midR * Math.sin(radEnd), capR * 1.75);
 
             // If the Week part was hidden (because day == week), we need a Start Cap in Bright Red
             if ((weekSweep - daySweep) <= gapDeg) {
@@ -651,39 +676,6 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         }
     }
 
-    // // Helper: draw a thick ring arc (outer->inner) from startDeg clockwise sweepDeg degrees
-    // function drawRingArc(dc as Dc, cx as Number, cy as Number, outerR as Number, innerR as Number, startDeg as Number, sweepDeg as Number, color as Number) as Void {
-    //     if (sweepDeg <= 0) { return; }
-        
-    //     var thickness = outerR - innerR;
-    //     var midRadius = innerR + (thickness / 2.0);
-    //     var capRadius = thickness / 2.0;
-
-    //     dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-    //     dc.setPenWidth(thickness);
-
-    //     // 1. Draw the main arc
-    //     var endDeg = startDeg - sweepDeg;
-    //     dc.drawArc(cx, cy, midRadius, Graphics.ARC_CLOCKWISE, startDeg, endDeg);
-
-    //     // 2. Draw Round Caps
-    //     // Convert start and end angles to radians for trigonometry
-    //     // Note: We use -90 because Garmin 0 degrees is at 3 o'clock
-    //     var startRad = Math.toRadians(startDeg);
-    //     var endRad = Math.toRadians(endDeg);
-
-    //     // Draw cap at the start
-    //     var startX = cx + midRadius * Math.cos(startRad);
-    //     var startY = cy - midRadius * Math.sin(startRad); // Subtract because Y increases downwards
-    //     dc.fillCircle(startX, startY, capRadius);
-
-    //     // Draw cap at the end
-    //     var endX = cx + midRadius * Math.cos(endRad);
-    //     var endY = cy - midRadius * Math.sin(endRad);
-    //     dc.fillCircle(endX, endY, capRadius);
-        
-    //     dc.setPenWidth(1);
-    // }
 
     
     // Draw font samples for testing

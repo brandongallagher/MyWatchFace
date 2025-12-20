@@ -72,6 +72,9 @@ class CustomColors {
     [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 27; @position = 17; @symbol_constdef = [TEAL,27,17,21]; ]
     static
     const TEAL = 0xFF008080;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 28; @position = 17; @symbol_constdef = [FLUORESCENT_GREEN,28,17,34]; ]
+    static
+    const FLUORESCENT_GREEN = 0x00FF00;
 }
 [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 2; ]
 <init> {
