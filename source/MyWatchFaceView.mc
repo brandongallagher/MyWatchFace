@@ -11,6 +11,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
     var showFontSamples = false;  // Set to true to display font samples
 
+    private var _weatherFont;
+
     function initialize() {
         WatchFace.initialize();
     }
@@ -18,6 +20,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.WatchFace(dc));
+        _weatherFont = WatchUi.loadResource(Rez.);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -48,14 +51,16 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Draw sunset indicator
         drawSunsetIndicator(dc, centerX, centerY, radius);
 
-        // drawDate(dc, centerX + radius - 40, centerY + 50);
-        drawDateStacked(dc, centerX + radius - 60, centerY + 30);
+        // drawDate at top right
+        drawDateStacked(dc, centerX + radius - 75, centerY - 75);
         
         // Draw battery percent at top center
         drawBatteryPercent(dc, centerX, 50);
 
         // Draw weather widget on the left
-        drawWeatherWidget(dc, centerX - 110, centerY + 50);
+        drawWeatherWidget(dc, centerX - 105, centerY - 50);
+
+        drawElevation(dc, centerX, centerY + 90);
 
         // Draw active minutes widget on the right
         drawActiveMinutesWidget(dc, centerX, centerY, radius);
@@ -167,24 +172,6 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             var conditions = Weather.getCurrentConditions();
             if (conditions == null) { return; }
 
-            // // Debug: log conditions properties to console
-            // System.println("DEBUG: Weather.getCurrentConditions() available properties:");
-            // System.println("  temperature: " + conditions.temperature);
-            // System.println("  condition: " + conditions.condition);
-            // System.println("  hiTemp: " + conditions.highTemperature);
-            // System.println("  lowTemp: " + conditions.lowTemperature);
-            // System.println("  feelsLike: " + conditions.feelsLikeTemperature);
-            // System.println("  humidity: " + conditions.relativeHumidity);
-            // System.println("  windSpeed: " + conditions.windSpeed);
-            // System.println("  windBearing: " + conditions.windBearing);
-
-            // var forecast = Weather.getDailyForecast();
-            // if (forecast == null) { return; }
-
-            // // Debug: log conditions properties to console
-            // System.println("DEBUG: Weather.getDailyForecast available properties:");
-            // System.println("  forecast: " + forecast[1].toString);
-
 
             var location = conditions.observationLocationPosition;
             var today = Time.now();
@@ -251,35 +238,21 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // Tail extends in opposite direction
         var tailLength = handLength * 0.2;
-        var tailX = centerX - (tailLength * cosA).toNumber();
-        var tailY = centerY - (tailLength * sinA).toNumber();
 
-        // Tip of the hand
-        var tipX = centerX + (handLength * cosA).toNumber();
-        var tipY = centerY + (handLength * sinA).toNumber();
+        // DROP SHADOW (Optional but effective)
+        // Draw the whole shape slightly offset in transparent black
+        dc.setColor(0x222222, Graphics.COLOR_TRANSPARENT);
+        var shadowOffset = 3;
+        drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
+        drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
 
-        // Polygon points (clockwise) - now includes tail
-        var points = [
-            // Tip left
-            [tipX + (px * halfWidthTip).toNumber(), tipY + (py * halfWidthTip).toNumber()],
+        // 2. DRAW THE LIGHT SIDE (Top half)
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_TRANSPARENT); // A brighter "highlight" green
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
 
-            // Tip right
-            [tipX - (px * halfWidthTip).toNumber(), tipY - (py * halfWidthTip).toNumber()],
-
-            // Base right (at center)
-            [centerX - (px * halfWidthBase).toNumber(), centerY - (py * halfWidthBase).toNumber()],
-
-            // Tail right
-            [tailX - (px * 3).toNumber(), tailY - (py * 3).toNumber()],
-
-            // Tail left
-            [tailX + (px * 3).toNumber(), tailY + (py * 3).toNumber()],
-
-            // Base left (at center)
-            [centerX + (px * halfWidthBase).toNumber(), centerY + (py * halfWidthBase).toNumber()]
-        ];
-
-        dc.fillPolygon(points);
+        // 3. DRAW THE DARK SIDE (Bottom half)
+        dc.setColor(CustomColors.FLUORESCENT_GREEN_SHADOW, Graphics.COLOR_TRANSPARENT);
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
 
         // Draw center bulge (pin attachment)
         dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);
@@ -287,60 +260,43 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
 
-    // Draw the minute hand as a polygon (blunt, tapered) with tail and center bulge
     function drawMinuteHand(dc as Dc, centerX as Number, centerY as Number, minutes as Number, radius as Number) as Void {
-        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);  // Fluorescent green
+        if (dc has :setAntiAlias) { dc.setAntiAlias(true); }
 
-        // Calculate minute hand angle (6 degrees per minute)
         var angle = (minutes * 6 - 90) * Math.PI / 180.0;
-
         var handLength = (radius * 0.9).toNumber();
-        var halfWidthBase = 7;     // base thickness / 2
-        var halfWidthTip  = 3;     // taper toward tip
+        var tailLength = handLength * 0.2;
+        var halfWidthBase = 7;
+        var halfWidthTip  = 3;
 
-        // Direction vector
         var cosA = Math.cos(angle);
         var sinA = Math.sin(angle);
-
-        // Perpendicular vector
         var px = -sinA;
-        var py =  cosA;
+        var py = cosA;
 
-        // Tail extends in opposite direction
-        var tailLength = handLength * 0.2;
-        var tailX = centerX - (tailLength * cosA).toNumber();
-        var tailY = centerY - (tailLength * sinA).toNumber();
+        // OLD
+        // drawSimpleHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, tailLength, handLength);
 
-        // Tip of the hand
-        var tipX = centerX + (handLength * cosA).toNumber();
-        var tipY = centerY + (handLength * sinA).toNumber();
+        // DROP SHADOW (Optional but effective)
+        // Draw the whole shape slightly offset in transparent black
+        dc.setColor(0x222222, Graphics.COLOR_TRANSPARENT);
+        var shadowOffset = 3;
+        drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
+        drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
 
-        // Polygon points (clockwise) - now includes tail
-        var points = [
-            // Tip left
-            [tipX + (px * halfWidthTip).toNumber(), tipY + (py * halfWidthTip).toNumber()],
+        // 2. DRAW THE LIGHT SIDE (Top half)
+        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_TRANSPARENT); // A brighter "highlight" green
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
 
-            // Tip right
-            [tipX - (px * halfWidthTip).toNumber(), tipY - (py * halfWidthTip).toNumber()],
+        // 3. DRAW THE DARK SIDE (Bottom half)
+        dc.setColor(CustomColors.FLUORESCENT_GREEN_SHADOW, Graphics.COLOR_TRANSPARENT);
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
 
-            // Base right (at center)
-            [centerX - (px * halfWidthBase).toNumber(), centerY - (py * halfWidthBase).toNumber()],
-
-            // Tail right
-            [tailX - (px * 3).toNumber(), tailY - (py * 3).toNumber()],
-
-            // Tail left
-            [tailX + (px * 3).toNumber(), tailY + (py * 3).toNumber()],
-
-            // Base left (at center)
-            [centerX + (px * halfWidthBase).toNumber(), centerY + (py * halfWidthBase).toNumber()]
-        ];
-
-        dc.fillPolygon(points);
-
-        // Draw center bulge (pin attachment)
-        dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_BLACK);
+        // 4. CENTER PIN (With a small highlight)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(centerX, centerY, 6);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(centerX, centerY, 2); // Tiny "hole" or pin head for realism
     }
 
     // Draw the second hand as a polygon (blunt, tapered) with tail and center bulge
@@ -370,6 +326,30 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // Tail extends in opposite direction
         var tailLength = handLength * 0.2;
+
+        // DROP SHADOW (Optional but effective)
+        // Draw the whole shape slightly offset in transparent black
+        dc.setColor(CustomColors.DROP_SHADOW, Graphics.COLOR_TRANSPARENT);
+        var shadowOffset = 3;
+        // drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
+        drawHalfHand(dc, centerX + shadowOffset, centerY + shadowOffset, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
+
+        // 2. DRAW THE LIGHT SIDE (Top half)
+        dc.setColor(CustomColors.RED2, Graphics.COLOR_TRANSPARENT); // A brighter "highlight" green
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, true);
+
+        // 3. DRAW THE DARK SIDE (Bottom half)
+        dc.setColor(CustomColors.DARK_RED, Graphics.COLOR_TRANSPARENT);
+        drawHalfHand(dc, centerX, centerY, cosA, sinA, px, py, handLength, tailLength, halfWidthBase, halfWidthTip, false);
+
+        // Draw center bulge (pin attachment)
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+        dc.fillCircle(centerX, centerY, 4);
+    }
+
+    
+
+    function drawSimpleHand(dc, centerX, centerY, cosA, sinA, px, py, len, tail, halfWidthBase, halfWidthTip, tailLength, handLength) {
         var tailX = centerX - (tailLength * cosA).toNumber();
         var tailY = centerY - (tailLength * sinA).toNumber();
 
@@ -389,20 +369,35 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             [centerX - (px * halfWidthBase).toNumber(), centerY - (py * halfWidthBase).toNumber()],
 
             // Tail right
-            [tailX - (px * 1.5).toNumber(), tailY - (py * 1.5).toNumber()],
+            [tailX - (px * 3).toNumber(), tailY - (py * 3).toNumber()],
 
             // Tail left
-            [tailX + (px * 1.5).toNumber(), tailY + (py * 1.5).toNumber()],
+            [tailX + (px * 3).toNumber(), tailY + (py * 3).toNumber()],
 
             // Base left (at center)
             [centerX + (px * halfWidthBase).toNumber(), centerY + (py * halfWidthBase).toNumber()]
         ];
 
         dc.fillPolygon(points);
+    }
 
-        // Draw center bulge (pin attachment)
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-        dc.fillCircle(centerX, centerY, 4);
+    // Helper to draw just one side of the polygon split down the middle
+    function drawHalfHand(dc, cx, cy, cosA, sinA, px, py, len, tail, wBase, wTip, isLeft) {
+        var side = isLeft ? 1 : -1;
+        
+        var tipX = cx + (len * cosA);
+        var tipY = cy + (len * sinA);
+        var tailX = cx - (tail * cosA);
+        var tailY = cy - (tail * sinA);
+
+        var points = [
+            [tipX, tipY], // The spine (tip)
+            [tipX + (px * wTip * side), tipY + (py * wTip * side)], // Outer edge tip
+            [cx + (px * wBase * side), cy + (py * wBase * side)],   // Outer edge base
+            [tailX + (px * 3 * side), tailY + (py * 3 * side)],     // Outer edge tail
+            [tailX, tailY] // The spine (tail)
+        ];
+        dc.fillPolygon(points);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -564,6 +559,26 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
 
+    function drawElevation(dc as Dc, x as Number, y as Number) as Void {
+        // Get the current elevation
+        var positionInfo = Position.getInfo();
+        if (positionInfo has :altitude && positionInfo.altitude != null) {
+            var altitude = metersToFeet(positionInfo.altitude);
+            var altitudeString = altitude.format("%.0f") + "ft";
+            System.println("Altitude: " + altitude);
+
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+            dc.drawText(x, y, Graphics.FONT_XTINY, altitudeString, Graphics.TEXT_JUSTIFY_CENTER);
+        }
+    }
+
+    // Converts meters to feet with decimal precision
+    function metersToFeet(meters as Float) as Float {
+        if (meters == null) {
+            return 0.0f;
+        }
+        return meters * 3.28084f;
+    }
     
 
     // Helper to keep code clean
@@ -579,7 +594,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         }
 
         var thickness = 14; // Increased slightly for the larger Venu 3 screen
-        var outerR = radius - 30; // Push it closer to edge for modern look
+        var outerR = radius - 35; 
         var midR = outerR - (thickness / 2.0);
         var capR = thickness / 2.0 - 1.5;
         
@@ -594,20 +609,24 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var activeDay = 120.0;
         var activeWeek = 455.0;
         var weekGoal = 900.0; 
+        var exceededGoal = false;
 
         var info = ActivityMonitor.getInfo();
-        // if (info != null) {
-        //     if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
-        //     if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
-        //     if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
-        // }
+        if (info != null) {
+            if (info.activeMinutesDay != null) { activeDay = info.activeMinutesDay.total.toFloat(); }
+            if (info.activeMinutesWeek != null) { activeWeek = info.activeMinutesWeek.total.toFloat(); }
+            if (info.activeMinutesWeekGoal != null) { weekGoal = info.activeMinutesWeekGoal.toFloat(); }
+        }
 
         // Safety checks
         if (weekGoal < 1.0) { weekGoal = 150.0; }
 
         // 3. Logic Calculations
         var weekFrac = activeWeek / weekGoal;
-        if (weekFrac > 1.0) { weekFrac = 1.0; }
+        if (weekFrac > 1.0) { 
+            weekFrac = 1.0;
+            exceededGoal = true;
+        }
 
         var dayFrac = activeDay / weekGoal;
         if (dayFrac > 1.0) { dayFrac = 1.0; }
@@ -674,8 +693,39 @@ class MyWatchFaceView extends WatchUi.WatchFace {
                 dc.fillCircle(cx + midR * Math.cos(radSplit), cy - midR * Math.sin(radSplit), capR);
             }
         }
+
+        // if goal exceeded, show a bigger circle at the end
+        if (exceededGoal) {
+            dc.setColor(Graphics.COLOR_DK_BLUE, Graphics.COLOR_TRANSPARENT);
+            dc.fillCircle(cx + midR * Math.cos(toRad(endDeg)), cy - midR * Math.sin(toRad(endDeg)), capR * 2.5);
+            drawStar(dc, cx + midR * Math.cos(toRad(endDeg)), cy - midR * Math.sin(toRad(endDeg)), capR * 2.25, CustomColors.GOLD);
+            
+        }
+
     }
 
+    function drawStar(dc, x, y, outerRadius, color) {
+        var numPoints = 5;
+        var points = new [numPoints * 2];
+        var innerRadius = outerRadius * 0.4; // Adjust this to make it "pointier"
+        var angleStep = Math.PI / numPoints; // 36 degrees per step
+        
+        // Start at the top (subtract 90 degrees or PI/2)
+        var currentAngle = -Math.PI / 2.0;
+
+        for (var i = 0; i < numPoints * 2; i++) {
+            var r = (i % 2 == 0) ? outerRadius : innerRadius;
+            
+            var px = x + (Math.cos(currentAngle) * r);
+            var py = y + (Math.sin(currentAngle) * r);
+            
+            points[i] = [px.toNumber(), py.toNumber()];
+            currentAngle += angleStep;
+        }
+
+        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        dc.fillPolygon(points);
+    }
 
     
     // Draw font samples for testing

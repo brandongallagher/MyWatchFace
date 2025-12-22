@@ -10,6 +10,7 @@ class CustomColors {
     static const LIGHT_GRAY  = 0xFFD3D3D3;
     static const DARK_GRAY   = 0xFF404040;
     static const RED         = 0xFFFF0000;
+    static const RED2        = 0xFFCC0000;
     static const DARK_RED    = 0xFF8B0000;
     static const GREEN       = 0xFF00FF00;
     static const DARK_GREEN  = 0xFF006400;
@@ -26,4 +27,7 @@ class CustomColors {
     static const LIGHT_BLUE  = 0xFFADD8E6;
     static const TEAL        = 0xFF008080;
     static const FLUORESCENT_GREEN = 0x00FF00;
+    static const FLUORESCENT_GREEN_SHADOW =0x00CC00;
+    static const GOLD =0xFFD700;
+    static const DROP_SHADOW = 0x40222222;
 }
