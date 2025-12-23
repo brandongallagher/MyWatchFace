@@ -11,8 +11,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
     var showFontSamples = false;  // Set to true to display font samples
 
-    private var _weatherFont;
-
+    
     function initialize() {
         WatchFace.initialize();
     }
@@ -20,7 +19,6 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.WatchFace(dc));
-        _weatherFont = WatchUi.loadResource(Rez.);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -34,6 +32,11 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Clear the screen
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
+
+        // ENABLE ANTI-ALIASING: Critical for Venu 3
+        if (dc has :setAntiAlias) {
+            dc.setAntiAlias(true);
+        }
 
         // Get screen dimensions
         var width = dc.getWidth();
@@ -60,7 +63,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Draw weather widget on the left
         drawWeatherWidget(dc, centerX - 105, centerY - 50);
 
-        drawElevation(dc, centerX, centerY + 90);
+        drawAltitudeOnDial(dc, centerX, centerY, radius);   
+        drawAltitude(dc, centerX, centerY + 90);
 
         // Draw active minutes widget on the right
         drawActiveMinutesWidget(dc, centerX, centerY, radius);
@@ -261,8 +265,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
 
     function drawMinuteHand(dc as Dc, centerX as Number, centerY as Number, minutes as Number, radius as Number) as Void {
-        if (dc has :setAntiAlias) { dc.setAntiAlias(true); }
-
+        
         var angle = (minutes * 6 - 90) * Math.PI / 180.0;
         var handLength = (radius * 0.9).toNumber();
         var tailLength = handLength * 0.2;
@@ -559,7 +562,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
 
-    function drawElevation(dc as Dc, x as Number, y as Number) as Void {
+    function drawAltitude(dc as Dc, x as Number, y as Number) as Void {
         // Get the current elevation
         var positionInfo = Position.getInfo();
         if (positionInfo has :altitude && positionInfo.altitude != null) {
@@ -570,6 +573,64 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
             dc.drawText(x, y, Graphics.FONT_XTINY, altitudeString, Graphics.TEXT_JUSTIFY_CENTER);
         }
+    }
+
+    function drawAltitudeOnDial(dc as Dc, centerX as Number, centerY as Number, radius as Number) as Void {
+        var positionInfo = Position.getInfo();
+        if (!(positionInfo has :altitude && positionInfo.altitude != null)) {
+            return;
+        }
+        
+        // 1. Math Setup
+        var altitude = metersToFeet(positionInfo.altitude);
+        var totalMinutes = 5.0 * altitude / 1000;
+        var angleDegrees = 360.0 * totalMinutes / 60 - 90;
+        var angleRad = angleDegrees * Math.PI / 180.0;
+
+        // 1. Define Shape Dimensions
+        var bodyHeight = 8;   // Length of the square part
+        var roofHeight = 7;   // Length of the triangle part
+        var wedgeWidth = 14;  // Total width of the house
+        var outerMargin = 2;  
+
+        // Distances from center for the three layers of the house
+        var distBase = radius - outerMargin;                // Back of the house
+        var distShoulders = distBase - bodyHeight;          // Where roof meets walls
+        var distTip = distShoulders - roofHeight;           // The peak pointing inward
+
+        // 2. Angular width (spread)
+        var halfWidthSpread = (wedgeWidth / 2.0) / distBase;
+
+        // 3. Define the 5 Points of the "House"
+        // Point 1: The Peak (Tip)
+        var p1X = centerX + distTip * Math.cos(angleRad);
+        var p1Y = centerY + distTip * Math.sin(angleRad);
+
+        // Point 2: Left Shoulder (where roof meets wall)
+        var p2X = centerX + distShoulders * Math.cos(angleRad - halfWidthSpread);
+        var p2Y = centerY + distShoulders * Math.sin(angleRad - halfWidthSpread);
+
+        // Point 3: Left Bottom Corner (outer edge)
+        var p3X = centerX + distBase * Math.cos(angleRad - halfWidthSpread);
+        var p3Y = centerY + distBase * Math.sin(angleRad - halfWidthSpread);
+
+        // Point 4: Right Bottom Corner (outer edge)
+        var p4X = centerX + distBase * Math.cos(angleRad + halfWidthSpread);
+        var p4Y = centerY + distBase * Math.sin(angleRad + halfWidthSpread);
+
+        // Point 5: Right Shoulder (where roof meets wall)
+        var p5X = centerX + distShoulders * Math.cos(angleRad + halfWidthSpread);
+        var p5Y = centerY + distShoulders * Math.sin(angleRad + halfWidthSpread);
+
+        // 4. Draw the House
+        dc.setColor(CustomColors.RED2, Graphics.COLOR_TRANSPARENT);
+        dc.fillPolygon([
+            [p1X, p1Y], // Peak
+            [p2X, p2Y], // Left Shoulder
+            [p3X, p3Y], // Left Base
+            [p4X, p4Y], // Right Base
+            [p5X, p5Y]  // Right Shoulder
+        ]);
     }
 
     // Converts meters to feet with decimal precision
@@ -587,12 +648,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     }
 
     function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
-        // 1. Setup & Config
-        // ENABLE ANTI-ALIASING: Critical for Venu 3
-        if (dc has :setAntiAlias) {
-            dc.setAntiAlias(true);
-        }
-
+        
         var thickness = 14; // Increased slightly for the larger Venu 3 screen
         var outerR = radius - 35; 
         var midR = outerR - (thickness / 2.0);
