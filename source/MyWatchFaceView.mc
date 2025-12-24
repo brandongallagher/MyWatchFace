@@ -55,13 +55,13 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         drawSunsetIndicator(dc, centerX, centerY, radius);
 
         // drawDate at top right
-        drawDateStacked(dc, centerX + radius - 75, centerY - 75);
+        drawDateStacked(dc, centerX + radius - 75, centerY - 55);
         
         // Draw battery percent at top center
         drawBatteryPercent(dc, centerX, 50);
 
         // Draw weather widget on the left
-        drawWeatherWidget(dc, centerX - 105, centerY - 50);
+        drawWeatherWidget(dc, centerX - 105, centerY - 30);
 
         drawAltitudeOnDial(dc, centerX, centerY, radius);   
         drawAltitude(dc, centerX, centerY + 90);
@@ -103,6 +103,109 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             }
         }
 
+        // drawHourMarkersAsHashMarks(dc, centerX, centerY, radius);
+        drawHourMarkersAs3dChevrons(dc, centerX, centerY, radius);
+
+        // Draw hour digits (only 4 and 8)
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        
+        // get the hour of day 1-12
+        var currentHour = System.getClockTime().hour % 12;
+        if (currentHour == 0) {
+            currentHour = 12;
+        }
+        
+        for (var i = 1; i <= 12; i++) {
+            if (i == 4 || i == 8) {
+                // only show if the current time is near that hour
+                if (i < currentHour + 1 && i > currentHour - 1) {
+                    var angle = (i * 30 - 90) * Math.PI / 180.0;
+                    var digitRadius = radius - 40;
+                    var digitX = centerX + (digitRadius * Math.cos(angle)).toNumber();
+                    var digitY = centerY + (digitRadius * Math.sin(angle)).toNumber();
+                    dc.drawText(digitX, digitY, Graphics.FONT_GLANCE_NUMBER, i.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                }
+            }
+        }
+    }
+
+    function drawHourMarkersAs3dChevrons(dc as Dc, centerX as Number, centerY as Number, radius as Number) as Void {
+        // Draw Metallic Platinum Hour Markers
+        for (var i = 0; i < 12; i++) {
+            var angle = (i * 30 - 90) * Math.PI / 180.0;
+            var cosA = Math.cos(angle);
+            var sinA = Math.sin(angle);
+            
+            var perpX = -sinA;
+            var perpY = cosA;
+            var radX = cosA;
+            var radY = sinA;
+            
+            // Geometry Definitions
+            var outerRadius = radius - 2;
+            var shoulderRadius = radius - 16;
+            var tipRadius = radius - 23;
+            var halfWidth = 6;
+
+            // --- COORDINATES ---
+            // Outer Base
+            var bLX = centerX + (outerRadius * radX) + (halfWidth * perpX);
+            var bLY = centerY + (outerRadius * radY) + (halfWidth * perpY);
+            var bRX = centerX + (outerRadius * radX) - (halfWidth * perpX);
+            var bRY = centerY + (outerRadius * radY) - (halfWidth * perpY);
+            var bMX = centerX + (outerRadius * radX);
+            var bMY = centerY + (outerRadius * radY);
+
+            // Shoulders
+            var sLX = centerX + (shoulderRadius * radX) + (halfWidth * perpX);
+            var sLY = centerY + (shoulderRadius * radY) + (halfWidth * perpY);
+            var sRX = centerX + (shoulderRadius * radX) - (halfWidth * perpX);
+            var sRY = centerY + (shoulderRadius * radY) - (halfWidth * perpY);
+            var sMX = centerX + (shoulderRadius * radX);
+            var sMY = centerY + (shoulderRadius * radY);
+
+            // Tip
+            var tX = centerX + (tipRadius * radX);
+            var tY = centerY + (tipRadius * radY);
+
+            // --- 1. THE "SETTING" (Border/Shadow) ---
+            // Drawing a slightly larger base or a dark outline first
+            dc.setPenWidth(1);
+            dc.setColor(0x222222, Graphics.COLOR_TRANSPARENT); 
+            var outline = [[bLX, bLY], [sLX, sLY], [tX, tY], [sRX, sRY], [bRX, bRY]];
+            // Rounding coordinates for fillPolygon
+            for(var j=0; j<outline.size(); j++) { 
+                outline[j] = [outline[j][0].toNumber(), outline[j][1].toNumber()]; 
+            }
+            dc.fillPolygon(outline);
+
+            // --- 2. THE FACETS (The Silver/Platinum Body) ---
+            
+            // Body Left: Polished Silver
+            dc.setColor(CustomColors.POLISHED_SILVER, Graphics.COLOR_TRANSPARENT); 
+            dc.fillPolygon([[bLX.toNumber(), bLY.toNumber()], [sLX.toNumber(), sLY.toNumber()], [sMX.toNumber(), sMY.toNumber()], [bMX.toNumber(), bMY.toNumber()]]);
+
+            // Body Right: Deep Shadowed Steel
+            dc.setColor(CustomColors.DEEP_SHADOWED_STEEL, Graphics.COLOR_TRANSPARENT); 
+            dc.fillPolygon([[bRX.toNumber(), bRY.toNumber()], [sRX.toNumber(), sRY.toNumber()], [sMX.toNumber(), sMY.toNumber()], [bMX.toNumber(), bMY.toNumber()]]);
+
+            // Tip Left: Specular Highlight (The part catching the most light)
+            dc.setColor(CustomColors.SPECULAR_HIGHLIGHT, Graphics.COLOR_TRANSPARENT); 
+            dc.fillPolygon([[sLX.toNumber(), sLY.toNumber()], [tX.toNumber(), tY.toNumber()], [sMX.toNumber(), sMY.toNumber()]]);
+
+            // Tip Right: Mid-tone Silver
+            dc.setColor(CustomColors.MID_TONE_SILVER, Graphics.COLOR_TRANSPARENT); 
+            dc.fillPolygon([[sRX.toNumber(), sRY.toNumber()], [tX.toNumber(), tY.toNumber()], [sMX.toNumber(), sMY.toNumber()]]);
+
+            // --- 3. THE POLISH LINE (Final Metallic Touch) ---
+            // Draw a single bright line down the center ridge
+            dc.setColor(CustomColors.POLISH_LINE, Graphics.COLOR_TRANSPARENT);
+            dc.drawLine(bMX.toNumber(), bMY.toNumber(), tX.toNumber(), tY.toNumber());
+        }
+    }
+
+    function drawHourMarkersAsHashMarks(dc as Dc, centerX as Number, centerY as Number, radius as Number) as Void {
+        
         // Draw hour markers (hash marks) as rectangular polygons
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         for (var i = 0; i < 12; i++) {
@@ -146,28 +249,6 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             
             dc.fillPolygon(points);
         }
-
-        // Draw hour digits (only 4 and 8)
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
-        
-        // get the hour of day 1-12
-        var currentHour = System.getClockTime().hour % 12;
-        if (currentHour == 0) {
-            currentHour = 12;
-        }
-        
-        for (var i = 1; i <= 12; i++) {
-            if (i == 4 || i == 8) {
-                // only show if the current time is near that hour
-                if (i < currentHour + 1 && i > currentHour - 1) {
-                    var angle = (i * 30 - 90) * Math.PI / 180.0;
-                    var digitRadius = radius - 40;
-                    var digitX = centerX + (digitRadius * Math.cos(angle)).toNumber();
-                    var digitY = centerY + (digitRadius * Math.sin(angle)).toNumber();
-                    dc.drawText(digitX, digitY, Graphics.FONT_GLANCE_NUMBER, i.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                }
-            }
-        }
     }
 
     // Draw sunset indicator as an orange dot at the 12-hour position corresponding to sunset time
@@ -197,9 +278,11 @@ class MyWatchFaceView extends WatchUi.WatchFace {
                 var indicatorX = centerX + dotRadius * Math.cos(angleRad);
                 var indicatorY = centerY + dotRadius * Math.sin(angleRad);
 
-                // Draw orange dot
-                dc.setColor(CustomColors.BURNT_ORANGE, Graphics.COLOR_BLACK);
-                dc.fillCircle(indicatorX, indicatorY, 8);  // 8px radius
+                // draw a sphere
+                SunsetRenderer.drawSunsetSphere(dc, indicatorX, indicatorY, 10);
+                // // Draw orange dot
+                // dc.setColor(CustomColors.BURNT_ORANGE, Graphics.COLOR_BLACK);
+                // dc.fillCircle(indicatorX, indicatorY, 8);  // 8px radius
 
                 // // Draw text near the dot with sunset time
                 // var timeStr = sunsetHour.format("%02d") + ":" + sunsetMinute.format("%02d");
@@ -210,6 +293,59 @@ class MyWatchFaceView extends WatchUi.WatchFace {
             // Weather data not available
             System.println("DEBUG: Exception in drawSunsetIndicator: " + e.toString());
         }
+    }
+
+    // Helper function to draw a 3D sphere
+    // dc: device context
+    // x, y: center coordinates of the sphere
+    // radius: size of the sphere
+    // baseColorHex: The main color (e.g., 0x0000FF for blue)
+    // shadowHex: A darker version of the main color for shadow
+    function draw3DSphere(dc, x, y, radius, baseColorHex, shadowHex) {
+
+        // Ensure device supports gradients (API 4.0.0+)
+        if (!(Graphics has :createRadialGradient)) {
+            // Fallback for older devices: Just draw flat circle
+            dc.setColor(baseColorHex, Graphics.COLOR_TRANSPARENT);
+            dc.fillCircle(x, y, radius);
+            return;
+        }
+
+        // 1. Calculate the "Highlight" position relative to the sphere center.
+        // We move it up and left by about 1/3rd of the radius to simulate top-left light.
+        var offset = radius / 3;
+        var highlightX = x - offset;
+        var highlightY = y - offset;
+
+        // 2. Define Gradient Colors
+        // We use 3 stops: Pure White Highlight -> Base Color -> Dark Shadow
+        var colors = [
+            0xFFFFFF,      // Center: Bright White Highlight
+            baseColorHex,  // Middle: The main color of the sphere
+            shadowHex      // Edge: Dark shadow
+        ];
+
+        // 3. Define where those colors sit (0.0 = center, 1.0 = edge)
+        var stops = [
+            0.0, // White is at the highlight center
+            0.6, // Base color dominates the mid-section
+            1.0  // Shadow is at the very edge
+        ];
+
+        // 4. Create the Radial Gradient Object
+        // Note: We make the gradient radius slightly larger (1.2x) than the sphere radius
+        // so the darkest shadow color gets pushed right to the edge of the shape.
+        var gradient = Graphics.createRadialGradient({
+            :colors => colors,
+            :stops  => stops,
+            :center => [highlightX, highlightY], // The gradient is centered on the highlight, not the circle center
+            :radius => radius * 1.2 
+        });
+
+        // 5. Apply the brush and draw the shape
+        dc.setFill(gradient);
+        // IMPORTANT: draw the circle at the ACTUAL center coordinates
+        dc.fillCircle(x, y, radius);
     }
 
     // Draw the hour hand as a polygon (blunt, tapered) with tail and center bulge
@@ -507,12 +643,14 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var currentTemp = "--";
         var highTemp = "--";
         var lowTemp = "--";
-        
+        var tempColor = Graphics.COLOR_LT_GRAY;
+
         try {
             var conditions = Weather.getCurrentConditions();
             if (conditions != null) {
                 if (conditions.temperature != null) {
                     currentTemp = celsiusToFahrenheit(conditions.temperature).format("%.0f");
+                    tempColor = getTemperatureColor(currentTemp.toNumber());
                 }
                 if (conditions.highTemperature != null) {
                     highTemp = celsiusToFahrenheit(conditions.highTemperature).format("%.0f");
@@ -527,15 +665,18 @@ class MyWatchFaceView extends WatchUi.WatchFace {
 
         // var x = centerX - 110;  // position to the left
 
-        // Draw current temperature
-        dc.setColor(getTemperatureColor(currentTemp.toNumber()), Graphics.COLOR_BLACK);
-        dc.drawText(x, y - 45, Graphics.FONT_SMALL, currentTemp, Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(x + 33, y - 45, Graphics.FONT_SMALL, "°", Graphics.TEXT_JUSTIFY_CENTER);
+        // Draw current temperature.
+        drawPillText(dc, x, y - 30, currentTemp + "°", Graphics.COLOR_WHITE, tempColor, Graphics.FONT_GLANCE_NUMBER);
         
-        // reset the text color
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
-
+        // Draw the temperature text
+        // dc.setColor(tempColor, Graphics.COLOR_BLACK);
+        // dc.fillCircle(x, y, 60);
+        // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        // dc.drawText(x, y - 45, Graphics.FONT_SMALL, currentTemp, Graphics.TEXT_JUSTIFY_CENTER);
+        // dc.drawText(x + 33, y - 45, Graphics.FONT_SMALL, "°", Graphics.TEXT_JUSTIFY_CENTER);
+        
         // Draw high/low temperatures
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         dc.drawText(x, y, Graphics.FONT_XTINY, highTemp + " - " + lowTemp, Graphics.TEXT_JUSTIFY_CENTER);
     }
 

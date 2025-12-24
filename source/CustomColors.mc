@@ -30,4 +30,12 @@ class CustomColors {
     static const FLUORESCENT_GREEN_SHADOW =0x00CC00;
     static const GOLD =0xFFD700;
     static const DROP_SHADOW = 0x40222222;
+    static const POLISHED_SILVER = 0xCCCCCC;
+    static const DEEP_SHADOWED_STEEL = 0x555555;
+    static const SPECULAR_HIGHLIGHT = 0xFFFFFF;
+    static const MID_TONE_SILVER = 0xAAAAAA;
+    static const POLISH_LINE = 0xFFFFFF;
+
 }
+
+
