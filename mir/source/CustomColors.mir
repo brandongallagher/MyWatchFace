@@ -87,6 +87,21 @@ class CustomColors {
     [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 32; @position = 17; @symbol_constdef = [DROP_SHADOW,32,17,28]; ]
     static
     const DROP_SHADOW = 0x40222222;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 33; @position = 17; @symbol_constdef = [POLISHED_SILVER,33,17,32]; ]
+    static
+    const POLISHED_SILVER = 0xCCCCCC;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 34; @position = 17; @symbol_constdef = [DEEP_SHADOWED_STEEL,34,17,36]; ]
+    static
+    const DEEP_SHADOWED_STEEL = 0x555555;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 35; @position = 17; @symbol_constdef = [SPECULAR_HIGHLIGHT,35,17,35]; ]
+    static
+    const SPECULAR_HIGHLIGHT = 0xFFFFFF;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 36; @position = 17; @symbol_constdef = [MID_TONE_SILVER,36,17,32]; ]
+    static
+    const MID_TONE_SILVER = 0xAAAAAA;
+    [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 37; @position = 17; @symbol_constdef = [POLISH_LINE,37,17,28]; ]
+    static
+    const POLISH_LINE = 0xFFFFFF;
 }
 [ @file = "C:\workdir\garmin\MyWatchFace\source\CustomColors.mc"; @line = 2; ]
 <init> {

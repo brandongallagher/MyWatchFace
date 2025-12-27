@@ -803,7 +803,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         var gapDeg = 0.5; 
 
         // 2. Data Fetching
-        var activeDay = 120.0;
+        var activeDay = 100.0;
         var activeWeek = 455.0;
         var weekGoal = 900.0; 
         var exceededGoal = false;
@@ -877,8 +877,12 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // C. The Day Segment (Bright Red)
         if (daySweep > 0) {
             dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
+            
             // Draw from Split -> End
-            dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, splitDeg, endDeg);
+            // only draw the arc if it is big enough to be seen, and won't go negative
+            if (daySweep > 1.0) {
+                dc.drawArc(cx, cy, midR, Graphics.ARC_COUNTER_CLOCKWISE, splitDeg, endDeg);
+            }
 
             // End Cap
             var radEnd = toRad(endDeg);
