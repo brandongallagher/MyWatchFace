@@ -1,24 +1,24 @@
-[ @file = "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Graphics,1,13,21]; ]
+[ @file = "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Graphics,1,13,21]; ]
 using Toybox.Graphics;
-[ @file = "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 3; @symbol_moduledef = [SunsetRenderer,3,7,21]; ]
+[ @file = "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 3; @symbol_moduledef = [SunsetRenderer,3,7,21]; ]
 module SunsetRenderer {
-    [ @file = "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 3; ]
+    [ @file = "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 3; ]
     <init> {
     }
-    [ @file = "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 7; @symbol_functiondef = [drawSunsetSphere,7,13,29]; @symbol_param<0> = [dc,7,30,32]; @symbol_param<1> = [x,7,34,35]; @symbol_param<2> = [y,7,37,38]; @symbol_param<3> = [radius,7,40,46]; ]
+    [ @file = "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 7; @symbol_functiondef = [drawSunsetSphere,7,13,29]; @symbol_param<0> = [dc,7,30,32]; @symbol_param<1> = [x,7,34,35]; @symbol_param<2> = [y,7,37,38]; @symbol_param<3> = [radius,7,40,46]; ]
     function drawSunsetSphere(dc, x, y, radius) {
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start:
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 8 8 ]
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_stmt:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start:
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 8 8 ]
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_stmt:
         %tmp.1 = lgetv %dc;
         symbol [ dc %tmp.1 8 12 14 ];
         %tmp.3 = const :setAntiAlias;
         symbol [ setAntiAlias %tmp.3 8 20 32 const ];
         %tmp.4 = canhazplz %tmp.1 %tmp.3;
-        bf %tmp.4 @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end;
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_true:
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_34_10_8_start:
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 9 12 ]
+        bf %tmp.4 @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end;
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_true:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_34_10_8_start:
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 9 12 ]
         %tmp.5 = lgetv %dc;
         symbol [ dc %tmp.5 9 12 14 ];
         %tmp.6 = as %tmp.5 { (interface { var setAntiAlias; }) };
@@ -26,78 +26,78 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_34_10_8_start:
         %tmp.7 = getv function %tmp.6 :setAntiAlias;
         %tmp.8 = true;
         invoke %tmp.6 %tmp.7(%tmp.8);
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_34_10_8_stop:
-        goto @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end;
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end:
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 14 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_34_10_8_stop:
+        goto @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end;
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_8_8_10_8_if_end:
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 14 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %rS.1 = local;
         symbol [ rS %rS.1 14 12 14 ];
         %tmp.9 = 0xAA;
         lputv %rS.1 %tmp.9;
         symbol [ rS %rS.1 14 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 15 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 15 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %gS.2 = local;
         symbol [ gS %gS.2 15 12 14 ];
         %tmp.10 = 0x22;
         lputv %gS.2 %tmp.10;
         symbol [ gS %gS.2 15 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 16 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 16 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %bS.3 = local;
         symbol [ bS %bS.3 16 12 14 ];
         %tmp.11 = 0x00;
         lputv %bS.3 %tmp.11;
         symbol [ bS %bS.3 16 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 19 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 19 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %rH.4 = local;
         symbol [ rH %rH.4 19 12 14 ];
         %tmp.12 = 0xFF;
         lputv %rH.4 %tmp.12;
         symbol [ rH %rH.4 19 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 20 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 20 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %gH.5 = local;
         symbol [ gH %gH.5 20 12 14 ];
         %tmp.13 = 0xFF;
         lputv %gH.5 %tmp.13;
         symbol [ gH %gH.5 20 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 21 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 21 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %bH.6 = local;
         symbol [ bH %bH.6 21 12 14 ];
         %tmp.14 = 0xAA;
         lputv %bH.6 %tmp.14;
         symbol [ bH %bH.6 21 12 14 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 23 8 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 23 8 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop" ]
         %steps.7 = local;
         symbol [ steps %steps.7 23 12 17 ];
         %tmp.15 = 15;
         lputv %steps.7 %tmp.15;
         symbol [ steps %steps.7 23 12 17 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 25 8 ]
-        for @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_incr @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end;
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_init:
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_begin" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 25 8 ]
+        for @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_incr @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end;
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_init:
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_begin" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end" ]
         %i.8 = local;
         symbol [ i %i.8 25 17 18 ];
         %tmp.16 = 0;
         lputv %i.8 %tmp.16;
         symbol [ i %i.8 25 17 18 ];
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test:
         %tmp.17 = lgetv %i.8;
         symbol [ i %tmp.17 25 24 25 ];
         %tmp.18 = lgetv %steps.7;
         symbol [ steps %tmp.18 25 28 33 ];
         %tmp.19 = lt %tmp.17 %tmp.18;
-        bf %tmp.19 @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end;
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_begin:
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 26 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+        bf %tmp.19 @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end;
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_begin:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 26 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %ratio.9 = local;
         symbol [ ratio %ratio.9 26 16 21 ];
         %tmp.20 = lgetv %i.8;
@@ -112,8 +112,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.26 = div %tmp.22 %tmp.25;
         lputv %ratio.9 %tmp.26;
         symbol [ ratio %ratio.9 26 16 21 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 29 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 29 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %r.10 = local;
         symbol [ r %r.10 29 16 17 ];
         %tmp.27 = lgetv %rS.1;
@@ -132,8 +132,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.35 = invoke %tmp.33 %tmp.34();
         lputv %r.10 %tmp.35;
         symbol [ r %r.10 29 16 17 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 30 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 30 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %g.11 = local;
         symbol [ g %g.11 30 16 17 ];
         %tmp.36 = lgetv %gS.2;
@@ -152,8 +152,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.44 = invoke %tmp.42 %tmp.43();
         lputv %g.11 %tmp.44;
         symbol [ g %g.11 30 16 17 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 31 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 31 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %b.12 = local;
         symbol [ b %b.12 31 16 17 ];
         %tmp.45 = lgetv %bS.3;
@@ -172,8 +172,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.53 = invoke %tmp.51 %tmp.52();
         lputv %b.12 %tmp.53;
         symbol [ b %b.12 31 16 17 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 34 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 34 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %currentColor.13 = local;
         symbol [ currentColor %currentColor.13 34 16 28 ];
         symbol [ Graphics %tmp.54 34 31 39 ];
@@ -190,8 +190,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.60 = invoke %tmp.54 %tmp.55(%tmp.56, %tmp.57, %tmp.58, %tmp.59);
         lputv %currentColor.13 %tmp.60;
         symbol [ currentColor %currentColor.13 34 16 28 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 37 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 37 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %currentR.14 = local;
         symbol [ currentR %currentR.14 37 16 24 ];
         %tmp.61 = lgetv %radius;
@@ -209,8 +209,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.69 = mul %tmp.61 %tmp.68;
         lputv %currentR.14 %tmp.69;
         symbol [ currentR %currentR.14 37 16 24 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 41 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 41 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %offsetMultiplier.15 = local;
         symbol [ offsetMultiplier %offsetMultiplier.15 41 16 32 ];
         %tmp.70 = lgetv %radius;
@@ -219,8 +219,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.72 = mul %tmp.70 %tmp.71;
         lputv %offsetMultiplier.15 %tmp.72;
         symbol [ offsetMultiplier %offsetMultiplier.15 41 16 32 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 42 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 42 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %curX.16 = local;
         symbol [ curX %curX.16 42 16 20 ];
         %tmp.73 = lgetv %x;
@@ -233,8 +233,8 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.77 = sub %tmp.73 %tmp.76;
         lputv %curX.16 %tmp.77;
         symbol [ curX %curX.16 42 16 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 43 12 ]
-        [ "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 43 12 ]
+        [ "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start" "D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop" ]
         %curY.17 = local;
         symbol [ curY %curY.17 43 16 20 ];
         %tmp.78 = lgetv %y;
@@ -247,7 +247,7 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.82 = sub %tmp.78 %tmp.81;
         lputv %curY.17 %tmp.82;
         symbol [ curY %curY.17 43 16 20 ];
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 45 12 ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 45 12 ]
         %tmp.83 = lgetv %dc;
         symbol [ dc %tmp.83 45 12 14 ];
         symbol [ setColor %tmp.84 45 15 23 ];
@@ -259,7 +259,7 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         symbol [ COLOR_TRANSPARENT %tmp.87 45 47 64 ];
         %tmp.87 = getv %tmp.86 :COLOR_TRANSPARENT;
         invoke %tmp.83 %tmp.84(%tmp.85, %tmp.87);
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 46 12 ]
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 46 12 ]
         %tmp.88 = lgetv %dc;
         symbol [ dc %tmp.88 46 12 14 ];
         symbol [ fillCircle %tmp.89 46 15 25 ];
@@ -271,19 +271,19 @@ C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_start:
         %tmp.92 = lgetv %currentR.14;
         symbol [ currentR %tmp.92 46 38 46 ];
         invoke %tmp.88 %tmp.89(%tmp.90, %tmp.91, %tmp.92);
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop:
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_incr:
-[ "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 25 ]
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_40_47_8_stop:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_incr:
+[ "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc" 25 ]
         %tmp.95 = lgetv %i.8;
         symbol [ i %tmp.95 25 35 36 ];
         %tmp.96 = add %tmp.95 1;
         lputv %i.8 %tmp.96;
         symbol [ i %i.8 25 35 36 ];
-        goto @C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test;
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end:
-C__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop:
+        goto @D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_test;
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_25_8_47_8_for_end:
+D__workdir_garmin_MyWatchFace_source_SunsetRenderer_mc_7_48_48_4_stop:
     }
 }
-[ @file = "C:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 1; ]
+[ @file = "D:\workdir\garmin\MyWatchFace\source\SunsetRenderer.mc"; @line = 1; ]
 <init> {
 }

@@ -486,7 +486,27 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.fillCircle(centerX, centerY, 4);
     }
 
-    
+    // Helper to draw just one side of the polygon split down the middle
+    function drawHalfHand(dc, cx, cy, cosA, sinA, px, py, len, tail, wBase, wTip, isLeft) {
+        var side = isLeft ? 1 : -1;
+        
+        var tipX = cx + (len * cosA);
+        var tipY = cy + (len * sinA);
+        var tailX = cx - (tail * cosA);
+        var tailY = cy - (tail * sinA);
+
+        var points = [
+            [tipX, tipY], // The spine (tip)
+            [tipX + (px * wTip * side), tipY + (py * wTip * side)], // Outer edge tip
+            [cx + (px * wBase * side), cy + (py * wBase * side)],   // Outer edge base
+            [tailX + (px * 3 * side), tailY + (py * 3 * side)],     // Outer edge tail
+            [tailX, tailY] // The spine (tail)
+        ];
+        dc.fillPolygon(points);
+    }
+
+
+
 
     function drawSimpleHand(dc, centerX, centerY, cosA, sinA, px, py, len, tail, halfWidthBase, halfWidthTip, tailLength, handLength) {
         var tailX = centerX - (tailLength * cosA).toNumber();
@@ -520,25 +540,7 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         dc.fillPolygon(points);
     }
 
-    // Helper to draw just one side of the polygon split down the middle
-    function drawHalfHand(dc, cx, cy, cosA, sinA, px, py, len, tail, wBase, wTip, isLeft) {
-        var side = isLeft ? 1 : -1;
-        
-        var tipX = cx + (len * cosA);
-        var tipY = cy + (len * sinA);
-        var tailX = cx - (tail * cosA);
-        var tailY = cy - (tail * sinA);
-
-        var points = [
-            [tipX, tipY], // The spine (tip)
-            [tipX + (px * wTip * side), tipY + (py * wTip * side)], // Outer edge tip
-            [cx + (px * wBase * side), cy + (py * wBase * side)],   // Outer edge base
-            [tailX + (px * 3 * side), tailY + (py * 3 * side)],     // Outer edge tail
-            [tailX, tailY] // The spine (tail)
-        ];
-        dc.fillPolygon(points);
-    }
-
+    
     // Called when this View is removed from the screen. Save the
     // the state of this View here. This includes freeing resources from
     // memory.
