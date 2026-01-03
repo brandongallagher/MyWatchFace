@@ -22,6 +22,7 @@ class CustomColors {
     static const ORANGE      = 0xFFFFA500;
     static const BURNT_ORANGE = 0xFFFF7F00;
     static const PURPLE      = 0xFF800080;
+    static const DARK_PURPLE = 0xFF660066;
     static const PINK        = 0xFFFFC0CB;
     static const BROWN       = 0xFFA52A2A;
     static const LIGHT_BLUE  = 0xFFADD8E6;
