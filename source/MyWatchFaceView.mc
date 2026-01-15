@@ -124,7 +124,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         for (var i = 1; i <= 12; i++) {
             if (i == 4 || i == 8) {
                 // only show if the current time is near that hour
-                if (i < currentHour + 1 && i > currentHour - 1) {
+                if ((i == 4 && currentHour > 3 && currentHour < 6) || 
+                        (i == 8 && currentHour > 6 && currentHour < 9)) {
                     var angle = (i * 30 - 90) * Math.PI / 180.0;
                     var digitRadius = radius - 40;
                     var digitX = centerX + (digitRadius * Math.cos(angle)).toNumber();
