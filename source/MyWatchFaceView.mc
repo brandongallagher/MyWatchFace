@@ -75,6 +75,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         }
 
 
+        drawDoNotDisturbIndicator(dc, centerX, centerY, radius);
+
 
         // do these last so they are on top of everything else
 
@@ -605,6 +607,42 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     // Helper to keep code clean
     function toRad(deg) {
         return deg * Math.PI / 180.0;
+    }
+
+    function drawDoNotDisturbIndicator(dc, centerX, centerY, radius) as Void {
+        var deviceSettings = System.getDeviceSettings();
+        if (deviceSettings has :doNotDisturb) {
+            var doNotDisturb = deviceSettings.doNotDisturb;
+
+            // If Do Not Disturb is enabled, draw the Venu-3 style icon
+            if (doNotDisturb) {
+                // Position the icon directly above the day-of-week text (used in drawDateStacked)
+                var dayX = centerX + radius - 95;
+                var dayY = centerY - 80;
+
+                var baseIconRadius = 15;
+                var iconRadius = (baseIconRadius * 1.5).toNumber(); // => 15
+                var padding = 6; // space between icon and text
+
+                var x = dayX;
+                var y = dayY - (iconRadius + padding);
+
+                // Draw solid green circle (match watch hands)
+                dc.setColor(CustomColors.FLUORESCENT_GREEN, Graphics.COLOR_TRANSPARENT);
+                dc.fillCircle(x, y, iconRadius);
+
+                // Draw the horizontal dash in black
+                var dashWidth = iconRadius * 1.6;
+                var dashHeight = (iconRadius * 0.4 > 4) ? iconRadius * 0.4 : 4;
+                dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+                dc.fillRoundedRectangle(x - (dashWidth/2.0), y - (dashHeight/2.0), dashWidth, dashHeight, dashHeight/2.0);
+
+                // Optional: thin subtle outline (keeps contrast nice on some displays)
+                dc.setPenWidth(1);
+                dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+                dc.drawArc(x, y, iconRadius, Graphics.ARC_COUNTER_CLOCKWISE, 0.0, 360.0);
+            }
+        }
     }
 
     function drawActiveMinutesWidget(dc as Dc, cx as Number, cy as Number, radius as Number) as Void {
