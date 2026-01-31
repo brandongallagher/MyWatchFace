@@ -155,11 +155,11 @@ module ClockHandRendererStaticShading {
         var tailY = cy - (tail * sinA);
 
         var points = [
-            [tipX, tipY], // The spine (tip)
-            [tipX + (px * wTip * side), tipY + (py * wTip * side)], // Outer edge tip
-            [cx + (px * wBase * side), cy + (py * wBase * side)],   // Outer edge base
-            [tailX + (px * 3 * side), tailY + (py * 3 * side)],     // Outer edge tail
-            [tailX, tailY] // The spine (tail)
+            [tipX.toNumber(), tipY.toNumber()], // The spine (tip)
+            [(tipX + (px * wTip * side)).toNumber(), (tipY + (py * wTip * side)).toNumber()], // Outer edge tip
+            [(cx + (px * wBase * side)).toNumber(), (cy + (py * wBase * side)).toNumber()],   // Outer edge base
+            [(tailX + (px * 3 * side)).toNumber(), (tailY + (py * 3 * side)).toNumber()],     // Outer edge tail
+            [tailX.toNumber(), tailY.toNumber()] // The spine (tail)
         ];
         dc.fillPolygon(points);
     }
